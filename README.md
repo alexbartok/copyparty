@@ -25,6 +25,8 @@ cd copyparty
 python3 -m copyparty
 ```
 
+This needs Python 3 and Jinja2 (`pip install jinja2`).
+
 The default theme is plain dark. `--theme 11` sets plain light, `--theme 0` the upstream default.
 
 A source checkout has no `copyparty/web/deps` (markdown editors, fonts). Build it with `scripts/deps-docker`, or copy it from an upstream install.
@@ -35,4 +37,4 @@ Based on copyparty v1.20.26. I merge upstream by hand, so this fork can be behin
 
 ## Credit
 
-copyparty: ed ([9001](https://github.com/9001)) and contributors, MIT license. Icons: Lucide, ISC license. Changes made with Claude Code.
+copyparty: ed ([9001](https://github.com/9001)) and contributors, MIT license. Icons: Lucide, ISC license ([docs/boring/LUCIDE-LICENSE](docs/boring/LUCIDE-LICENSE)). Changes made with Claude Code.
