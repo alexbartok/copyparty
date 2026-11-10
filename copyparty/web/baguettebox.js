@@ -322,17 +322,17 @@ window.baguetteBox = (function () {
                 '<button id="bbox-prev" class="bbox-btn" type="button" aria-label="Previous">&lt;</button>' +
                 '<button id="bbox-next" class="bbox-btn" type="button" aria-label="Next">&gt;</button>' +
                 '<div id="bbox-btns">' +
-                '<button id="bbox-help" type="button">?</button>' +
+                '<button id="bbox-help" type="button" tt="Show the keyboard shortcuts$NHotkey: ?">?</button>' +
                 '<button id="bbox-anim" type="button" tt="a">-</button>' +
                 '<button id="bbox-readdir" type="button" tt="a">ltr</button>' +
-                '<button id="bbox-rotl" type="button">↶</button>' +
-                '<button id="bbox-rotr" type="button">↷</button>' +
-                '<button id="bbox-tsel" type="button">sel</button>' +
-                '<button id="bbox-full" type="button" tt="full-screen">⛶</button>' +
-                '<button id="bbzoom" type="button" tt="zoom/stretch">z</button>' +
+                '<button id="bbox-rotl" type="button" tt="Rotate left$NHotkey: shift-R">↶</button>' +
+                '<button id="bbox-rotr" type="button" tt="Rotate right$NHotkey: R">↷</button>' +
+                '<button id="bbox-tsel" type="button" tt="Select or unselect this file$NHotkey: S">sel</button>' +
+                '<button id="bbox-full" type="button" tt="Switch full-screen on or off$NHotkey: F">⛶</button>' +
+                '<button id="bbzoom" type="button" tt="Switch zoom / stretch on or off$NHotkey: Z">z</button>' +
                 '<button id="bbox-vmode" type="button" tt="a"></button>' +
-                '<button id="bbox-gopage" type="button" tt="go to page">pg</button>' +
-                '<button id="bbox-close" type="button" aria-label="Close">X</button>' +
+                '<button id="bbox-gopage" type="button" tt="Go to a page (comic book archives)$NHotkey: G">pg</button>' +
+                '<button id="bbox-close" type="button" aria-label="Close" tt="Close$NHotkey: Esc">X</button>' +
                 '</div></div>'
             );
             overlay = ctr.firstChild;
@@ -538,7 +538,7 @@ window.baguetteBox = (function () {
 
             v = parseInt(v);
             if (!isNum(v))
-                return toast.warn(4, 'invalid input');
+                return toast.warn(4, 'invalid page number');
 
             show(Math.max(Math.min(v, max), 1) - 1);
         });
@@ -578,7 +578,7 @@ window.baguetteBox = (function () {
         }
         catch (ex) {
             if (IPHONE)
-                alert('sorry, apple decided to make this impossible on iphones (should work on ipad tho)');
+                alert('fullscreen is not available on iPhones (it should work on an iPad)');
             else
                 alert(ex);
         }
@@ -747,18 +747,18 @@ window.baguetteBox = (function () {
 
         var an = options.animation = sread('ganim', anims) || anims[ANIM ? 0 : 2];
         btnAnim.textContent = ['⇄', '⮺', '⚡'][anims.indexOf(an)];
-        btnAnim.setAttribute('tt', 'animation: ' + an);
+        btnAnim.setAttribute('tt', 'Animation: ' + an);
 
         options.readDirRtl = sread('greaddir') === "rtl";
         var msg;
         if (options.readDirRtl) {
             btnReadDir.innerText = "rtl";
-            msg = "browse from right to left";
+            msg = "Browse from right to left";
             slider.style.display = "flex";
             slider.style.flexDirection = "row-reverse";
         } else {
             btnReadDir.innerText = "ltr";
-            msg = "browse from left to right";
+            msg = "Browse from left to right";
             slider.style.flexDirection = "";
             slider.style.display = "block";
         }

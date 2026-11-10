@@ -154,8 +154,9 @@ redraw = (function () {
         onresize();
     }
     var modetoggle = function () {
-        var mode = dom_nsbs.innerHTML;
-        dom_nsbs.innerHTML = mode == 'editor' ? 'preview' : 'editor';
+        var mode = dom_nsbs.getAttribute('mode') || 'editor';
+        dom_nsbs.setAttribute('mode', mode == 'editor' ? 'preview' : 'editor');
+        dom_nsbs.innerHTML = mode == 'editor' ? 'Preview only' : 'Editor only';
         mode += ' single';
         dom_wrap.className = mode;
         dom_swrap.className = mode;
@@ -289,7 +290,7 @@ function Modpoll() {
 
         // firefox bug: sometimes get stale text even if copyparty sent a 200
         if (r.initial && server_ref != server_now)
-            return modal.confirm('Your browser decided to show an outdated copy of the document!\n\nDo you want to load the latest version from the server instead?', function () {
+            return modal.confirm('Your browser is showing an outdated copy of the document.\n\nDo you want to load the latest version from the server instead?', function () {
                 dom_src.value = server_md = new_md;
                 last_modified = new_mt;
                 draw_md();
@@ -307,7 +308,7 @@ function Modpoll() {
                 "Press F5 or CTRL-R to refresh the page,",
                 "replacing your document with the server copy.",
                 "",
-                "You can close this message to ignore and contnue."
+                "You can close this message to ignore this and continue."
             ];
             return toast.warn(0, msg.join('\n'));
         }
@@ -401,7 +402,7 @@ function save_cb() {
             return toast.err(0, msg.join('\n'));
         }
         else
-            return toast.err(0, 'Error! Save failed.  Maybe this JSON explains why:\n\n' + this.responseText);
+            return toast.err(0, 'Error! Save failed.  Server response:\n\n' + this.responseText);
     }
 
     clmod(this.btn, 'force-save');
@@ -983,7 +984,7 @@ var set_lno = (function () {
         if (!e && window.event) {
             e = window.event;
             if (dev_fbw == 1) {
-                toast.warn(10, 'hello from fallback code ;_;\ncheck console trace');
+                toast.warn(10, 'using fallback code;\nsee the browser console for details');
                 console.error('using window.event');
             }
         }
@@ -1097,7 +1098,7 @@ ebi('help').onclick = function (e) {
         var txt = dtxt[0].value;
         if (!convert_markdown(txt, dom))
             dom.innerText = txt.split('## markdown')[0];
-        dom.innerHTML = '<a href="#" id="helpclose">close</a>' + dom.innerHTML;
+        dom.innerHTML = '<a href="#" id="helpclose">Close</a>' + dom.innerHTML;
     }
 
     dom.style.display = 'block';

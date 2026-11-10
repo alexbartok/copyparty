@@ -15,7 +15,7 @@ function add_dls() {
     oa = QSA('pre.dl');
     for (var a = 0; a < oa.length; a++) {
         var an = 'ta' + a,
-            o = ebi(an) || mknod('a', an, 'download');
+            o = ebi(an) || mknod('a', an, 'Download');
 
         oa[a].setAttribute('id', 'tx' + a);
         oa[a].parentNode.insertBefore(o, oa[a]);

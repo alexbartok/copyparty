@@ -217,7 +217,7 @@ function convert_markdown(md_text, dest_dom) {
     }
     catch (ex) {
         if (IE) {
-            dest_dom.innerHTML = 'IE cannot into markdown ;_;';
+            dest_dom.innerHTML = 'Internet Explorer cannot render markdown';
             return false;
         }
 
@@ -512,8 +512,8 @@ var redraw = (function () {
 
 
 dom_navtgl.onclick = function () {
-    var hidden = dom_navtgl.innerHTML == 'hide nav';
-    dom_navtgl.innerHTML = hidden ? 'show nav' : 'hide nav';
+    var hidden = dom_nav.style.display != 'none';
+    dom_navtgl.innerHTML = hidden ? 'Show path bar' : 'Hide path bar';
     dom_nav.style.display = hidden ? 'none' : 'block';
 
     swrite('hidenav', hidden ? 1 : 0);

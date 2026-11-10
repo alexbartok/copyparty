@@ -34,32 +34,32 @@
 		<form method="post" enctype="multipart/form-data" accept-charset="utf-8" action="{{ url_suf }}">
 			<input type="hidden" name="act" value="bput" />
 			<input type="file" name="f" multiple /><br />
-			<input type="submit" value="start upload">
+			<input type="submit" value="Start upload">
 		</form>
-		<a id="bbsw" href="?b=u" rel="nofollow"><br />switch to basic browser</a>
+		<a id="bbsw" href="?b=u" rel="nofollow"><br />Switch to basic browser</a>
 	</div>
 
 	<div id="op_mkdir" class="opview opbox {% if not ls0 %}act{% endif %}">
 		<form method="post" enctype="multipart/form-data" accept-charset="utf-8" action="{{ url_suf }}">
 			<input type="hidden" name="act" value="mkdir" />
-			📂<input type="text" name="name" class="i" placeholder="awesome mix vol.1">
-			<input type="submit" value="make directory">
+			📂<input type="text" name="name" class="i" placeholder="folder name">
+			<input type="submit" value="Create folder">
 		</form>
 	</div>
 
 	<div id="op_new_md" class="opview opbox">
 		<form method="post" enctype="multipart/form-data" accept-charset="utf-8" action="{{ url_suf }}">
 			<input type="hidden" name="act" value="new_md" />
-			📝<input type="text" name="name" class="i" placeholder="weekend-plans">
-			<input type="submit" value="new file">
+			📝<input type="text" name="name" class="i" placeholder="file name">
+			<input type="submit" value="Create file">
 		</form>
 		<span id="new_mdi"></span>
 	</div>
 
 	<div id="op_msg" class="opview opbox {% if not ls0 %}act{% endif %}">
 		<form method="post" enctype="application/x-www-form-urlencoded" accept-charset="utf-8" action="{{ url_suf }}">
-			📟<input type="text" name="msg" class="i" placeholder="lorem ipsum dolor sit amet">
-			<input type="submit" value="send msg to srv log">
+			📟<input type="text" name="msg" class="i" placeholder="message">
+			<input type="submit" value="Send to server log">
 		</form>
 	</div>
 
@@ -91,8 +91,8 @@
 	<table id="files">
 		<thead>
 			<tr>
-				<th name="lead"><span>c</span></th>
-				<th name="href"><span>File Name</span></th>
+				<th name="lead"><span>Action</span></th>
+				<th name="href"><span>Name</span></th>
 				<th name="sz" sort="int"><span>Size</span></th>
 				{%- for k in taglist %}
 					{%- if k.startswith('.') %}
@@ -101,7 +101,7 @@
 				<th name="tags/{{ k }}"><span>{{ k[0]|upper }}{{ k[1:] }}</span></th>
 					{%- endif %}
 				{%- endfor %}
-				<th name="ext"><span>T</span></th>
+				<th name="ext"><span>Type</span></th>
 				<th name="ts"><span>Date</span></th>
 			</tr>
 		</thead>
@@ -119,9 +119,9 @@
 
 	<div id="epi" class="logue">{{ "" if sb_lg else logues[1] }}</div>
 
-	<h2 id="wfp"><a href="{{ r }}/?h" id="goh">control-panel</a></h2>
+	<h2 id="wfp"><a href="{{ r }}/?h" id="goh">Control panel</a></h2>
 
-	<p id="js_bork">Looks like javascript is broken; see "csp nonce" section in readme</p>
+	<p id="js_bork">JavaScript did not load; see the "csp nonce" section in the readme</p>
 
 	<a href="#" id="repl">π</a>
 

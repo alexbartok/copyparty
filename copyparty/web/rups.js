@@ -3,7 +3,7 @@
 var J_RUP = 1;
 
 function render() {
-    var html = ['<table id="tab"><thead><tr><th>size</th><th>who</th><th>ip</th><th>when</th><th>age</th><th>dir</th><th>file</th></tr></thead><tbody>'];
+    var html = ['<table id="tab"><thead><tr><th>size</th><th>user</th><th>IP address</th><th>uploaded</th><th>age</th><th>folder</th><th>file</th></tr></thead><tbody>'];
     var ups = V.ups, now = V.now;
     ebi('filter').value = V.filter;
     ebi('hits').innerHTML = 'showing ' + ups.length + ' files';

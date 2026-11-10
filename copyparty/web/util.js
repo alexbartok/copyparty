@@ -210,9 +210,9 @@ function vis_exh(msg, url, lineNo, columnNo, error) {
     crashed = true;
     window.onerror = undefined;
     var html = [
-        '<h1>you hit a bug!</h1>',
-        '<p style="font-size:1.3em;margin:0;line-height:2em">try to <a href="#" id="exh_wipecfg">reset copyparty settings</a> if you are stuck here, or <a href="#" id="exh_ignex">ignore this</a> / <a href="#" id="exh_ignexa">ignore all</a> / <a href="?b=u">basic</a></p>',
-        '<p style="color:#fff">please send me a screenshot arigathanks gozaimuch: <a href="<ghi>" target="_blank">new github issue</a></p>',
+        '<h1>Something went wrong</h1>',
+        '<p style="font-size:1.3em;margin:0;line-height:2em">try to <a href="#" id="exh_wipecfg">reset copyparty settings</a> if you are stuck here, or <a href="#" id="exh_ignex">ignore this</a> / <a href="#" id="exh_ignexa">ignore all</a> / <a href="?b=u">use the basic browser</a></p>',
+        '<p style="color:#fff">please report this with a screenshot: <a href="<ghi>" target="_blank">new github issue</a></p>',
         '<p class="b">' + esc(url + ' @' + lineNo + ':' + columnNo), '<br />' + esc(msg).replace(/\n/g, '<br />') + '</p>',
         '<p><b>UA:</b> ' + esc(UA)
     ];
@@ -339,7 +339,7 @@ function ev(e) {
     if (!e && window.event) {
         e = window.event;
         if (dev_fbw == 1) {
-            toast.warn(10, 'hello from fallback code ;_;\ncheck console trace');
+            toast.warn(10, 'using fallback code;\nsee the browser console for details');
             console.error('using window.event');
         }
     }
@@ -1126,7 +1126,7 @@ function humansize_fuzzy(b) {
 	if (b <= 50050000000) return "BD-DL";
 	return "LTO";
 }
-var humansize_fmts = ['0', '1', '2', '2c', '3', '3c', '4', '4c', '5', '5c', '6', '6c', '7', '7c', 'fuzzy'];
+var humansize_fmts = ['0', '1', '2', '2c', '3', '3c', '4', '4c', '5', '5c', '6', '6c', '7', '7c'];
 window.filesizefun = (function () {
     var v = sread('fszfmt', humansize_fmts);
     return window['humansize_' + (v || window.dfszf)] || humansize_1;
@@ -1941,7 +1941,7 @@ var modal = (function () {
         }
         catch (ex) {
             if (r.busy)
-                alert('WARNING: you have a browser-extension which is causing problems');
+                alert('WARNING: one of your browser extensions is causing problems');
         }
         r.busy = false;
         setTimeout(next, 50);
@@ -2416,7 +2416,7 @@ function xhrchk(xhr, prefix, e404, lvl, tag) {
             return;
 
         cf_cha_t = now;
-        errtxt = 'Clou' + wah + 'dflare protection kicked in\n\n<strong>trying to fix it...</strong>';
+        errtxt = 'Clou' + wah + 'dflare protection was triggered\n\n<strong>trying to fix it...</strong>';
         fun = toast.warn;
 
         qsr('#cf_frame');

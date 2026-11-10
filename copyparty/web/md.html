@@ -18,26 +18,26 @@
 <body>
 	<div id="mn"></div>
 	<div id="mh">
-		<a id="lightswitch" href="#">go dark</a>
-		<a id="navtoggle" href="#">hide nav</a>
+		<a id="lightswitch" href="#" tt="switch between the light and the dark theme">Dark mode</a>
+		<a id="navtoggle" href="#" tt="show or hide the path bar at the top">Hide path bar</a>
 		{%- if edit %}
-			<a id="save" href="{{ arg_base }}edit" tt="Hotkey: ctrl-s">save</a>
-			<a id="sbs" href="#" tt="editor and preview side by side">sbs</a>
-			<a id="nsbs" href="#" tt="switch between editor and preview$NHotkey: ctrl-e">editor</a>
+			<a id="save" href="{{ arg_base }}edit" tt="save the document on the server$NHotkey: ctrl-s">Save</a>
+			<a id="sbs" href="#" tt="show the editor and the preview side by side">Side by side</a>
+			<a id="nsbs" href="#" mode="editor" tt="switch between editor and preview$NHotkey: ctrl-e">Editor only</a>
 			<div id="toolsbox">
-				<a id="tools" href="#">tools</a>
-				<a id="fmt_table" href="#">beautify table (ctrl-k)</a>
-				<a id="fmt_json" href="#">beautify json (ctrl-j)</a>
-				<a id="iter_uni" href="#">non-ascii: iterate (ctrl-u)</a>
-				<a id="mark_uni" href="#">non-ascii: markup</a>
-				<a id="cfg_uni" href="#">non-ascii: whitelist</a>
-				<a id="help" href="#">help</a>
+				<a id="tools" href="#">Tools</a>
+				<a id="fmt_table" href="#">Format table (ctrl-k)</a>
+				<a id="fmt_json" href="#">Format JSON (ctrl-j)</a>
+				<a id="iter_uni" href="#">Non-ASCII: go to next (ctrl-u)</a>
+				<a id="mark_uni" href="#">Non-ASCII: mark all</a>
+				<a id="cfg_uni" href="#">Non-ASCII: allowed characters</a>
+				<a id="help" href="#">Help</a>
 			</div>
 			<span id="lno">L#</span>
 		{%- else %}
-			<a href="{{ arg_base }}edit" tt="good: higher performance$Ngood: same document width as viewer$Nbad: assumes you know markdown">edit (basic)</a>
-			<a href="{{ arg_base }}edit2" id="edit2" tt="not in-house so probably less buggy">edit (fancy)</a>
-			<a href="{{ arg_base }}">view raw</a>
+			<a href="{{ arg_base }}edit" tt="faster, and uses the same document width as the viewer;$Nyou need to know markdown">Edit (basic)</a>
+			<a href="{{ arg_base }}edit2" id="edit2" tt="third-party editor (EasyMDE) with a toolbar and a preview">Edit (rich editor)</a>
+			<a href="{{ arg_base }}">View raw</a>
 		{%- endif %}
 	</div>
 	<div id="toc"></div>
@@ -59,7 +59,7 @@
 	<div id="helpbox">
 		<textarea autocomplete="off">
 
-write markdown (most html is 🙆 too)
+write markdown (most html works too)
 
 ## hotkey list
 * `Ctrl-S` to save
@@ -70,12 +70,12 @@ write markdown (most html is 🙆 too)
 * `TAB` / `Shift-TAB` to indent/dedent a selection
 
 ## toolbar
-1. toggle dark mode
-2. show/hide navigation bar
-3. save changes on server
-4. side-by-side editing
-5. toggle editor/preview
-6. this thing :^)
+1. switch between light and dark mode
+2. show or hide the path bar
+3. save changes on the server
+4. editor and preview side by side
+5. switch between editor and preview
+6. tools and this help
 
 ## markdown
 |||
@@ -86,7 +86,6 @@ write markdown (most html is 🙆 too)
 |`` `code` ``|`code`|
 |`[](#hotkey-list)`|[](#hotkey-list)|
 |`[](/foo/bar.md#header)`|[](/foo/bar.md#header)|
-|`<blink>💯</blink>`|<blink>💯</blink>|
 
 ## tables
     |left-aligned|centered|right-aligned
@@ -117,7 +116,7 @@ write markdown (most html is 🙆 too)
 > hello
 
 ## codeblock
-		four spaces (no tab pls)
+		four spaces (no tabs)
 
 ## code in lists
 	* foo
@@ -141,12 +140,14 @@ var SR = "{{ r }}",
 
 (function () {
 	var l = window.localStorage,
-		drk = (l && l.light) != 1,
+		thm = (l && l.cpp_thm) || "{{ dtheme }}",
+		tf = thm.charAt(0) == "f",
+		drk = l && l.light != null ? l.light != 1 : !(tf && thm.charAt(1) == "y"),
 		btn = document.getElementById("lightswitch"),
 		f = function (e) {
 if (e) { e.preventDefault(); drk = !drk; }
-document.documentElement.className = drk? "z":"y";
-btn.innerHTML = "go " + (drk ? "light":"dark");
+document.documentElement.className = tf ? (drk? "fz f z":"fy f y") : (drk? "z":"y");
+btn.innerHTML = drk ? "Light mode":"Dark mode";
 try { l.light = drk? 0:1; } catch (ex) { }
 		};
 	btn.onclick = f;

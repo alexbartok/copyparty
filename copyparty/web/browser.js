@@ -12,29 +12,30 @@ if (1)
 		"tt": "English",
 
 		"cols": {
-			"c": "action buttons",
-			"dur": "duration",
-			"q": "quality / bitrate",
-			"Ac": "audio codec",
-			"Vc": "video codec",
-			"Fmt": "format / container",
-			"Ahash": "audio checksum",
-			"Vhash": "video checksum",
-			"Res": "resolution",
-			"T": "filetype",
-			"aq": "audio quality / bitrate",
-			"vq": "video quality / bitrate",
-			"pixfmt": "subsampling / pixel structure",
-			"resw": "horizontal resolution",
-			"resh": "vertical resolution",
-			"chs": "audio channels",
-			"hz": "sample rate",
+			"c": "Action buttons",
+			"Action": "Quick actions: play, download as zip, view as text",
+			"dur": "Duration",
+			"q": "Quality / bitrate",
+			"Ac": "Audio codec",
+			"Vc": "Video codec",
+			"Fmt": "Format / container",
+			"Ahash": "Audio checksum",
+			"Vhash": "Video checksum",
+			"Res": "Resolution",
+			"T": "Filetype",
+			"aq": "Audio quality / bitrate",
+			"vq": "Video quality / bitrate",
+			"pixfmt": "Subsampling / pixel structure",
+			"resw": "Horizontal resolution",
+			"resh": "Vertical resolution",
+			"chs": "Audio channels",
+			"hz": "Sample rate",
 		},
 
 		"hks": [
 			[
 				"misc",
-				["ESC", "close various things"],
+				["ESC", "close the open panel or dialog"],
 
 				"file-manager",
 				["G", "toggle list / grid view"],
@@ -56,28 +57,28 @@ if (1)
 				["ctrl-A", "select all files / folders"],
 			], [
 				"navigation",
-				["B", "toggle breadcrumbs / navpane"],
+				["B", "toggle breadcrumbs / folder tree"],
 				["I/K", "prev/next folder"],
 				["M", "parent folder (or unexpand current)"],
-				["V", "toggle folders / textfiles in navpane"],
-				["A/D", "navpane size"],
+				["V", "toggle folders / textfiles in folder tree"],
+				["A/D", "folder tree size"],
 			], [
 				"audio-player",
 				["J/L", "prev/next song"],
 				["U/O", "skip 10sec back/fwd"],
 				["0..9", "jump to 0%..90%"],
-				["P", "play/pause (also initiates)"],
+				["P", "play/pause (also starts playback)"],
 				["S", "select playing song"],
 				["Y", "download song"],
 			], [
 				"image-viewer",
-				["J/L, ←/→", "prev/next pic"],
-				["Home/End", "first/last pic"],
+				["J/L, ←/→", "prev/next picture"],
+				["Home/End", "first/last picture"],
 				["F", "fullscreen"],
 				["R", "rotate clockwise"],
-				["⇧ R", "rotate ccw"],
-				["S", "select pic"],
-				["Y", "download pic"],
+				["⇧ R", "rotate counterclockwise"],
+				["S", "select picture"],
+				["Y", "download picture"],
 			], [
 				"video-player",
 				["U/O", "skip 10sec back/fwd"],
@@ -114,78 +115,78 @@ if (1)
 		"ht_d2": "days",
 		"ht_and": " and ",
 
-		"goh": "control-panel",
-		"gop": 'previous sibling">prev',
-		"gou": 'parent folder">up',
-		"gon": 'next folder">next',
-		"logout": "Logout ",
-		"login": "Login",
+		"goh": "Control panel",
+		"gop": 'Go to the previous folder on the same level$NHotkey: I">prev',
+		"gou": 'Go to the parent folder$NHotkey: M">up',
+		"gon": 'Go to the next folder on the same level$NHotkey: K">next',
+		"logout": "Log out ",
+		"login": "Log in",
 		"access": " access",
-		"ot_close": "close submenu",
-		"ot_search": "`search for files by attributes, path / name, music tags, or any combination of those$N$N`foo bar` = must contain both «foo» and «bar»,$N`foo -bar` = must contain «foo» but not «bar»,$N`^yana .opus$` = start with «yana» and be an «opus» file$N`&quot;try unite&quot;` = contain exactly «try unite»$N$Nthe date format is iso-8601, like$N`2009-12-31` or `2020-09-12 23:30:00`",
-		"ot_unpost": "unpost: delete your recent uploads, or abort unfinished ones",
-		"ot_bup": "bup: basic uploader, even supports netscape 4.0",
-		"ot_mkdir": "mkdir: create a new directory",
-		"ot_md": "new-file: create a new textfile",
-		"ot_msg": "msg: send a message to the server log",
-		"ot_mp": "media player options",
-		"ot_cfg": "configuration options",
-		"ot_u2i": 'up2k: upload files (if you have write-access) or toggle into the search-mode to see if they exist somewhere on the server$N$Nuploads are resumable, multithreaded, and file timestamps are preserved, but it uses more CPU than [🎈]&nbsp; (the basic uploader)<br /><br />during uploads, this icon becomes a progress indicator!',
-		"ot_u2w": 'up2k: upload files with resume support (close your browser and drop the same files in later)$N$Nmultithreaded, and file timestamps are preserved, but it uses more CPU than [🎈]&nbsp; (the basic uploader)<br /><br />during uploads, this icon becomes a progress indicator!',
+		"ot_close": "Close this panel$NHotkey: Esc",
+		"ot_search": "`Search for files by attributes, path / name, music tags, or any combination of those$N$N`foo bar` = must contain both «foo» and «bar»,$N`foo -bar` = must contain «foo» but not «bar»,$N`^yana .opus$` = start with «yana» and be an «opus» file$N`&quot;try unite&quot;` = contain exactly «try unite»$N$Nthe date format is iso-8601, like$N`2009-12-31` or `2020-09-12 23:30:00`",
+		"ot_unpost": "Recent uploads: delete your recent uploads, or stop unfinished ones (unpost)",
+		"ot_bup": "Basic uploader: a simple upload form which also works in very old browsers",
+		"ot_mkdir": "Create a new folder",
+		"ot_md": "Create a new text file",
+		"ot_msg": "Send a message to the server log",
+		"ot_mp": "Media player options",
+		"ot_cfg": "Settings",
+		"ot_u2i": 'Upload files (if you have write-access), or switch to search mode to check if they already exist somewhere on the server$N$NUploads are resumable, multithreaded, and file timestamps are preserved, but this uploader (up2k) uses more CPU than the basic uploader<br /><br />During uploads, this icon becomes a progress indicator',
+		"ot_u2w": 'Upload files with resume support (close your browser and drop the same files in later)$N$NMultithreaded, and file timestamps are preserved, but this uploader (up2k) uses more CPU than the basic uploader<br /><br />During uploads, this icon becomes a progress indicator',
 		"ot_noie": 'Please use Chrome / Firefox / Edge',
 
-		"ab_mkdir": "make directory",
-		"ab_mkdoc": "new textfile",
-		"ab_msg": "send msg to srv log",
+		"ab_mkdir": "Create folder",
+		"ab_mkdoc": "Create file",
+		"ab_msg": "Send to server log",
 
 		"ay_path": "skip to folders",
 		"ay_files": "skip to files",
 
-		"wt_ren": "rename selected items$NHotkey: F2",
-		"wt_del": "delete selected items$NHotkey: ctrl-K",
-		"wt_cut": "cut selected items &lt;small&gt;(then paste somewhere else)&lt;/small&gt;$NHotkey: ctrl-X",
-		"wt_cpy": "copy selected items to clipboard$N(to paste them somewhere else)$NHotkey: ctrl-C",
-		"wt_pst": "paste a previously cut / copied selection$NHotkey: ctrl-V",
-		"wt_selall": "select all files$NHotkey: ctrl-A (when file focused)",
-		"wt_selinv": "invert selection",
-		"wt_zip1": "download this folder as archive",
-		"wt_selzip": "download selection as archive",
-		"wt_seldl": "download selection as separate files$NHotkey: Y",
-		"wt_npirc": "copy irc-formatted track info",
-		"wt_nptxt": "copy plaintext track info",
-		"wt_m3ua": "add to m3u playlist (click <code>📻copy</code> later)",
-		"wt_m3uc": "copy m3u playlist to clipboard",
-		"wt_grid": "toggle grid / list view$NHotkey: G",
-		"wt_prev": "previous track$NHotkey: J",
-		"wt_play": "play / pause$NHotkey: P",
-		"wt_next": "next track$NHotkey: L",
+		"wt_ren": "Rename the selected items$NHotkey: F2",
+		"wt_del": "Delete the selected items$NHotkey: ctrl-K",
+		"wt_cut": "Cut the selected items (then paste them somewhere else)$NHotkey: ctrl-X",
+		"wt_cpy": "Copy the selected items (then paste them somewhere else)$NHotkey: ctrl-C",
+		"wt_pst": "Paste the items you cut or copied$NHotkey: ctrl-V",
+		"wt_selall": "Select all files$NHotkey: ctrl-A (when a file has focus)",
+		"wt_selinv": "Invert the selection",
+		"wt_zip1": "Download this folder as an archive",
+		"wt_selzip": "Download the selection as an archive",
+		"wt_seldl": "Download the selection as separate files$NHotkey: Y",
+		"wt_npirc": "Copy track info, formatted for IRC",
+		"wt_nptxt": "Copy track info as plain text",
+		"wt_m3ua": "Add to the m3u playlist (then click the <code>copy</code> button next to this one)",
+		"wt_m3uc": "Copy the m3u playlist to the clipboard",
+		"wt_grid": "Switch between grid view and list view$NHotkey: G",
+		"wt_prev": "Previous track$NHotkey: J",
+		"wt_play": "Play / pause$NHotkey: P",
+		"wt_next": "Next track$NHotkey: L",
 
 		"ul_par": "parallel uploads:",
-		"ut_rand": "randomize filenames",
-		"ut_u2ts": "copy the last-modified timestamp$Nfrom your filesystem to the server\">📅",
-		"ut_ow": "overwrite existing files on the server?$N🛡️: never (will generate a new filename instead)$N🕒: overwrite if server-file is older than yours$N♻️: always overwrite if the files are different$N⏭️: unconditionally skip all existing files",
-		"ut_mt": "continue hashing other files while uploading$N$Nmaybe disable if your CPU or HDD is a bottleneck",
-		"ut_ask": 'ask for confirmation before upload starts">💭',
-		"ut_pot": "improve upload speed on slow devices$Nby making the UI less complex",
-		"ut_srch": "don't actually upload, instead check if the files already $N exist on the server (will scan all folders you can read)",
-		"ut_par": "pause uploads by setting it to 0$N$Nincrease if your connection is slow / high latency$N$Nkeep it 1 on LAN or if the server HDD is a bottleneck",
-		"ul_btn": "drop files / folders<br>here (or click me)",
-		"ul_btnu": "U P L O A D",
-		"ul_btns": "S E A R C H",
+		"ut_rand": "Give the uploaded files random names",
+		"ut_u2ts": "Copy the last-modified timestamp$Nfrom your filesystem to the server\">Keep timestamps",
+		"ut_ow": "Overwrite existing files on the server?$N🛡️: never (will generate a new filename instead)$N🕒: overwrite if server-file is older than yours$N♻️: always overwrite if the files are different$N⏭️: unconditionally skip all existing files",
+		"ut_mt": "Continue hashing other files while uploading$N$NConsider disabling this if your CPU or disk is a bottleneck",
+		"ut_ask": 'Ask for confirmation before an upload starts">Ask before upload',
+		"ut_pot": "Use a simpler UI, which improves$Nthe upload speed on slow devices",
+		"ut_srch": "Do not upload; instead check whether the files already $N exist on the server (scans all folders you can read)",
+		"ut_par": "Number of parallel uploads; set it to 0 to pause uploads$N$NIncrease it if your connection is slow / high latency$N$NKeep it at 1 on a LAN or if the server disk is a bottleneck",
+		"ul_btn": "drop files / folders<br>here (or click to choose)",
+		"ul_btnu": "Upload",
+		"ul_btns": "Search",
 
 		"ul_hash": "hash",
 		"ul_send": "send",
 		"ul_done": "done",
 		"ul_idle1": "no uploads are queued yet",
-		"ut_etah": "average &lt;em&gt;hashing&lt;/em&gt; speed, and estimated time until finish",
-		"ut_etau": "average &lt;em&gt;upload&lt;/em&gt; speed and estimated time until finish",
-		"ut_etat": "average &lt;em&gt;total&lt;/em&gt; speed and estimated time until finish",
+		"ut_etah": "Average &lt;em&gt;hashing&lt;/em&gt; speed and estimated time until finish",
+		"ut_etau": "Average &lt;em&gt;upload&lt;/em&gt; speed and estimated time until finish",
+		"ut_etat": "Average &lt;em&gt;total&lt;/em&gt; speed and estimated time until finish",
 
-		"uct_ok": "completed successfully",
-		"uct_ng": "no-good: failed / rejected / not-found",
-		"uct_done": "ok and ng combined",
-		"uct_bz": "hashing or uploading",
-		"uct_q": "idle, pending",
+		"uct_ok": "Completed successfully",
+		"uct_ng": "Failed, rejected or not found",
+		"uct_done": "Completed and failed combined",
+		"uct_bz": "Hashing or uploading",
+		"uct_q": "Waiting in the queue",
 
 		"utl_name": "filename",
 		"utl_ulist": "list",
@@ -200,173 +201,191 @@ if (1)
 		"utl_oserr": "OS-error",
 		"utl_found": "found",
 		"utl_defer": "defer",
-		"utl_yolo": "YOLO",
+		"utl_yolo": "TURBO",
 		"utl_done": "done",
 
-		"ul_flagblk": "the files were added to the queue</b><br>however there is a busy up2k in another browser tab,<br>so waiting for that to finish first",
+		"ul_flagblk": "the files were added to the queue</b><br>however, another browser tab is uploading,<br>so this upload waits until that one has finished",
 		"ul_btnlk": "the server configuration has locked this switch into this state",
 
 		"udt_up": "Upload",
 		"udt_srch": "Search",
 		"udt_drop": "drop it here",
 
-		"u_nav_m": '<h6>aight, what do you have?</h6><code>Enter</code> = Files (one or more)\n<code>ESC</code> = One folder (including subfolders)',
+		"u_nav_m": '<h6>What do you want to upload?</h6><code>Enter</code> = Files (one or more)\n<code>ESC</code> = One folder (including subfolders)',
 		"u_nav_b": '<a href="#" id="modal-ok">Files</a><a href="#" id="modal-ng">One folder</a>',
 
-		"cl_opts": "switches",
-		"cl_hfsz": "filesize",
-		"cl_themes": "theme",
-		"cl_langs": "language",
-		"cl_ziptype": "folder download",
-		"cl_uopts": "up2k switches",
-		"cl_favico": "favicon",
-		"cl_bigdir": "big dirs",
-		"cl_hsort": "#sort",
-		"cl_keytype": "key notation",
-		"cl_hiddenc": "hidden columns",
+		"cl_opts": "View options",
+		"cl_hfsz": "File size format",
+		"cl_themes": "Theme",
+		"cl_langs": "Language",
+		"cl_ziptype": "Folder download format",
+		"cl_uopts": "Upload options",
+		"cl_favico": "Favicon",
+		"cl_bigdir": "Large folders",
+		"cl_hsort": "Sort rules in links",
+		"cl_keytype": "Musical key notation",
+		"cl_hiddenc": "Hidden columns",
 		"cl_hidec": "hide",
 		"cl_reset": "reset",
 		"cl_hpick": "tap on column headers to hide in the table below",
-		"cl_hcancel": "column hiding aborted",
-		"cl_rcm": "right-click menu",
-		"cl_gauto": "autogrid",
+		"cl_hcancel": "column hiding cancelled",
+		"cl_rcm": "Right-click menu",
+		"cl_gauto": "Automatic grid view",
 
-		"ct_grid": '田 the grid',
-		"ct_ttips": '◔ ◡ ◔">ℹ️ tooltips',
-		"ct_thumb": 'in grid-view, toggle icons or thumbnails$NHotkey: T">🖼️ thumbs',
-		"ct_csel": 'use CTRL and SHIFT for file selection in grid-view">sel',
-		"ct_dsel": 'use drag-selection in grid-view">dsel',
-		"ct_dl": 'force download (don\'t display inline) when a file is clicked">dl',
-		"ct_ihop": 'when the image viewer is closed, scroll down to the last viewed file">g⮯',
-		"ct_dots": 'show hidden files (if server permits)">dotfiles',
-		"ct_qdel": 'when deleting files, only ask for confirmation once">qdel',
-		"ct_dir1st": 'sort folders before files">📁 first',
-		"ct_nsort": 'natural sort (for filenames with leading digits)">nsort',
-		"ct_utc": 'show all datetimes in UTC">UTC',
-		"ct_readme": 'show README.md in folder listings">📜 readme',
-		"ct_idxh": 'show index.html instead of folder listing">htm',
-		"ct_sbars": 'show scrollbars">⟊',
+		"ct_grid": 'Grid view',
+		"ct_ttips": 'Show a help text when you point at a control">Tooltips',
+		"ct_thumb": 'In grid view, show thumbnails instead of icons$NHotkey: T">Thumbnails',
+		"ct_csel": 'In grid view, select files with ctrl-click and shift-click">Ctrl/Shift select',
+		"ct_dsel": 'In grid view, select files by dragging">Drag select',
+		"ct_dl": 'Download a file when you click it, instead of showing it in the browser">Force download',
+		"ct_ihop": 'When the image viewer is closed, scroll down to the last viewed file">Scroll to last image',
+		"ct_dots": 'Show hidden files (if the server permits)">Hidden files',
+		"ct_qdel": 'When deleting files, ask for confirmation only once">Confirm delete once',
+		"ct_dir1st": 'Sort folders before files">Folders first',
+		"ct_nsort": 'Natural sort (for filenames with leading digits)">Natural sort',
+		"ct_utc": 'Show all dates and times in UTC">UTC',
+		"ct_readme": 'Show README.md in folder listings">Show README',
+		"ct_idxh": 'Show index.html instead of the folder listing">Show index.html',
+		"ct_sbars": 'Show scrollbars">Scrollbars',
 
-		"cut_umod": "if a file already exists on the server, update the server's last-modified timestamp to match your local file (requires write+delete permissions)\">re📅",
+		"cut_umod": "If a file already exists on the server, update the server's last-modified timestamp to match your local file (requires write+delete permissions)\">Update timestamps",
 
-		"cut_turbo": "the yolo button, you probably DO NOT want to enable this:$N$Nuse this if you were uploading a huge amount of files and had to restart for some reason, and want to continue the upload ASAP$N$Nthis replaces the hash-check with a simple <em>&quot;does this have the same filesize on the server?&quot;</em> so if the file contents are different it will NOT be uploaded$N$Nyou should turn this off when the upload is done, and then &quot;upload&quot; the same files again to let the client verify them\">turbo",
+		"cut_turbo": "You probably do NOT want to enable this:$N$NUse this if you were uploading a huge amount of files and had to restart for some reason, and want to continue the upload as soon as possible$N$NThis replaces the hash-check with a simple <em>&quot;does this have the same filesize on the server?&quot;</em> so a file with different contents will NOT be uploaded$N$NTurn this off when the upload is done, and then &quot;upload&quot; the same files again to let the client verify them\">Turbo",
 
-		"cut_datechk": "has no effect unless the turbo button is enabled$N$Nreduces the yolo factor by a tiny amount; checks whether the file timestamps on the server matches yours$N$Nshould <em>theoretically</em> catch most unfinished / corrupted uploads, but is not a substitute for doing a verification pass with turbo disabled afterwards\">date-chk",
+		"cut_datechk": "Has no effect unless turbo is enabled$N$NMakes turbo slightly safer; checks whether the file timestamps on the server match yours$N$NShould <em>theoretically</em> catch most unfinished / corrupted uploads, but is not a substitute for doing a verification pass with turbo disabled afterwards\">Date check",
 
-		"cut_u2sz": "size (in MiB) of each upload chunk; big values fly better across the atlantic. Try low values on very unreliable connections",
+		"cut_u2sz": "Size (in MiB) of each upload chunk; large values work better on long-distance connections. Try low values on very unreliable connections",
 
-		"cut_flag": "ensure only one tab is uploading at a time $N -- other tabs must have this enabled too $N -- only affects tabs on the same domain",
+		"cut_flag": "Allow only one tab to upload at a time $N -- other tabs must have this enabled too $N -- only affects tabs on the same domain",
 
-		"cut_az": "upload files in alphabetical order, rather than smallest-file-first$N$Nalphabetical order can make it easier to eyeball if something went wrong on the server, but it makes uploading slightly slower on fiber / LAN",
+		"cut_az": "Upload files in alphabetical order instead of smallest-file-first$N$NAlphabetical order can make it easier to check by eye whether something went wrong on the server, but it makes uploading slightly slower on fiber / LAN",
 
-		"cut_nag": "OS notification when upload completes$N(only if the browser or tab is not active)",
-		"cut_sfx": "audible alert when upload completes$N(only if the browser or tab is not active)",
+		"cut_nag": "Show an OS notification when the upload completes$N(only if the browser or tab is not active)",
+		"cut_sfx": "Play a sound when the upload completes$N(only if the browser or tab is not active)",
 
-		"cut_mt": "use multithreading to accelerate file hashing$N$Nthis uses web-workers and requires$Nmore RAM (up to 512 MiB extra)$N$Nmakes https 30% faster, http 4.5x faster\">mt",
+		"cut_mt": "Use multithreading to accelerate file hashing$N$NThis uses web-workers and requires$Nmore RAM (up to 512 MiB extra)$N$NMakes https 30% faster, http 4.5x faster\">Multithreaded hashing",
 
-		"cut_wasm": "use wasm instead of the browser's built-in hasher; improves speed on chrome-based browsers but increases CPU load, and many older versions of chrome have bugs which makes the browser consume all RAM and crash if this is enabled\">wasm",
+		"cut_wasm": "Use WebAssembly (wasm) instead of the browser's built-in hasher; improves speed on chrome-based browsers but increases CPU load, and many older versions of chrome have bugs which make the browser use all RAM and crash if this is enabled\">WASM hasher",
 
-		"cft_text": "favicon text (blank and refresh to disable)",
-		"cft_fg": "foreground color",
-		"cft_bg": "background color",
+		"cft_text": "Favicon text (clear it and refresh the page to disable)",
+		"cft_fg": "Foreground color",
+		"cft_bg": "Background color",
 
-		"cdt_lim": "max number of files to show in a folder",
-		"cdt_ask": "when scrolling to the bottom,$Ninstead of loading more files,$Nask what to do",
-		"cdt_hsort": "`how many sorting rules (`,sorthref`) to include in media-URLs. Setting this to 0 will also ignore sorting-rules included in media links when clicking them",
-		"cdt_ren": "enable custom right-click menu, you can still access the regular menu by pressing the shift key and right-clicking\">enable",
-		"cdt_rdb": "show the regular right-click menu when the custom one is already open and right-clicking again\">double",
+		"cdt_lim": "Maximum number of files to show in a folder",
+		"cdt_ask": "When scrolling to the bottom,$Nask what to do instead$Nof loading more files",
+		"cdt_hsort": "`How many sorting rules (`,sorthref`) to include in media-URLs. Setting this to 0 will also ignore sorting-rules included in media links when clicking them",
+		"cdt_ren": "Enable the custom right-click menu; the browser's own menu is still available with shift + right-click\">Enable",
+		"cdt_rdb": "Show the browser's own menu when you right-click while the custom menu is open\">Double click for browser menu",
 
-		"tt_entree": "show navpane (directory tree sidebar)$NHotkey: B",
-		"tt_detree": "show breadcrumbs$NHotkey: B",
-		"tt_visdir": "scroll to selected folder",
-		"tt_ftree": "toggle folder-tree / textfiles$NHotkey: V",
-		"tt_pdock": "show parent folders in a docked pane at the top",
-		"tt_dynt": "autogrow as tree expands",
-		"tt_wrap": "word wrap",
-		"tt_hover": "reveal overflowing lines on hover$N( breaks scrolling unless mouse $N&nbsp; cursor is in the left gutter )",
-		"tt_gauto": "display as grid or list depending on folder contents",
-		"tt_gathr": "use grid if this percentage of files are pics/vids",
+		"tt_entree": "Show the folder tree$NHotkey: B",
+		"tt_detree": "Hide the folder tree and show breadcrumbs$NHotkey: B",
+		"tt_wider": "Make the folder pane wider$NHotkey: D",
+		"tt_narrower": "Make the folder pane narrower$NHotkey: A",
+		"tt_repl": "Open the JavaScript console (for debugging)",
+		"wt_mp": "Show or hide the media player",
+		"ut_par1": "Fewer parallel uploads",
+		"ut_par2": "More parallel uploads",
+		"gt_z1": "Smaller thumbnails$NHotkey: shift-A",
+		"gt_z2": "Larger thumbnails$NHotkey: shift-D",
+		"fsi_f1": "file",
+		"fsi_f2": "files",
+		"tt_visdir": "Scroll to the selected folder",
+		"tt_ftree": "Switch between the folder tree and the list of text files$NHotkey: V",
+		"tt_pdock": "Show parent folders in a docked pane at the top",
+		"tt_dynt": "Widen the pane as the tree expands",
+		"tt_wrap": "Wrap long folder names",
+		"tt_hover": "Reveal overflowing lines on hover$N( breaks scrolling unless the mouse $N&nbsp; cursor is in the left gutter )",
+		"tt_gauto": "Show a grid or a list, depending on the folder contents",
+		"tt_gathr": "Use the grid if this percentage of the files are pictures or videos",
 
-		"ml_pmode": "at end of folder...",
-		"ml_btns": "cmds",
-		"ml_tcode": "transcode",
-		"ml_tcode2": "transcode to",
-		"ml_tint": "tint",
-		"ml_eq": "audio equalizer",
-		"ml_drc": "dynamic range compressor",
-		"ml_ss": "skip silence",
+		"ml_opts": "Playback options",
+		"tab_view": "View",
+		"tab_look": "Appearance",
+		"tab_files": "Files",
+		"tab_up": "Upload",
+		"tab_play": "Playback",
+		"tab_conv": "Conversion",
+		"tab_snd": "Sound",
+		"ml_pmode": "At end of folder",
+		"ml_btns": "Actions",
+		"ml_tcode": "Convert while playing",
+		"ml_tcode2": "Convert to",
+		"ml_tint": "Seekbar tint",
+		"ml_eq": "Equalizer",
+		"ml_drc": "Dynamic range compressor",
+		"ml_ss": "Skip silence",
 
-		"mt_loop": "loop/repeat one song\">🔁",
-		"mt_one": "stop after one song\">1️⃣",
-		"mt_shuf": "shuffle the songs in each folder\">🔀",
-		"mt_aplay": "autoplay if there is a song-ID in the link you clicked to access the server$N$Ndisabling this will also stop the page URL from being updated with song-IDs when playing music, to prevent autoplay if these settings are lost but the URL remains\">a▶",
-		"mt_preload": "start loading the next song near the end for gapless playback\">preload",
-		"mt_prescan": "go to the next folder before the last song$Nends, keeping the webbrowser happy$Nso it doesn't stop the playback\">nav",
-		"mt_fullpre": "try to preload the entire song;$N✅ enable on <b>unreliable</b> connections,$N❌ <b>disable</b> on slow connections probably\">full",
-		"mt_fau": "on phones, prevent music from stopping if the next song doesn't preload fast enough (can make tags display glitchy)\">☕️",
-		"mt_waves": "waveform seekbar:$Nshow audio amplitude in the scrubber\">~s",
-		"mt_npclip": "show buttons for clipboarding the currently playing song\">/np",
-		"mt_m3u_c": "show buttons for clipboarding the$Nselected songs as m3u8 playlist entries\">📻",
-		"mt_octl": "os integration (media hotkeys / osd)\">os-ctl",
-		"mt_oseek": "allow seeking through os integration$N$Nnote: on some devices (iPhones),$Nthis replaces the next-song button\">seek",
-		"mt_oscv": "show album cover in osd\">art",
-		"mt_follow": "keep the playing track scrolled into view\">🎯",
-		"mt_compact": "compact controls\">⟎",
-		"mt_uncache": "clear cache &nbsp;(try this if your browser cached$Na broken copy of a song so it refuses to play)\">uncache",
-		"mt_mloop": "loop the open folder\">🔁 loop",
-		"mt_mnext": "load the next folder and continue\">📂 next",
-		"mt_mstop": "stop playback\">⏸ stop",
-		"mt_cflac": "convert flac / wav to {0}\">flac",
-		"mt_caac": "convert aac / m4a to {0}\">aac",
-		"mt_coth": "convert all others (not mp3) to {0}\">oth",
-		"mt_c2opus": "best choice for desktops, laptops, android\">opus",
-		"mt_c2owa": "opus-weba, for iOS 17.5 and newer\">owa",
-		"mt_c2caf": "opus-caf, for iOS 11 through 17\">caf",
-		"mt_c2mp3": "use this on very old devices\">mp3",
-		"mt_c2flac": "best sound quality, but huge downloads\">flac",
-		"mt_c2wav": "uncompressed playback (even bigger)\">wav",
-		"mt_c2ok": "nice, good choice",
-		"mt_c2nd": "that's not the recommended output format for your device, but that's fine",
-		"mt_c2ng": "your device does not seem to support this output format, but let's try anyways",
+		"mt_loop": "Repeat the current song\">Repeat one",
+		"mt_one": "Stop after one song\">Stop after one",
+		"mt_shuf": "Shuffle the songs in each folder\">Shuffle",
+		"mt_aplay": "Start playing if the link you opened contains a song-ID$N$NDisabling this also stops the page URL from being updated with song-IDs when playing music, to prevent autoplay if these settings are lost but the URL remains\">Autoplay from link",
+		"mt_preload": "Start loading the next song near the end, for gapless playback\">Preload next",
+		"mt_prescan": "Go to the next folder before the last song$Nends, so that the browser does not$Nstop the playback\">Preload next folder",
+		"mt_fullpre": "Try to preload the entire song;$N<b>enable</b> on unreliable connections,$N<b>disable</b> on slow connections\">Preload whole song",
+		"mt_fau": "On phones, prevent music from stopping if the next song doesn't preload fast enough (the tag display may flicker)\">Keep playing",
+		"mt_waves": "Waveform seekbar:$Nshow the audio amplitude in the seekbar\">Waveform",
+		"mt_npclip": "Show buttons which copy info about the playing song to the clipboard\">Copy track info",
+		"mt_m3u_c": "Show buttons which copy the selected$Nsongs as m3u8 playlist entries\">Playlist buttons",
+		"mt_octl": "Operating system integration (media keys / on-screen display)\">Media keys",
+		"mt_oseek": "Allow seeking with the media controls of the operating system$N$NNote: on some devices (iPhones),$Nthis replaces the next-song button\">Seek with media keys",
+		"mt_oscv": "Show the album cover in the media controls of the operating system\">Cover in OS",
+		"mt_follow": "Keep the playing track scrolled into view\">Follow track",
+		"mt_compact": "Use compact player controls\">Compact",
+		"mt_uncache": "Clear the cache &nbsp;(try this if your browser cached$Na broken copy of a song so it refuses to play)\">Clear cache",
+		"mt_mloop": "Loop the open folder\">Loop folder",
+		"mt_mnext": "Load the next folder and continue\">Next folder",
+		"mt_mstop": "Stop the playback\">Stop",
+		"mt_cflac": "Convert flac / wav to {0}\">FLAC / WAV",
+		"mt_caac": "Convert aac / m4a to {0}\">AAC / M4A",
+		"mt_coth": "Convert all others (not mp3) to {0}\">Others",
+		"mt_c2opus": "Best choice for desktops, laptops, Android\">opus",
+		"mt_c2owa": "Opus in a weba container, for iOS 17.5 and newer\">owa",
+		"mt_c2caf": "Opus in a caf container, for iOS 11 through 17\">caf",
+		"mt_c2mp3": "Use this on very old devices\">mp3",
+		"mt_c2flac": "Best sound quality, but huge downloads\">flac",
+		"mt_c2wav": "Uncompressed playback (even bigger)\">wav",
+		"mt_c2ok": "good choice for your device",
+		"mt_c2nd": "this is not the recommended output format for your device, but it should work",
+		"mt_c2ng": "your device does not seem to support this output format, trying it anyway",
 		"mt_xowa": "there are bugs in iOS preventing background playback using this format; please use caf or mp3 instead",
-		"mt_tint": "background level (0-100) on the seekbar$Nto make buffering less distracting",
-		"mt_eq": "`enables the equalizer and gain control;$N$Nboost `0` = standard 100% volume (unmodified)$N$Nwidth `1 &nbsp;` = standard stereo (unmodified)$Nwidth `0.5` = 50% left-right crossfeed$Nwidth `0 &nbsp;` = mono$N$Nboost `-0.8` &amp; width `10` = vocal removal :^)$N$Nenabling the equalizer makes gapless albums fully gapless, so leave it on with all the values at zero (except width = 1) if you care about that",
-		"mt_drc": "enables the dynamic range compressor (volume flattener / brickwaller); will also enable EQ to balance the spaghetti, so set all EQ fields except for 'width' to 0 if you don't want it$N$Nlowers the volume of audio above THRESHOLD dB; for every RATIO dB past THRESHOLD there is 1 dB of output, so default values of 'tresh' -24 and 'ratio' 12 means it should never get louder than -22 dB and it is safe to increase the equalizer boost to 0.8, or even 1.8 with ATK 0 and a huge RLS like 90 (only works in firefox; RLS is max 1 in other browsers)$N$N(see wikipedia, they explain it much better)",
-		"mt_ss": "`enables skip-silence; multiplies playback speed by `ffwd` near the start/end of songs when volume is under `vol` and the playback position is within the first `start`% or the last `end`% of the track",
-		"mt_ssvt": "volume threshold (0-255)\">vol",
-		"mt_ssts": "active threshold (% of track, start)\">start",
-		"mt_sste": "active threshold (% of track, end)\">end",
-		"mt_sssm": "playback speed multiplier (range: 0.15 to 8)\">ffwd",
+		"mt_tint": "Background level (0-100) on the seekbar,$Nto make buffering less distracting",
+		"mt_eq": "`Enables the equalizer and gain control$N$Nboost `0` = standard 100% volume (unmodified)$N$Nwidth `1 &nbsp;` = standard stereo (unmodified)$Nwidth `0.5` = 50% left-right crossfeed$Nwidth `0 &nbsp;` = mono$N$Nboost `-0.8` &amp; width `10` = vocal removal$N$Nenabling the equalizer makes gapless albums fully gapless, so leave it on with all the values at zero (except width = 1) if you care about that",
+		"mt_drc": "Enables the dynamic range compressor, which evens out the volume; this also enables the equalizer, so set all equalizer fields except for 'width' to 0 if you don't want it$N$NLowers the volume of audio above 'threshold' dB; for every 'ratio' dB past the threshold there is 1 dB of output, so the default values of threshold -24 and ratio 12 mean it should never get louder than -22 dB, and it is safe to increase the equalizer boost to 0.8, or even 1.8 with attack 0 and a huge release like 90 (only works in Firefox; release is max 1 in other browsers)$N$N(see the Wikipedia article on dynamic range compression)",
+		"mt_ss": "`Enables skip-silence; multiplies the playback speed by `ffwd` near the start/end of songs when the volume is under `vol` and the playback position is within the first `start`% or the last `end`% of the track",
+		"mt_ssvt": "Volume threshold (0-255)\">vol",
+		"mt_ssts": "Active threshold (% of track, start)\">start",
+		"mt_sste": "Active threshold (% of track, end)\">end",
+		"mt_sssm": "Playback speed multiplier (range: 0.15 to 8)\">ffwd",
 
 		"mb_play": "play",
 		"mm_hashplay": "play this audio file?",
-		"mm_m3u": "press <code>Enter/OK</code> to Play\npress <code>ESC/Cancel</code> to Edit",
+		"mm_m3u": "press <code>Enter/OK</code> to play\npress <code>ESC/Cancel</code> to edit",
 		"mp_breq": "need firefox 82+ or chrome 73+ or iOS 15+",
 		"mm_bload": "now loading...",
 		"mm_bconv": "converting to {0}, please wait...",
 		"mm_opusen": "your browser cannot play aac / m4a files;\ntranscoding to opus is now enabled",
 		"mm_playerr": "playback failed: ",
 		"mm_eabrt": "The playback attempt was cancelled",
-		"mm_enet": "Your internet connection is wonky",
-		"mm_edec": "This file is supposedly corrupted??",
+		"mm_enet": "Network error; please check your connection",
+		"mm_edec": "This file appears to be corrupted",
 		"mm_esupp": "Your browser does not understand this audio format",
-		"mm_eunk": "Unknown Errol",
+		"mm_eunk": "Unknown error",
 		"mm_e404": "Could not play audio; error 404: File not found.",
-		"mm_e403": "Could not play audio; error 403: Access denied.\n\nTry pressing F5 to reload, maybe you got logged out",
+		"mm_e403": "Could not play audio; error 403: Access denied.\n\nTry pressing F5 to reload; you may have been logged out",
 		"mm_e415": "Could not play audio; error 415: File transcoding failed; check server logs.",
 		"mm_e500": "Could not play audio; error 500: Check server logs.",
 		"mm_e5xx": "Could not play audio; server error ",
-		"mm_nof": "not finding any more audio files nearby",
+		"mm_nof": "no more audio files found in the nearby folders",
 		"mm_prescan": "Looking for music to play next...",
 		"mm_scank": "Found the next song:",
 		"mm_uncache": "cache cleared; all songs will redownload on next playback",
-		"mm_hnf": "that song no longer exists",
+		"mm_hnf": "this song no longer exists",
 
-		"im_hnf": "that image no longer exists",
+		"im_hnf": "this image no longer exists",
 
 		"f_empty": 'this folder is empty',
 		"f_chide": 'this will hide the column «{0}»\n\nyou can unhide columns in the settings tab',
-		"f_bigtxt": "this file is {0} MiB large -- really view as text?",
+		"f_bigtxt": "this file is {0} MiB large; view it as text anyway?",
 		"f_bigtxt2": "view just the end of the file instead? this will also enable following/tailing, showing newly added lines of text in real time",
 		"fbd_more": '<div id="blazy">showing <code>{0}</code> of <code>{1}</code> files; <a href="#" id="bd_more">show {2}</a> or <a href="#" id="bd_all">show all</a></div>',
 		"fbd_all": '<div id="blazy">showing <code>{0}</code> of <code>{1}</code> files; <a href="#" id="bd_all">show all</a></div>',
@@ -375,9 +394,9 @@ if (1)
 		"f_dls": 'the file links in the current folder have\nbeen changed into download links',
 		"f_dl_nd": 'skipping folder (use zip/tar download instead):\n',
 
-		"f_partial": "To safely download a file which is currently being uploaded, please click the file which has the same filename, but without the <code>.PARTIAL</code> file extension. Please press CANCEL or Escape to do this.\n\nPressing OK / Enter will ignore this warning and continue downloading the <code>.PARTIAL</code> scratchfile instead, which will almost definitely give you corrupted data.",
+		"f_partial": "To safely download a file which is currently being uploaded, please click the file which has the same filename, but without the <code>.PARTIAL</code> file extension. Please press CANCEL or Escape to do this.\n\nPressing OK / Enter will ignore this warning and continue downloading the <code>.PARTIAL</code> scratchfile instead, which will almost certainly give you corrupted data.",
 
-		"ft_paste": "paste {0} items$NHotkey: ctrl-V",
+		"ft_paste": "Paste {0} items$NHotkey: ctrl-V",
 		"fr_eperm": 'cannot rename:\nyou do not have “move” permission in this folder',
 		"fd_eperm": 'cannot delete:\nyou do not have “delete” permission in this folder',
 		"fc_eperm": 'cannot cut:\nyou do not have “move” permission in this folder',
@@ -387,36 +406,36 @@ if (1)
 		"fc_emore": "select at least one item to cut",
 		"fcp_emore": "select at least one item to copy to clipboard",
 
-		"fs_sc": "share the folder you're in",
-		"fs_ss": "share the selected files",
+		"fs_sc": "Share the folder you are in",
+		"fs_ss": "Share the selected files",
 		"fs_just1d": "you cannot select more than one folder,\nor mix files and folders in one selection",
-		"fs_abrt": "❌ abort",
-		"fs_rand": "🎲 rand.name",
-		"fs_go": "✅ create share",
+		"fs_abrt": "Cancel",
+		"fs_rand": "Random name",
+		"fs_go": "Create share",
 		"fs_name": "name",
 		"fs_src": "source",
-		"fs_pwd": "passwd",
+		"fs_pwd": "password",
 		"fs_exp": "expiry",
 		"fs_tmin": "min",
 		"fs_thrs": "hours",
 		"fs_tdays": "days",
-		"fs_never": "eternal",
+		"fs_never": "never",
 		"fs_pname": "optional link name; will be random if blank",
-		"fs_tsrc": "the file or folder to share",
+		"fs_tsrc": "The file or folder to share",
 		"fs_ppwd": "optional password",
 		"fs_w8": "creating share...",
-		"fs_ok": "press <code>Enter/OK</code> to Clipboard\npress <code>ESC/Cancel</code> to Close",
+		"fs_ok": "press <code>Enter/OK</code> to copy the link\npress <code>ESC/Cancel</code> to close",
 
-		"frt_dec": "may fix some cases of broken filenames\">url-decode",
-		"frt_rst": "reset modified filenames back to the original ones\">↺ reset",
-		"frt_abrt": "abort and close this window\">❌ cancel",
-		"frb_apply": "APPLY RENAME",
-		"fr_adv": "batch / metadata / pattern renaming\">advanced",
-		"fr_case": "case-sensitive regex\">case",
-		"fr_win": "windows-safe names; replace <code>&lt;&gt;:&quot;\\|?*</code> with japanese fullwidth characters\">win",
-		"fr_slash": "replace <code>/</code> with a character that doesn't cause new folders to be created\">no /",
-		"fr_re": "`regex search pattern to apply to original filenames; capturing groups can be referenced in the format field below like `(1)` and `(2)` and so on",
-		"fr_fmt": "`inspired by foobar2000:$N`(title)` is replaced by song title,$N`[(artist) - ](title)` skips [this] part if artist is blank$N`$lpad((tn),2,0)` pads tracknumber to 2 digits",
+		"frt_dec": "May fix some cases of broken filenames\">URL-decode",
+		"frt_rst": "Reset modified filenames back to the original ones\">Reset",
+		"frt_abrt": "Cancel and close this window\">Cancel",
+		"frb_apply": "Apply rename",
+		"fr_adv": "Batch / metadata / pattern renaming\">Advanced",
+		"fr_case": "Case-sensitive regex\">Case-sensitive",
+		"fr_win": "Windows-safe names; replace <code>&lt;&gt;:&quot;\\|?*</code> with japanese fullwidth characters\">Windows-safe",
+		"fr_slash": "Replace <code>/</code> with a character that doesn't cause new folders to be created\">No slashes",
+		"fr_re": "`Regex search pattern to apply to original filenames; capturing groups can be referenced in the format field below like `(1)` and `(2)` and so on",
+		"fr_fmt": "`Inspired by foobar2000:$N`(title)` is replaced by song title,$N`[(artist) - ](title)` skips [this] part if artist is blank$N`$lpad((tn),2,0)` pads tracknumber to 2 digits",
 		"fr_pdel": "delete",
 		"fr_pnew": "save as",
 		"fr_pname": "provide a name for your new preset",
@@ -426,20 +445,20 @@ if (1)
 		"fr_tags": "tags for the selected files (read-only, just for reference):",
 		"fr_busy": "renaming {0} items...\n\n{1}",
 		"fr_efail": "rename failed:\n",
-		"fr_nchg": "{0} of the new names were altered due to <code>win</code> and/or <code>no /</code>\n\nOK to continue with these altered new names?",
+		"fr_nchg": "{0} of the new names were altered due to <code>Windows-safe</code> and/or <code>No slashes</code>\n\nOK to continue with these altered new names?",
 
 		"fd_ok": "delete OK",
 		"fd_err": "delete failed:\n",
-		"fd_none": "nothing was deleted; maybe blocked by server config (xbd)?",
+		"fd_none": "nothing was deleted; this may be blocked by the server config (xbd)",
 		"fd_busy": "deleting {0} items...\n\n{1}",
-		"fd_warn1": "DELETE these {0} items?",
-		"fd_warn2": "<b>Last chance!</b> No way to undo. Delete?",
+		"fd_warn1": "Delete these {0} items?",
+		"fd_warn2": "<b>This cannot be undone.</b> Delete?",
 
 		"fc_ok": "cut {0} items",
-		"fc_warn": 'cut {0} items\n\nbut: only <b>this</b> browser-tab can paste them\n(since the selection is so absolutely massive)',
+		"fc_warn": 'cut {0} items\n\nbut: only <b>this</b> browser-tab can paste them\n(because the selection is very large)',
 
 		"fcc_ok": "copied {0} items to clipboard",
-		"fcc_warn": 'copied {0} items to clipboard\n\nbut: only <b>this</b> browser-tab can paste them\n(since the selection is so absolutely massive)',
+		"fcc_warn": 'copied {0} items to clipboard\n\nbut: only <b>this</b> browser-tab can paste them\n(because the selection is very large)',
 
 		"fp_apply": "use these names",
 		"fp_skip": "skip conflicts",  // TLNote: "skip existing names" (filenames taken in target folder)
@@ -463,7 +482,7 @@ if (1)
 		"fp_both_b": '<a href="#" id="modal-ok">Move</a><a href="#" id="modal-ng">Upload</a>',
 		"fcp_both_b": '<a href="#" id="modal-ok">Copy</a><a href="#" id="modal-ng">Upload</a>',
 
-		"mk_noname": "type a name into the text field on the left before you do that :p",
+		"mk_noname": "enter a name in the text field on the left first",
 		"nmd_i1": "also add the file extension you want, for example <code>.md</code>",
 		"nmd_i2": "you can only create <code>.{0}</code> files because you don't have the delete-permission",
 
@@ -471,36 +490,36 @@ if (1)
 		"tv_xe1": "could not load textfile:\n\nerror ",
 		"tv_xe2": "404, file not found",
 		"tv_lst": "list of textfiles in",
-		"tvt_close": "return to folder view$NHotkey: M (or Esc)\">❌ close",
-		"tvt_dl": "download this file$NHotkey: Y\">💾 download",
-		"tvt_prev": "show previous document$NHotkey: i\">⬆ prev",
-		"tvt_next": "show next document$NHotkey: K\">⬇ next",
-		"tvt_sel": "select file &nbsp; ( for cut / copy / delete / ... )$NHotkey: S\">sel",
-		"tvt_j": "beautify json$NHotkey: shift-J\">j",
-		"tvt_edit": "open file in text editor$NHotkey: E\">✏️ edit",
-		"tvt_tail": "monitor file for changes; show new lines in real time\">📡 follow",
-		"tvt_wrap": "word-wrap\">↵",
-		"tvt_atail": "lock scroll to bottom of page\">⚓",
-		"tvt_ctail": "decode terminal colors (ansi escape codes)\">🌈",
-		"tvt_ntail": "scrollback limit (how many bytes of text to keep loaded)",
+		"tvt_close": "Return to the folder view$NHotkey: M (or Esc)\">Close",
+		"tvt_dl": "Download this file$NHotkey: Y\">Download",
+		"tvt_prev": "Show the previous document$NHotkey: I\">Previous",
+		"tvt_next": "Show the next document$NHotkey: K\">Next",
+		"tvt_sel": "Select this file &nbsp; ( for cut / copy / delete / ... )$NHotkey: S\">Select",
+		"tvt_j": "Format (beautify) JSON$NHotkey: shift-J\">Format JSON",
+		"tvt_edit": "Open this file in the text editor$NHotkey: E\">Edit",
+		"tvt_tail": "Monitor the file for changes; show new lines in real time\">Follow",
+		"tvt_wrap": "Wrap long lines\">Wrap",
+		"tvt_atail": "Keep the view scrolled to the bottom of the page\">Follow end",
+		"tvt_ctail": "Show terminal colors (ANSI escape codes)\">Colors",
+		"tvt_ntail": "Scrollback limit (how many bytes of text to keep loaded)",
 
 		"m3u_add1": "song added to m3u playlist",
 		"m3u_addn": "{0} songs added to m3u playlist",
 		"m3u_clip": "m3u playlist now copied to clipboard\n\nyou should create a new textfile named something.m3u and paste the playlist in that document; this will make it playable",
 
-		"gt_vau": "don't show videos, just play the audio\">🎧",
-		"gt_msel": "enable file selection; ctrl-click a file to override$N$N&lt;em&gt;when active: doubleclick a file / folder to open it&lt;/em&gt;$N$NHotkey: S\">multiselect",
-		"gt_crop": "center-crop thumbnails\">crop",
-		"gt_3x": "hi-res thumbnails\">3x",
+		"gt_vau": "Do not show videos, only play the audio\">Audio only",
+		"gt_msel": "Enable file selection; ctrl-click a file to override$N$N&lt;em&gt;When active: double-click a file / folder to open it&lt;/em&gt;$NHotkey: S\">Multiselect",
+		"gt_crop": "Center-crop thumbnails\">Crop",
+		"gt_3x": "High-resolution thumbnails\">3x",
 		"gt_zoom": "zoom",
-		"gt_chop": "chop",
+		"gt_chop": "name length",
 		"gt_sort": "sort by",
 		"gt_name": "name",
 		"gt_sz": "size",
 		"gt_ts": "date",
 		"gt_ext": "type",
-		"gt_c1": "truncate filenames more (show less)",
-		"gt_c2": "truncate filenames less (show more)",
+		"gt_c1": "Shorten filenames more (show less)",
+		"gt_c2": "Shorten filenames less (show more)",
 
 		"sm_w8": "searching...",
 		"sm_prev": "search results below are from a previous query:\n  ",
@@ -513,27 +532,27 @@ if (1)
 		"s_rd": "path",
 		"s_fn": "name",
 		"s_ta": "tags",
-		"s_ua": "up@",
-		"s_ad": "adv.",
+		"s_ua": "uploaded",
+		"s_ad": "advanced",
 		"s_s1": "minimum MiB",
 		"s_s2": "maximum MiB",
-		"s_d1": "min. iso8601",
-		"s_d2": "max. iso8601",
+		"s_d1": "earliest (iso-8601)",
+		"s_d2": "latest (iso-8601)",
 		"s_u1": "uploaded after",
 		"s_u2": "and/or before",
 		"s_r1": "path contains &nbsp; (space-separated)",
-		"s_f1": "name contains &nbsp; (negate with -nope)",
+		"s_f1": "name contains &nbsp; (exclude with -word)",
 		"s_t1": "tags contains &nbsp; (^=start, end=$)",
 		"s_a1": "specific metadata properties",
 
 		"md_eshow": "cannot render ",
-		"md_off": "[📜<em>readme</em>] disabled in [⚙️] -- document hidden",
+		"md_off": "<em>Show README</em> is turned off in the settings; document hidden",
 
 		"badreply": "Failed to parse reply from server",
 
-		"xhr403": "403: Access denied\n\ntry pressing F5, maybe you got logged out",
+		"xhr403": "403: Access denied\n\ntry pressing F5; you may have been logged out",
 		"xhr0": "unknown (probably lost connection to server, or server is offline)",
-		"cf_ok": "sorry about that -- DD" + wah + "oS protection kicked in\n\nthings should resume in about 30 sec\n\nif nothing happens, hit F5 to reload the page",
+		"cf_ok": "DD" + wah + "oS protection was triggered\n\nthe page should work again in about 30 seconds\n\nif nothing happens, press F5 to reload the page",
 		"tl_xe1": "could not list subfolders:\n\nerror ",
 		"tl_xe2": "404: Folder not found",
 		"fl_xe1": "could not list files in folder:\n\nerror ",
@@ -542,16 +561,16 @@ if (1)
 		"fd_xe2": "404: Parent folder not found",
 		"fsm_xe1": "could not send message:\n\nerror ",
 		"fsm_xe2": "404: Parent folder not found",
-		"fu_xe1": "failed to load unpost list from server:\n\nerror ",
-		"fu_xe2": "404: File not found??",
+		"fu_xe1": "failed to load the list of recent uploads from the server:\n\nerror ",
+		"fu_xe2": "404: File not found",
 
-		"fz_tar": "uncompressed gnu-tar file (linux / mac)",
-		"fz_pax": "uncompressed pax-format tar (slower)",
-		"fz_targz": "gnu-tar with gzip level 3 compression$N$Nthis is usually very slow, so$Nuse uncompressed tar instead",
-		"fz_tarxz": "gnu-tar with xz level 1 compression$N$Nthis is usually very slow, so$Nuse uncompressed tar instead",
-		"fz_zip8": "zip with utf8 filenames (maybe wonky on windows 7 and older)",
-		"fz_zipd": "zip with traditional cp437 filenames, for really old software",
-		"fz_zipc": "cp437 with crc32 computed early,$Nfor MS-DOS PKZIP v2.04g (october 1993)$N(takes longer to process before download can start)",
+		"fz_tar": "Uncompressed GNU tar file (Linux / Mac)",
+		"fz_pax": "Uncompressed pax-format tar (slower)",
+		"fz_targz": "GNU tar with gzip level 3 compression$N$NThis is usually very slow, so$Nuse uncompressed tar instead",
+		"fz_tarxz": "GNU tar with xz level 1 compression$N$NThis is usually very slow, so$Nuse uncompressed tar instead",
+		"fz_zip8": "Zip with utf8 filenames (may show wrong filenames on Windows 7 and older)",
+		"fz_zipd": "Zip with traditional cp437 filenames, for really old software",
+		"fz_zipc": "Zip with cp437 filenames and crc32 computed early,$Nfor MS-DOS PKZIP v2.04g (October 1993)$N(takes longer before the download can start)",
 
 		"un_m1": "you can delete your recent uploads (or abort unfinished ones) below",
 		"un_upd": "refresh",
@@ -560,16 +579,16 @@ if (1)
 		"un_ucopy": "copy",
 		"un_flt": "optional filter:&nbsp; URL must contain",
 		"un_fclr": "clear filter",
-		"un_derr": 'unpost-delete failed:\n',
-		"un_f5": 'something broke, please try a refresh or hit F5',
-		"un_uf5": "sorry but you have to refresh the page (for example by pressing F5 or CTRL-R) before this upload can be aborted",
-		"un_nou": '<b>warning:</b> server too busy to show unfinished uploads; click the "refresh" link in a bit',
-		"un_noc": '<b>warning:</b> unpost of fully uploaded files is not enabled/permitted in server config',
+		"un_derr": 'could not delete the upload:\n',
+		"un_f5": 'something went wrong; please refresh the page (F5)',
+		"un_uf5": "please refresh the page (for example by pressing F5 or CTRL-R) before you abort this upload",
+		"un_nou": '<b>warning:</b> server too busy to show unfinished uploads; click the "refresh" link in a moment',
+		"un_noc": '<b>warning:</b> deleting fully uploaded files (unpost) is not enabled or not permitted in the server config',
 		"un_max": "showing first 2000 files (use the filter)",
 		"un_avail": "{0} recent uploads can be deleted<br />{1} unfinished ones can be aborted",
 		"un_m2": "sorted by upload time; most recent first:",
-		"un_no1": "sike! no uploads are sufficiently recent",
-		"un_no2": "sike! no uploads matching that filter are sufficiently recent",
+		"un_no1": "no uploads are recent enough to be deleted here",
+		"un_no2": "no uploads matching that filter are recent enough to be deleted here",
 		"un_next": "delete the next {0} files below",
 		"un_abrt": "abort",
 		"un_del": "delete",
@@ -580,19 +599,19 @@ if (1)
 		"u_https1": "you should",
 		"u_https2": "switch to https",
 		"u_https3": "for better performance",
-		"u_ancient": 'your browser is impressively ancient -- maybe you should <a href="#" id="u2nah">use bup instead</a>',
+		"u_ancient": 'your browser is very old; please <a href="#" id="u2nah">use the basic uploader instead</a>',
 		"u_nowork": "need firefox 53+ or chrome 57+ or iOS 11+",
 		"tail_2old": "need firefox 105+ or chrome 71+ or iOS 14.5+",
 		"b2old": 'your browser is too old',
 		"u_nodrop": 'your browser is too old for drag-and-drop uploading',
-		"u_notdir": "that's not a folder!\n\nyour browser is too old,\nplease try dragdrop instead",
-		"u_uri": "to dragdrop images from other browser windows,\nplease drop it onto the big upload button",
-		"u_enpot": 'switch to <a href="#">potato UI</a> (may improve upload speed)',
-		"u_depot": 'switch to <a href="#">fancy UI</a> (may reduce upload speed)',
-		"u_gotpot": 'switching to the potato UI for improved upload speed,\n\nfeel free to disagree and switch back!',
+		"u_notdir": "that is not a folder\n\nyour browser is too old;\nplease use drag-and-drop instead",
+		"u_uri": "to drag-and-drop images from other browser windows,\nplease drop them onto the large upload button",
+		"u_enpot": 'switch to <a href="#">simple UI</a> (may improve upload speed)',
+		"u_depot": 'switch to <a href="#">full UI</a> (may reduce upload speed)',
+		"u_gotpot": 'switching to the simple UI for improved upload speed\n\nyou can switch back at any time',
 		"u_pott": "<p>files: &nbsp; <b>{0}</b> finished, &nbsp; <b>{1}</b> failed, &nbsp; <b>{2}</b> busy, &nbsp; <b>{3}</b> queued</p>",
-		"u_ever": "this is the basic uploader; up2k needs at least<br>chrome 21 // firefox 13 // edge 12 // opera 12 // safari 5.1",
-		"u_su2k": 'this is the basic uploader; <a href="#" id="u2yea">up2k</a> is better',
+		"u_ever": "this is the basic uploader; the full uploader (up2k) needs at least<br>chrome 21 // firefox 13 // edge 12 // opera 12 // safari 5.1",
+		"u_su2k": 'this is the basic uploader; the <a href="#" id="u2yea">full uploader (up2k)</a> is faster and can resume uploads',
 		"u_uput": 'optimize for speed (skip checksum)',
 		"u_ewrite": 'you do not have write-access to this folder',
 		"u_eread": 'you do not have read-access to this folder',
@@ -600,13 +619,13 @@ if (1)
 		"u_enoow": "overwrite will not work here; need Delete-permission",
 		"u_badf": 'These {0} files (of {1} total) were skipped, possibly due to filesystem permissions:\n\n',
 		"u_blankf": 'These {0} files (of {1} total) are blank / empty; upload them anyways?\n\n',
-		"u_applef": 'These {0} files (of {1} total) are probably undesirable;\nPress <code>OK/Enter</code> to SKIP the following files,\nPress <code>Cancel/ESC</code> to NOT exclude, and UPLOAD those as well:\n\n',
+		"u_applef": 'These {0} files (of {1} total) are probably unwanted;\nPress <code>OK/Enter</code> to SKIP the following files,\nPress <code>Cancel/ESC</code> to NOT exclude, and UPLOAD those as well:\n\n',
 		"u_just1": '\nMaybe it works better if you select just one file',
 		"u_ff_many": "if you're using <b>Linux / MacOS / Android,</b> then this amount of files <a href=\"https://bugzilla.mozilla.org/show_bug.cgi?id=1790500\" target=\"_blank\"><em>may</em> crash Firefox!</a>\nif that happens, please try again (or use Chrome).",
 		"u_up_life": "This upload will be deleted from the server\n{0} after it completes",
 		"u_asku": 'upload these {0} files to <code>{1}</code>',
-		"u_unpt": "you can undo / delete this upload using the top-left 🧯",
-		"u_bigtab": 'about to show {0} files\n\nthis may crash your browser, are you sure?',
+		"u_unpt": "you can undo / delete this upload with the recent-uploads button (unpost) in the top menu",
+		"u_bigtab": 'about to show {0} files\n\nthis may crash your browser; continue?',
 		"u_scan": 'Scanning files...',
 		"u_dirstuck": 'directory iterator got stuck trying to access the following {0} items; will skip:',
 		"u_etadone": 'Done ({0}, {1} files)',
@@ -614,10 +633,10 @@ if (1)
 		"u_hashdone": 'hashing done',
 		"u_hashing": 'hash',
 		"u_hs": 'handshaking...',
-		"u_started": "the files are now being uploaded; see [🚀]",
+		"u_started": "the files are now being uploaded; see the upload panel",
 		"u_dupdefer": "duplicate; will be processed after all other files",
 		"u_actx": "click this text to prevent loss of<br />performance when switching to other windows/tabs",
-		"u_fixed": "OK!&nbsp; Fixed it 👍",
+		"u_fixed": "OK, fixed",
 		"u_cuerr": "failed to upload chunk {0} of {1};\nprobably harmless, continuing\n\nfile: {2}",
 		"u_cuerr2": "server rejected upload (chunk {0} of {1});\nwill retry later\n\nfile: {2}\n\nerror ",
 		"u_ehstmp": "will retry; see bottom-right",
@@ -626,13 +645,13 @@ if (1)
 		"u_ehsinit": "server rejected the request to initiate upload; retrying...",
 		"u_eneths": "network error while performing upload handshake; retrying...",
 		"u_enethd": "network error while testing target existence; retrying...",
-		"u_cbusy": "waiting for server to trust us again after a network glitch...",
-		"u_ehsdf": "server ran out of disk space!\n\nwill keep retrying, in case someone\nfrees up enough space to continue",
+		"u_cbusy": "waiting for the server to accept requests again after a network error...",
+		"u_ehsdf": "the server ran out of disk space\n\nwill keep retrying, in case someone\nfrees up enough space to continue",
 		"u_emtleak1": "it looks like your webbrowser may have a memory leak;\nplease",
 		"u_emtleak2": ' <a href="{0}">switch to https (recommended)</a> or ',
 		"u_emtleak3": ' ',
-		"u_emtleakc": 'try the following:\n<ul><li>hit <code>F5</code> to refresh the page</li><li>then disable the &nbsp;<code>mt</code>&nbsp; button in the &nbsp;<code>⚙️ settings</code></li><li>and try that upload again</li></ul>Uploads will be a bit slower, but oh well.\nSorry for the trouble !\n\nPS: chrome v107 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1354816" target="_blank">has a bugfix</a> for this',
-		"u_emtleakf": 'try the following:\n<ul><li>hit <code>F5</code> to refresh the page</li><li>then enable <code>🥔</code> (potato) in the upload UI<li>and try that upload again</li></ul>\nPS: firefox <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1790500" target="_blank">will hopefully have a bugfix</a> at some point',
+		"u_emtleakc": 'try the following:\n<ul><li>hit <code>F5</code> to refresh the page</li><li>then disable &nbsp;<code>Multithreaded hashing</code>&nbsp; in the settings</li><li>and try that upload again</li></ul>Uploads will be a bit slower.\n\nNote: chrome v107 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1354816" target="_blank">has a bugfix</a> for this',
+		"u_emtleakf": 'try the following:\n<ul><li>hit <code>F5</code> to refresh the page</li><li>then enable <code>🥔</code> (simple UI) in the upload panel<li>and try that upload again</li></ul>\nNote: firefox has an <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1790500" target="_blank">open bug report</a> for this',
 		"u_s404": "not found on server",
 		"u_expl": "explain",
 		"u_maxconn": "most browsers limit this to 6, but firefox lets you raise it with <code>connections-per-server</code> in <code>about:config</code>",
@@ -641,25 +660,25 @@ if (1)
 		"u_turbo_c": "turbo is disabled in server config",
 		"u_turbo_g": "disabling turbo because you don't have\ndirectory listing privileges within this volume",
 		"u_life_cfg": 'autodelete after <input id="lifem" p="60" /> min (or <input id="lifeh" p="3600" /> hours)',
-		"u_life_est": 'upload will be deleted <span id="lifew" tt="local time">---</span>',
+		"u_life_est": 'upload will be deleted <span id="lifew" tt="Local time">---</span>',
 		"u_life_max": 'this folder enforces a\nmax lifetime of {0}',
-		"u_unp_ok": 'unpost is allowed for {0}',
-		"u_unp_ng": 'unpost will NOT be allowed',
+		"u_unp_ok": 'you can delete this upload (unpost) for {0}',
+		"u_unp_ng": 'you will NOT be able to delete this upload (unpost)',
 		"ue_ro": 'your access to this folder is Read-Only\n\n',
 		"ue_nl": 'you are currently not logged in',
 		"ue_la": 'you are currently logged in as "{0}"',
-		"ue_sr": 'you are currently in file-search mode\n\nswitch to upload-mode by clicking the magnifying glass 🔎 (next to the big SEARCH button), and try uploading again\n\nsorry',
+		"ue_sr": 'you are currently in file-search mode\n\nswitch to upload-mode by clicking the magnifying glass 🔎 (next to the large Search button), and try uploading again',
 		"ue_ta": 'try uploading again, it should work now',
-		"ue_ab": "this file is already being uploaded into another folder, and that upload must be completed before the file can be uploaded elsewhere.\n\nYou can abort and forget the initial upload using the top-left 🧯",
+		"ue_ab": "this file is already being uploaded into another folder, and that upload must be completed before the file can be uploaded elsewhere.\n\nYou can abort and forget the initial upload with the recent-uploads button (unpost) in the top menu",
 		"ur_1uo": "OK: File uploaded successfully",
 		"ur_auo": "OK: All {0} files uploaded successfully",
 		"ur_1so": "OK: File found on server",
 		"ur_aso": "OK: All {0} files found on server",
-		"ur_1un": "Upload failed, sorry",
-		"ur_aun": "All {0} uploads failed, sorry",
+		"ur_1un": "Upload failed",
+		"ur_aun": "All {0} uploads failed",
 		"ur_1sn": "File was NOT found on server",
 		"ur_asn": "The {0} files were NOT found on server",
-		"ur_um": "Finished;\n{0} uploads OK,\n{1} uploads failed, sorry",
+		"ur_um": "Finished;\n{0} uploads OK,\n{1} uploads failed",
 		"ur_sm": "Finished;\n{0} files found on server,\n{1} files NOT found on server",
 
 		"rc_opn": "open",
@@ -823,7 +842,7 @@ ebi('widget').innerHTML = (
 	'<div id="wtoggle">' +
 	'<span id="wfs"></span>' +
 	'<span id="wfm"><a' +
-	' href="#" id="fshr" tt="' + L.wt_shr + '">📨<span>share</span></a><a' +
+	' href="#" id="fshr" tt="' + L.fs_sc + '">📨<span>share</span></a><a' +
 	' href="#" id="fren" tt="' + L.wt_ren + '">✎<span>name</span></a><a' +
 	' href="#" id="fdel" tt="' + L.wt_del + '">⌫<span>del.</span></a><a' +
 	' href="#" id="fcut" tt="' + L.wt_cut + '">✂<span>cut</span></a><a' +
@@ -832,10 +851,10 @@ ebi('widget').innerHTML = (
 	'</span><span id="wzip1"><a' +
 	' href="#" id="zip1" tt="' + L.wt_zip1 + '">📦<span>zip</span></a>' +
 	'</span><span id="wzip"><a' +
-	' href="#" id="selall" tt="' + L.wt_selall + '">sel.<br />all</a><a' +
-	' href="#" id="selinv" tt="' + L.wt_selinv + '">sel.<br />inv.</a><a' +
+	' href="#" id="selall" tt="' + L.wt_selall + '">select<br />all</a><a' +
+	' href="#" id="selinv" tt="' + L.wt_selinv + '">invert<br />sel.</a><a' +
 	' href="#" id="selzip" class="l1" tt="' + L.wt_selzip + '">zip</a><a' +
-	' href="#" id="seldl" class="l1" tt="' + L.wt_seldl + '">dl</a>' +
+	' href="#" id="seldl" class="l1" tt="' + L.wt_seldl + '">get</a>' +
 	'</span><span id="wnp"><a' +
 	' href="#" id="npirc" tt="' + L.wt_npirc + '">📋<span>irc</span></a><a' +
 	' href="#" id="nptxt" tt="' + L.wt_nptxt + '">📋<span>txt</span></a>' +
@@ -844,7 +863,7 @@ ebi('widget').innerHTML = (
 	' href="#" id="m3uc" tt="' + L.wt_m3uc + '">📻<span>copy</span></a>' +
 	'</span><a' +
 	'	href="#" id="wtgrid" tt="' + L.wt_grid + '">田</a><a' +
-	'	href="#" id="wtico">♫</a>' +
+	'	href="#" id="wtico" tt="' + (L.wt_mp || '') + '">♫</a>' +
 	'</div>' +
 	'<div id="widgeti">' +
 	'	<div id="pctl"><a href="#" id="bprev" tt="' + L.wt_prev + '">⏮</a><a href="#" id="bplay" tt="' + L.wt_play + '">▶</a><a href="#" id="bnext" tt="' + L.wt_next + '">⏭</a></div>' +
@@ -898,9 +917,9 @@ ebi('op_up2k').innerHTML = (
 	'	</tr>\n' +
 	'	<tr>\n' +
 	'		<td class="c" data-perm="read">\n' +
-	'			<a href="#" class="b" id="nthread_sub">&ndash;</a><input\n' +
+	'			<a href="#" class="b" id="nthread_sub" tt="' + (L.ut_par1 || '') + '">&ndash;</a><input\n' +
 	'				class="txtbox" id="nthread" value="" tt="' + L.ut_par + '"/><a\n' +
-	'				href="#" class="b" id="nthread_add">+</a><br />&nbsp;\n' +
+	'				href="#" class="b" id="nthread_add" tt="' + (L.ut_par2 || '') + '">+</a><br />&nbsp;\n' +
 	'		</td>\n' +
 	'	</tr>\n' +
 	'</table>\n' +
@@ -924,10 +943,10 @@ ebi('op_up2k').innerHTML = (
 
 	'<div id="u2cards">\n' +
 	'	<a href="#" act="ok" tt="' + L.uct_ok + '">ok <span>0</span></a><a\n' +
-	'	href="#" act="ng" tt="' + L.uct_ng + '">ng <span>0</span></a><a\n' +
+	'	href="#" act="ng" tt="' + L.uct_ng + '">failed <span>0</span></a><a\n' +
 	'	href="#" act="done" tt="' + L.uct_done + '">done <span>0</span></a><a\n' +
 	'	href="#" act="bz" tt="' + L.uct_bz + '" class="act">busy <span>0</span></a><a\n' +
-	'	href="#" act="q" tt="' + L.uct_q + '">que <span>0</span></a>\n' +
+	'	href="#" act="q" tt="' + L.uct_q + '">queued <span>0</span></a>\n' +
 	'</div>\n' +
 
 	'</div>\n' +
@@ -1005,21 +1024,20 @@ ebi('op_cfg').innerHTML = (
 	'<div>\n' +
 	'	<h3>' + L.cl_hfsz + '</h3>\n' +
 	'	<div><select id="fszfmt">\n' +
-	'		<option value="0">0 ┃ 2345678</option>\n' +
-	'		<option value="1">1 ┃ 2 345 678</option>\n' +
-	'		<option value="2">2- ┃ 2.24 M /1024</option>\n' +
-	'		<option value="2c">2c ┃ 2.24 M /1024</option>\n' +
-	'		<option value="3">3- ┃ 2.2 M /1024</option>\n' +
-	'		<option value="3c">3c ┃ 2.2 M /1024</option>\n' +
-	'		<option value="4">4- ┃ 2.24 Mi /1024</option>\n' +
-	'		<option value="4c">4c ┃ 2.24 Mi /1024</option>\n' +
-	'		<option value="5">5- ┃ 2.2 Mi /1024</option>\n' +
-	'		<option value="5c">5c ┃ 2.2 Mi /1024</option>\n' +
-	'		<option value="6">6- ┃ 2.35 MB /1000</option>\n' +
-	'		<option value="6c">6c ┃ 2.35 MB /1000</option>\n' +
-	'		<option value="7">7- ┃ 2.3 MB /1000</option>\n' +
-	'		<option value="7c">7c ┃ 2.3 MB /1000</option>\n' +
-	'		<option value="fuzzy">fuzzy</option>\n' +
+	'		<option value="0">2345678 &nbsp;(bytes)</option>\n' +
+	'		<option value="1">2 345 678 &nbsp;(bytes, grouped)</option>\n' +
+	'		<option value="2">2.24 M &nbsp;(1024-based)</option>\n' +
+	'		<option value="2c">2.24 M &nbsp;(1024-based, colored)</option>\n' +
+	'		<option value="3">2.2 M &nbsp;(1024-based, short)</option>\n' +
+	'		<option value="3c">2.2 M &nbsp;(1024-based, short, colored)</option>\n' +
+	'		<option value="4">2.24 Mi &nbsp;(1024-based)</option>\n' +
+	'		<option value="4c">2.24 Mi &nbsp;(1024-based, colored)</option>\n' +
+	'		<option value="5">2.2 Mi &nbsp;(1024-based, short)</option>\n' +
+	'		<option value="5c">2.2 Mi &nbsp;(1024-based, short, colored)</option>\n' +
+	'		<option value="6">2.35 MB &nbsp;(1000-based)</option>\n' +
+	'		<option value="6c">2.35 MB &nbsp;(1000-based, colored)</option>\n' +
+	'		<option value="7">2.3 MB &nbsp;(1000-based, short)</option>\n' +
+	'		<option value="7c">2.3 MB &nbsp;(1000-based, short, colored)</option>\n' +
 	'	</select></div>\n' +
 	'</div>\n' +
 	'<div>\n' +
@@ -1045,10 +1063,10 @@ ebi('op_cfg').innerHTML = (
 	'		<a id="u2turbo" class="tgl btn ttb" href="#" tt="' + L.cut_turbo + '</a>\n' +
 	'		<a id="u2tdate" class="tgl btn ttb" href="#" tt="' + L.cut_datechk + '</a>\n' +
 	'		<input type="text" id="u2szg" value="" ' + NOAC + ' style="width:3em" tt="' + L.cut_u2sz + '" />' +
-	'		<a id="flag_en" class="tgl btn" href="#" tt="' + L.cut_flag + '">💤</a>\n' +
-	'		<a id="u2sort" class="tgl btn" href="#" tt="' + L.cut_az + '">az</a>\n' +
-	'		<a id="upnag" class="tgl btn" href="#" tt="' + L.cut_nag + '">🔔</a>\n' +
-	'		<a id="upsfx" class="tgl btn" href="#" tt="' + L.cut_sfx + '">🔊</a>\n' +
+	'		<a id="flag_en" class="tgl btn" href="#" tt="' + L.cut_flag + '">One tab at a time</a>\n' +
+	'		<a id="u2sort" class="tgl btn" href="#" tt="' + L.cut_az + '">Alphabetical</a>\n' +
+	'		<a id="upnag" class="tgl btn" href="#" tt="' + L.cut_nag + '">Notify</a>\n' +
+	'		<a id="upsfx" class="tgl btn" href="#" tt="' + L.cut_sfx + '">Sound</a>\n' +
 	'		</td>\n' +
 	'	</div>\n' +
 	'</div>\n' +
@@ -1065,7 +1083,7 @@ ebi('op_cfg').innerHTML = (
 	'	<h3>' + L.cl_bigdir + '</h3>\n' +
 	'	<div>\n' +
 	'		<input type="text" id="bd_lim" value="250" ' + NOAC + ' style="width:4em" tt="' + L.cdt_lim + '" />' +
-	'		<a id="bd_ask" class="tgl btn" href="#" tt="' + L.cdt_ask + '">ask</a>\n' +
+	'		<a id="bd_ask" class="tgl btn" href="#" tt="' + L.cdt_ask + '">Ask before loading more</a>\n' +
 	'		</td>\n' +
 	'	</div>\n' +
 	'</div>\n' +
@@ -1086,8 +1104,8 @@ ebi('op_cfg').innerHTML = (
 ebi('tree').innerHTML = (
 	'<div id="treeh">\n' +
 	'	<a href="#" id="detree" tt="' + L.tt_detree + '">🍞...</a>\n' +
-	'	<a href="#" class="btn" step="2" id="twobytwo" tt="Hotkey: D">+</a>\n' +
-	'	<a href="#" class="btn" step="-2" id="twig" tt="Hotkey: A">&ndash;</a>\n' +
+	'	<a href="#" class="btn" step="2" id="twobytwo" tt="' + (L.tt_wider || 'Hotkey: D') + '">+</a>\n' +
+	'	<a href="#" class="btn" step="-2" id="twig" tt="' + (L.tt_narrower || 'Hotkey: A') + '">&ndash;</a>\n' +
 	'	<a href="#" class="btn" id="visdir" tt="' + L.tt_visdir + '">🎯</a>\n' +
 	'	<a href="#" class="tgl btn" id="filetree" tt="' + L.tt_ftree + '">📃</a>\n' +
 	'	<a href="#" class="tgl btn" id="parpane" tt="' + L.tt_pdock + '">📌</a>\n' +
@@ -1103,6 +1121,8 @@ ebi('tree').innerHTML = (
 clmod(ebi('tree'), 'sbar', 1);
 ebi('entree').setAttribute('tt', L.tt_entree);
 ebi('goh').textContent = L.goh;
+if (ebi('repl') && L.tt_repl)
+	ebi('repl').setAttribute('tt', L.tt_repl);
 QS('#op_mkdir input[type="submit"]').value = L.ab_mkdir;
 QS('#op_new_md input[type="submit"]').value = L.ab_mkdoc;
 QS('#op_msg input[type="submit"]').value = L.ab_msg;
@@ -1353,7 +1373,7 @@ var mpl = (function () {
 	var have_mctl = 'mediaSession' in navigator && window.MediaMetadata;
 
 	ebi('op_player').innerHTML = (
-		'<div><h3>' + L.cl_opts + '</h3><div>' +
+		'<div><h3>' + (L.ml_opts || L.cl_opts) + '</h3><div>' +
 		'<a href="#" class="tgl btn" id="au_loop" tt="' + L.mt_loop + '</a>' +
 		'<a href="#" class="tgl btn" id="au_one" tt="' + L.mt_one + '</a>' +
 		'<a href="#" class="tgl btn" id="au_shuf" tt="' + L.mt_shuf + '</a>' +
@@ -1742,7 +1762,7 @@ function MPlayer() {
 
 		if (re_audio.exec(fn)) {
 			var tid = link.getAttribute('id'),
-				txt = re_au_vid.exec(fn) ? '(🎧)' : L.mb_play;
+				txt = re_au_vid.exec(fn) ? 'audio' : L.mb_play;
 			r.order.push(tid);
 			r.tracks[tid] = url;
 			tds[0].innerHTML = '<a id="a' + tid + '" href="#a' + tid + '" class="play">' + txt + '</a></td>';
@@ -2001,6 +2021,7 @@ var widget = (function () {
 		if (was_paused != paused) {
 			was_paused = paused;
 			ebi('bplay').innerHTML = paused ? '▶' : '⏸';
+			clmod(ebi('bplay'), 'on', !paused);
 		}
 	};
 	r.setvis = function () {
@@ -2095,6 +2116,11 @@ function canvas_cfg(can) {
 	r.ctx = can.getContext('2d');
 	r.ctx.scale(mul, mul);
 	return r;
+}
+
+
+function cssvar(k) {
+	return getComputedStyle(document.documentElement).getPropertyValue(k).trim();
 }
 
 
@@ -2197,9 +2223,14 @@ var pbar = (function () {
 
 		var sm = bc.w * 1.0 / mp.au.duration,
 			gk = bc.h + '/' + themen,
+			fl = themen.charAt(0) == 'f',
 			dz = themen == 'dz',
 			dy = themen == 'dy';
 
+		if (gradh != gk && fl) {
+			gradh = gk;
+			grad = cssvar('--bg-u5');
+		}
 		if (gradh != gk) {
 			gradh = gk;
 			grad = glossy_grad(bc, dz ? 120 : 85,
@@ -2222,23 +2253,23 @@ var pbar = (function () {
 		}
 
 		var step = sm > 1 ? 1 : sm > 0.4 ? 3 : sm > 0.05 ? 30 : 720;
-		bctx.fillStyle = light && !dy ? 'rgba(0,64,0,0.15)' : 'rgba(204,255,128,0.15)';
+		bctx.fillStyle = fl ? 'rgba(128,128,128,0.2)' : light && !dy ? 'rgba(0,64,0,0.15)' : 'rgba(204,255,128,0.15)';
 		for (var p = step, mins = adur / 10; p <= mins; p += step)
 			bctx.fillRect(Math.floor(sm * p * 10), 0, 2, pc.h);
 
 		step = sm > 0.15 ? 1 : sm > 0.05 ? 10 : 360;
-		bctx.fillStyle = light && !dy ? 'rgba(0,64,0,0.5)' : 'rgba(192,255,96,0.5)';
+		bctx.fillStyle = fl ? 'rgba(128,128,128,0.5)' : light && !dy ? 'rgba(0,64,0,0.5)' : 'rgba(192,255,96,0.5)';
 		for (var p = step, mins = adur / 60; p <= mins; p += step)
 			bctx.fillRect(Math.floor(sm * p * 60), 0, 2, pc.h);
 
 		step = sm > 0.33 ? 1 : sm > 0.15 ? 5 : sm > 0.05 ? 10 : sm > 0.01 ? 60 : 720;
-		bctx.fillStyle = dz ? '#0f0' : dy ? '#999' : light ? 'rgba(0,64,0,0.9)' : 'rgba(192,255,96,1)';
+		bctx.fillStyle = fl ? cssvar('--fg-weak') : dz ? '#0f0' : dy ? '#999' : light ? 'rgba(0,64,0,0.9)' : 'rgba(192,255,96,1)';
 		for (var p = step, mins = adur / 60; p <= mins; p += step) {
 			bctx.fillText(p, Math.floor(sm * p * 60 + 3), pc.h / 3);
 		}
 
 		step = sm > 0.2 ? 10 : sm > 0.1 ? 30 : sm > 0.01 ? 60 : sm > 0.005 ? 720 : 1440;
-		bctx.fillStyle = light ? 'rgba(0,0,0,1)' : 'rgba(255,255,255,1)';
+		bctx.fillStyle = fl ? cssvar('--fg-weak') : light ? 'rgba(0,0,0,1)' : 'rgba(255,255,255,1)';
 		for (var p = step, mins = adur / 60; p <= mins; p += step)
 			bctx.fillRect(Math.floor(sm * p * 60), 0, 2, pc.h);
 	};
@@ -2265,7 +2296,7 @@ var pbar = (function () {
 
 			pctx.fillStyle = light ? 'rgba(0,0,0,0.5)' : 'rgba(255,255,255,0.5)';
 			var m = /[?&]th=(opus|owa|caf|mp3)/.exec('' + mp.au.rsrc),
-				txt = mp.au.ded ? L.mm_playerr.replace(':', ' ;_;') :
+				txt = mp.au.ded ? L.mm_playerr.replace(':', '') :
 					m ? L.mm_bconv.format(m[1]) : L.mm_bload;
 
 			pctx.fillText(txt, 16, pc.h / 1.5);
@@ -2298,11 +2329,21 @@ var pbar = (function () {
 		if (!widget.is_open)
 			return;
 
-		pctx.fillStyle = '#573'; pctx.fillRect((x - w / 2) - 1, 0, w + 2, pc.h);
-		pctx.fillStyle = '#dfc'; pctx.fillRect((x - w / 2), 0, w, pc.h);
+		var fl = themen.charAt(0) == 'f';
+		if (fl) {
+			pctx.fillStyle = cssvar('--a');
+			pctx.globalAlpha = 0.35; pctx.fillRect(0, 0, x, pc.h);
+			pctx.globalAlpha = 1; pctx.fillRect(x - 1, 0, 2, pc.h);
+		}
+		else {
+			pctx.fillStyle = '#573'; pctx.fillRect((x - w / 2) - 1, 0, w + 2, pc.h);
+			pctx.fillStyle = '#dfc'; pctx.fillRect((x - w / 2), 0, w, pc.h);
+		}
 
 		pctx.lineWidth = 2.5;
-		pctx.fillStyle = '#fff';
+		pctx.fillStyle = fl ? cssvar('--fg-max') : '#fff';
+		if (fl)
+			pctx.strokeStyle = cssvar('--bg-u2');
 
 		var m1 = pctx.measureText(t1),
 			m1b = pctx.measureText(t1 + ":88"),
@@ -2353,10 +2394,16 @@ var vbar = (function () {
 		if (!mp)
 			return;
 
-		var gh = h + '' + light,
+		var gh = h + '' + themen,
+			fl = themen.charAt(0) == 'f',
 			dz = themen == 'dz',
 			dy = themen == 'dy';
 
+		if (gradh != gh && fl) {
+			gradh = gh;
+			grad1 = cssvar('--a');
+			grad2 = cssvar('--bg-u4');
+		}
 		if (gradh != gh) {
 			gradh = gh;
 			grad1 = glossy_grad(r.can, dz ? 120 : 50,
@@ -2379,7 +2426,7 @@ var vbar = (function () {
 			li = !li;
 		}
 
-		ctx.fillStyle = li ? '#fff' : '#210';
+		ctx.fillStyle = fl ? cssvar(mp.vol < 0.5 ? '--fg' : '--on-a') : li ? '#fff' : '#210';
 		ctx.fillText(vt, x, h / 3 * 2);
 
 		clearTimeout(untext);
@@ -2413,7 +2460,7 @@ var vbar = (function () {
 
 		setTimeout(function () {
 			if (IPHONE && mp.au && mul < 0.9 && mp.au.volume == 1)
-				toast.inf(6, 'volume doesnt work because <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html#//apple_ref/doc/uid/TP40009523-CH5-SW11" target="_blank">apple says no</a>');
+				toast.inf(6, 'the volume control does not work here because <a href="https://developer.apple.com/library/archive/documentation/AudioVideo/Conceptual/Using_HTML5_Audio_Video/Device-SpecificConsiderations/Device-SpecificConsiderations.html#//apple_ref/doc/uid/TP40009523-CH5-SW11" target="_blank">Apple does not allow it on this device</a>');
 		}, 1);
 	}
 	can.onmousedown = function (e) {
@@ -2792,7 +2839,7 @@ var afilt = (function () {
 		"bands": [31.25, 62.5, 125, 250, 500, 1000, 2000, 4000, 8000, 16000],
 		"gains": [4, 3, 2, 1, 0, 0, 1, 2, 3, 4],
 		"drcv": [-24, 30, 12, 0.01, 0.25],
-		"drch": ['tresh', 'knee', 'ratio', 'atk', 'rls'],
+		"drch": ['threshold', 'knee', 'ratio', 'attack', 'release'],
 		"drck": ['threshold', 'knee', 'ratio', 'attack', 'release'],
 		"sscl": [L.mt_ssvt, L.mt_ssts, L.mt_sste, L.mt_sssm],
 		"sscv": [1, 5, 5, 5.0],
@@ -4033,7 +4080,8 @@ var fileman = (function () {
 		if (!nf)
 			return '';
 
-		var ret = '{0}<br />{1}<small>F</small>'.format(humansize(sz), nf);
+		var ret = '{0} {1}<br />{2}'.format(nf,
+			nf == 1 ? (L.fsi_f1 || 'file') : (L.fsi_f2 || 'files'), humansize(sz));
 
 		if (dur)
 			ret += ' ' + s2ms(dur);
@@ -4299,7 +4347,7 @@ var fileman = (function () {
 
 		html = html.concat([
 			'<button id="rn_cancel" tt="' + L.frt_abrt + '</button>',
-			'<button id="rn_apply">✅ ' + L.frb_apply + '</button>',
+			'<button id="rn_apply">' + L.frb_apply + '</button>',
 			'<a id="rn_adv" class="tgl btn" href="#" tt="' + L.fr_adv + '</a>',
 			'<a id="rn_case" class="tgl btn" href="#" tt="' + L.fr_case + '</a>',
 			'<a id="rn_win" class="tgl btn" href="#" tt="' + L.fr_win + '</a>',
@@ -5170,7 +5218,7 @@ var showfile = (function () {
 
 			td.innerHTML = '<a href="#" id="t' +
 				link.id + '" class="doc bri" hl="' +
-				link.id + '" rel="nofollow">-txt-</a>';
+				link.id + '" rel="nofollow">text</a>';
 
 			td.getElementsByTagName('a')[0].setAttribute('href', '?doc=' + fn);
 		}
@@ -5575,8 +5623,8 @@ var thegrid = (function () {
 		'<a href="#" class="tgl btn" id="gridcrop" tt="' + L.gt_crop + '</a> ' +
 		'<a href="#" class="tgl btn" id="grid3x" tt="' + L.gt_3x + '</a> ' +
 		'<span>' + L.gt_zoom + ': ' +
-		'<a href="#" class="btn" z="-1.1" tt="Hotkey: shift-A">&ndash;</a> ' +
-		'<a href="#" class="btn" z="1.1" tt="Hotkey: shift-D">+</a></span> <span>' + L.gt_chop + ': ' +
+		'<a href="#" class="btn" z="-1.1" tt="' + (L.gt_z1 || 'Hotkey: shift-A') + '">&ndash;</a> ' +
+		'<a href="#" class="btn" z="1.1" tt="' + (L.gt_z2 || 'Hotkey: shift-D') + '">+</a></span> <span>' + L.gt_chop + ': ' +
 		'<a href="#" class="btn" l="-1" tt="' + L.gt_c1 + '">&ndash;</a> ' +
 		'<a href="#" class="btn" l="1" tt="' + L.gt_c2 + '">+</a></span> <span>' + L.gt_sort + ': ' +
 		'<a href="#" s="href">' + L.gt_name + '</a> ' +
@@ -5920,6 +5968,8 @@ var thegrid = (function () {
 			ihref = addq(ihref, 'cache=i&_=' + ACB + TS);
 			if (CHROME)
 				ihref += "&raster";
+			if (themen.charAt(0) == 'f')
+				ihref += "&ico=" + (light ? 'y' : 'z');
 
 			html.push('<a href="' + ohref + '" ref="' + ref +
 				'"' + ac + ' ttt="' + esc(name) + '"><img style="height:' +
@@ -6807,7 +6857,7 @@ var search_ui = (function () {
 		set_vq();
 		mukey.render();
 		reload_browser();
-		filecols.set_style(['File Name']);
+		filecols.set_style(['Name']);
 
 		if (xhr)
 			sethash('q=' + uricom_enc(xhr.q_raw));
@@ -7540,7 +7590,7 @@ var treectl = (function () {
 			return;
 
 		if (this.ts != res.fnugg && res.fnugg != 'nei' && sread('no_fnugg') !== '1')
-			toast.warn(60, "WARNING: A proxy/CDN between your webbrowser and the server is misbehaving, and caching responses it shouldn't. As a result, you are now seeing stale directory listings. There will be many issues.\n\nIf you need to ignore this and stop these messages, you can set the global-option 'no-fnugg' on the server, or click <code>π</code> and run this: <code>STG.no_fnugg=1</code>");
+			toast.warn(60, "WARNING: A proxy/CDN between your webbrowser and the server is caching responses which it should not cache. As a result, you are now seeing outdated folder listings, and other things will also not work correctly.\n\nIf you need to ignore this and stop these messages, you can set the global-option 'no-fnugg' on the server, or open the JavaScript console (the <code>π</code> link) and run this: <code>STG.no_fnugg=1</code>");
 
 		for (var a = 0; a < res.files.length; a++)
 			if (res.files[a].tags === undefined)
@@ -7725,7 +7775,7 @@ var treectl = (function () {
 			if (tn.lead == '-')
 				tn.lead = '<a href="?doc=' + bhref + '" id="t' + id +
 					'" rel="nofollow" class="doc' + (lang ? ' bri' : '') +
-					'" hl="' + id + '" name="' + hname + '">-txt-</a>';
+					'" hl="' + id + '" name="' + hname + '">text</a>';
 
 			var cl = /\.PARTIAL$/.exec(fname) ? ' class="fade"' : '',
 				ln = ['<tr' + cl + '><td>' + tn.lead + '</td><td><a href="' +
@@ -8216,8 +8266,8 @@ function find_file_col(txt) {
 function mk_files_header(taglist) {
 	var html = [
 		'<thead><tr>',
-		'<th name="lead"><span>c</span></th>',
-		'<th name="href"><span>File Name</span></th>',
+		'<th name="lead"><span>Action</span></th>',
+		'<th name="href"><span>Name</span></th>',
 		'<th name="sz" sort="int"><span>Size</span></th>'
 	];
 	for (var a = 0; a < taglist.length; a++) {
@@ -8233,7 +8283,7 @@ function mk_files_header(taglist) {
 		html.push(tag + '</span></th>');
 	}
 	html = html.concat([
-		'<th name="ext"><span>T</span></th>',
+		'<th name="ext"><span>Type</span></th>',
 		'<th name="ts"><span>Date</span></th>',
 		'</tr></thead>',
 	]);
@@ -8243,7 +8293,11 @@ function mk_files_header(taglist) {
 
 var filecols = (function () {
 	var r = { 'picking': false };
-	var hidden = jread('filecols', []);
+	var hidden = jread('filecols', []),
+		renamed = { 'c': 'Action', 'T': 'Type', 'File Name': 'Name' };
+
+	for (var a = 0; a < hidden.length; a++)
+		hidden[a] = renamed[hidden[a]] || hidden[a];
 
 	r.add_btns = function () {
 		var ths = QSA('#files>thead th>span');
@@ -8252,7 +8306,7 @@ var filecols = (function () {
 				toh = ths[a].outerHTML, // !ff10
 				ttv = L.cols[ths[a].textContent];
 
-			ttv = (ttv ? ttv + '; ' : '') + 'id=<code>' + th.getAttribute('name') + '</code>';
+			ttv = (ttv || ths[a].textContent) + '$N' + (L.cols_id || 'Column ID:') + ' <code>' + th.getAttribute('name') + '</code>';
 			if (!MOBILE && toh) {
 				th.innerHTML = '<div class="cfg"><a href="#">-</a></div>' + toh;
 				th.getElementsByTagName('a')[0].onclick = ev_row_tgl;
@@ -8566,10 +8620,19 @@ var settheme = (function () {
 		var html = [],
 			cb = ebi('themes'),
 			itheme = ax.indexOf(theme[0]) * 2 + (light ? 1 : 0),
-			names = ['classic dark', 'classic light', 'pm-monokai', 'flat light', 'vice', 'hotdog stand', 'hacker', 'hi-con', 'phi95 dark', 'phi95'];
+			names = ['classic dark', 'classic light', 'pm-monokai', 'flat light', 'vice', 'hotdog stand', 'hacker', 'hi-con', 'phi95 dark', 'phi95', 'plain dark', 'plain light'];
 
+		// the plain themes (10, 11) are the default, so list them first
+		var order = [];
 		for (var a = 0; a < themes; a++)
+			order.push(a);
+		if (themes > 11)
+			order = [10, 11].concat(order.slice(0, 10), order.slice(12));
+
+		for (var b = 0; b < order.length; b++) {
+			var a = order[b];
 			html.push('<option value="{0}">{0} ┃ {1}</option>'.format(a, names[a] || 'custom'));
+		}
 
 		ebi('themes').innerHTML = html.join('');
 		cb.value = itheme;
@@ -10293,6 +10356,63 @@ var mpss = (function() {
 
 	return r;
 })();
+
+
+// tabs inside the wide panels; a theme decides whether to show them (.optabs)
+function optabs(pid, tabs) {
+	var p = ebi(pid),
+		bar = mknod('div'),
+		kids = p.children,
+		html = [];
+
+	for (var a = 0; a < kids.length; a++) {
+		var n = 0;
+		for (var b = 0; b < tabs.length; b++)
+			if (kids[a].matches(tabs[b][1]) || kids[a].querySelector(tabs[b][1])) {
+				n = b;
+				break;
+			}
+		kids[a].setAttribute('otab', n);
+	}
+	for (var a = 0; a < tabs.length; a++)
+		html.push('<a href="#" n="' + a + '">' + tabs[a][0] + '</a>');
+
+	bar.className = 'optabs';
+	bar.innerHTML = html.join('');
+	p.insertBefore(bar, p.firstChild);
+
+	function go(n) {
+		n = parseInt(n) || 0;
+		if (n >= tabs.length)
+			n = 0;
+
+		p.setAttribute('otab', n);
+		var links = bar.children;
+		for (var a = 0; a < links.length; a++)
+			clmod(links[a], 'act', a == n);
+
+		swrite('otab_' + pid, n);
+	}
+	bar.onclick = function (e) {
+		if (e.target.tagName != 'A')
+			return;
+
+		ev(e);
+		go(e.target.getAttribute('n'));
+	};
+	go(sread('otab_' + pid));
+}
+optabs('op_cfg', [
+	[L.tab_view || 'View', '#tooltips, #gauto, #hcols, #bd_lim'],
+	[L.tab_look || 'Appearance', '#themes, #langs, #fszfmt, #icot'],
+	[L.tab_files || 'Files', '#arc_fmt, #rcm_en, #hsortn, #key_notation'],
+	[L.tab_up || 'Upload', '#ask_up']
+]);
+optabs('op_player', [
+	[L.tab_play || 'Playback', '#au_loop, #pb_mode, #au_uncache, #pb_tint'],
+	[L.tab_conv || 'Conversion', '#ac_flac, #ac2opus'],
+	[L.tab_snd || 'Sound', '#audio_drc, #audio_eq, #audio_ss, [id*="_drc"], [id*="_eq"], [id*="_ss"]']
+]);
 
 treectl.hydrate();
 

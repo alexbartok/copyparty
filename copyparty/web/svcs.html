@@ -16,8 +16,8 @@
 <body>
 	<div id="wrap" class="w">
         <div class="cn">
-            <p class="btns"><a href="/{{ rvp }}">browse files</a> // <a href="{{ r }}/?h">control panel</a></p>
-            <p>or choose your OS for cooler alternatives:</p>
+            <p class="btns"><a href="/{{ rvp }}">Browse files</a> <a href="{{ r }}/?h">Control panel</a></p>
+            <p>or choose your OS for other ways to connect:</p>
             <div class="ossel">
                 <a id="swin" href="#">Windows</a>
                 <a id="slin" href="#">Linux</a>
@@ -26,8 +26,8 @@
         </div>
 
         <p class="sph">
-            make this server appear on your computer as a regular HDD!<br />
-            pick your favorite below (sorted by performance, best first) and lets 🎉<br />
+            make this server appear on your computer as a regular drive<br />
+            pick one of the options below (sorted by performance, best first)<br />
             <br />
             <span class="os win lin mac">placeholders:</span>
             <span class="os win">
@@ -36,8 +36,8 @@
             <span class="os lin mac">
                 {% if accs %}{% if un %}<code><b id="un0">{{ un }}</b></code>=username, <code><b id="up0">{{ unpw }}</b></code>=username:password, {% endif %}<code><b id="pw0">{{ pw }}</b></code>=password, {% endif %}<code><b>mp</b></code>=mountpoint
             </span>
-            {% if accs %}<a href="#" id="setpw">use real password</a>{% endif %}
-            <a href="#" id="qr">show qr</a>
+            {% if accs %}<a href="#" id="setpw">Use real password</a>{% endif %}
+            <a href="#" id="qr">Show QR code</a>
         </p>
 
 
@@ -59,7 +59,7 @@
             </pre>
             <ul>
                 {%- if s %}
-                <li>running <code>rclone mount</code> on LAN (or just dont have valid certificates)? add <code>--no-check-certificate</code></li>
+                <li>running <code>rclone mount</code> on LAN (or do not have valid certificates)? add <code>--no-check-certificate</code></li>
                 {%- endif %}
                 <li>old version of rclone? replace all <code>=</code> with <code>&nbsp;</code> (space)</li>
             </ul>
@@ -82,7 +82,7 @@
             </pre>
             <ul>
                 {%- if s %}
-                <li>running <code>rclone mount</code> on LAN (or just dont have valid certificates)? add <code>--no-check-certificate</code></li>
+                <li>running <code>rclone mount</code> on LAN (or do not have valid certificates)? add <code>--no-check-certificate</code></li>
                 {%- endif %}
                 <li>running <code>rclone mount</code> as root? add <code>--allow-other</code></li>
                 <li>old version of rclone? replace all <code>=</code> with <code>&nbsp;</code> (space)</li>
@@ -107,7 +107,7 @@
                 printf '%s\n' "http{{ s }}://{{ ep }}/{{ rvp }} <b>mp</b> davfs rw,user,uid=1000,noauto 0 0" >> /etc/fstab
             </pre>
             {%- endif %}
-            <p>or the emergency alternative (gnome/gui-only):</p>
+            <p>or as a fallback (gnome/gui-only):</p>
             <!-- gnome-bug: ignores vp -->
             <pre>
                 {%- if accs %}
@@ -165,11 +165,11 @@
             {%- endif %}
             <ul>
                 {%- if args.ftps %}
-                <li>running on LAN (or just dont have valid certificates)? add <code>no_check_certificate=true</code> to the config command</li>
+                <li>running on LAN (or do not have valid certificates)? add <code>no_check_certificate=true</code> to the config command</li>
                 {%- endif %}
                 <li>old version of rclone? replace all <code>=</code> with <code>&nbsp;</code> (space)</li>
             </ul>
-            <p>if you want to use the native FTP client in windows instead (please dont), press <code>win+R</code> and run this command:</p>
+            <p>if you want to use the native FTP client in windows instead (not recommended), press <code>win+R</code> and run this command:</p>
             <pre>
                 {%- if un %}
                 explorer {{ "ftp" if args.ftp else "ftps" }}://{% if accs %}{{ b_un }}:<b>{{ pw }}</b>@{% endif %}{{ host }}:{{ args.ftp or args.ftps }}/{{ rvp }}
@@ -204,12 +204,12 @@
             {%- endif %}
             <ul>
                 {%- if args.ftps %}
-                <li>running on LAN (or just dont have valid certificates)? add <code>no_check_certificate=true</code> to the config command</li>
+                <li>running on LAN (or do not have valid certificates)? add <code>no_check_certificate=true</code> to the config command</li>
                 {%- endif %}
                 <li>running <code>rclone mount</code> as root? add <code>--allow-other</code></li>
                 <li>old version of rclone? replace all <code>=</code> with <code>&nbsp;</code> (space)</li>
             </ul>
-            <p>emergency alternative (gnome/gui-only):</p>
+            <p>fallback (gnome/gui-only):</p>
             <!-- gnome-bug: ignores vp -->
             <pre>
                 {%- if accs %}
@@ -241,7 +241,7 @@
             partyfuse.py{% if accs %} -a <b>{{ unpw }}</b>{% endif %} http{{ s }}://{{ ep }}/{{ rvp }} <b><span class="os win">W:</span><span class="os lin mac">mp</span></b>
         </pre>
         {%- if s %}
-        <ul><li>if you are on LAN (or just dont have valid certificates), add <code>-td</code></li></ul>
+        <ul><li>if you are on LAN (or do not have valid certificates), add <code>-td</code></li></ul>
         {%- endif %}
         <p>
             you can use <a href="{{ r }}/.cpr/a/u2c.py">u2c.py</a> to upload (sometimes faster than web-browsers)

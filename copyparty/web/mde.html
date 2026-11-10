@@ -38,10 +38,12 @@ var SR = "{{ r }}",
 
 var lightswitch = (function () {
 	var l = window.localStorage,
-		drk = (l && l.light) != 1,
+		thm = (l && l.cpp_thm) || "{{ dtheme }}",
+		tf = thm.charAt(0) == "f",
+		drk = l && l.light != null ? l.light != 1 : !(tf && thm.charAt(1) == "y"),
 		f = function (e) {
 if (e) drk = !drk;
-document.documentElement.className = drk? "z":"y";
+document.documentElement.className = tf ? (drk? "fz f z":"fy f y") : (drk? "z":"y");
 try { l.light = drk? 0:1; } catch (ex) { }
 		};
 	f();

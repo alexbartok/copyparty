@@ -27,12 +27,12 @@ var mde = (function () {
     var tbar = [
         {
             name: "light",
-            title: "light",
+            title: "Light or dark mode",
             className: "fa fa-lightbulb",
             action: lightswitch
         }, {
             name: "save",
-            title: "save",
+            title: "Save (Ctrl-S)",
             className: "fa fa-save",
             action: save
         }, '|',
@@ -160,7 +160,7 @@ function save_cb() {
             return toast.err(0, msg.join('\n'));
         }
         else
-            return toast.err(0, 'Error! Save failed.  Maybe this JSON explains why:\n\n' + this.responseText);
+            return toast.err(0, 'Error! Save failed.  Server response:\n\n' + this.responseText);
     }
 
     clmod(this.btn, 'force-save');
