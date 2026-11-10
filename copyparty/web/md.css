@@ -450,3 +450,218 @@ blink {
 		color: #940;
 	}
 }
+
+
+
+/* theme f begin */
+/* theme f, "plain": markdown viewer (colors are in ui.css)
+ * icons: Lucide v1.71.0, ISC license, https://lucide.dev
+ */
+@media screen {
+	html.f {
+		--i-chevron-right: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 18 6-6-6-6%22/%3E%3C/svg%3E");
+	}
+	html.f,
+	html.f body {
+		color: var(--fg);
+		background: var(--bg);
+		text-shadow: none;
+		-webkit-font-smoothing: antialiased;
+	}
+	html.f #repl {
+		font-size: .8rem;
+		color: var(--fg-weak);
+		opacity: .6;
+	}
+
+	/* breadcrumbs */
+	html.f #mn {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: .125rem;
+		box-sizing: border-box;
+		width: 100%;
+		padding: .5rem 2rem .25rem .75rem;
+		background: var(--bg);
+		border: none;
+	}
+	html.f #mn a,
+	html.f #mn a:first-child,
+	html.f #mn a:last-child {
+		display: inline-flex;
+		align-items: center;
+		color: var(--fg-weak);
+		margin: 0;
+		padding: .2rem .4rem;
+		border: none;
+		border-radius: var(--rad);
+		text-decoration: none;
+	}
+	html.f #mn a:hover {
+		color: var(--fg-max);
+		background: var(--bg-u3);
+		text-decoration: none;
+	}
+	html.f #mn a:last-child {
+		color: var(--fg-max);
+		font-weight: 500;
+	}
+	html.f #mn a:not(:last-child)::after {
+		width: .9rem;
+		height: .9rem;
+		margin: 0 -.35rem 0 .45rem;
+		border: none;
+		transform: none;
+		background: var(--fg-weak);
+		opacity: .6;
+		-webkit-mask: var(--i-chevron-right) center / contain no-repeat;
+		mask: var(--i-chevron-right) center / contain no-repeat;
+	}
+
+	/* toolbar */
+	html.f #mh {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: .375rem;
+		box-sizing: border-box;
+		width: 100%;
+		padding: .375rem .75rem .5rem .75rem;
+		background: var(--bg);
+		border-bottom: 1px solid var(--line);
+	}
+	html.f #mh a {
+		display: inline-flex;
+		align-items: center;
+		box-sizing: border-box;
+		height: 2rem;
+		margin: 0;
+		padding: 0 .7rem;
+		font-size: .9rem;
+		line-height: 1;
+		color: var(--fg);
+		background: var(--bg-u3);
+		border: 1px solid var(--line);
+		border-radius: var(--rad);
+		text-decoration: none;
+		white-space: nowrap;
+	}
+	html.f #mh a:hover {
+		color: var(--fg-max);
+		background: var(--bg-u5);
+	}
+	html.f #lno {
+		position: static;
+		margin-left: auto;
+		font-size: .8rem;
+		color: var(--fg-weak);
+		font-variant-numeric: tabular-nums;
+	}
+	html.f #toolsbox,
+	html.f #toolsbox.open {
+		position: relative;
+		display: inline-block;
+		overflow: visible;
+		height: 2rem;
+		margin: 0;
+		padding: 0;
+		background: none;
+		box-shadow: none;
+		border-radius: 0;
+	}
+	html.f #toolsbox a+a {
+		display: none;
+	}
+	html.f #toolsbox.open a {
+		position: relative;
+		z-index: 11;
+	}
+	html.f #toolsbox.open a+a {
+		display: flex;
+		width: max-content;
+		min-width: 100%;
+		margin-top: -1px;
+		background: var(--bg-u2);
+		border-radius: 0;
+		box-shadow: 0 .5rem 1rem rgba(0,0,0,0.25);
+	}
+	html.f #toolsbox.open a+a:hover {
+		background: var(--bg-u5);
+	}
+	html.f #toolsbox.open a:first-child {
+		background: var(--bg-u5);
+		border-radius: var(--rad) var(--rad) 0 0;
+	}
+	html.f #toolsbox.open a:last-child {
+		border-radius: 0 0 var(--rad) var(--rad);
+	}
+
+	/* table of contents */
+	html.f #toc {
+		background: var(--bg);
+		scrollbar-color: var(--bg-u6) var(--bg-u1);
+	}
+	html.f #toc>ul {
+		padding: .5rem;
+		margin: 0;
+	}
+	html.f #toc li {
+		border: none;
+		margin: .125rem 0;
+		line-height: 1.3;
+	}
+	html.f #toc a,
+	html.f #toc a.act {
+		color: var(--fg);
+		background: none;
+		border: none;
+		border-radius: var(--rad);
+		margin: 0;
+		padding: .3rem .5rem;
+		font-size: .9rem;
+	}
+	html.f #toc a:hover {
+		color: var(--fg-max);
+		background: var(--bg-u3);
+	}
+	html.f #toc a.act {
+		color: var(--fg-max);
+		background: var(--sel);
+	}
+	html.f #mw {
+		scrollbar-color: var(--bg-u6) var(--bg);
+	}
+	html.f #mp {
+		padding-top: .5rem;
+	}
+	html.f .todo_pend,
+	html.f .todo_done {
+		color: var(--fg-weak);
+		text-shadow: none;
+	}
+	html.f .todo_done {
+		color: var(--ok);
+	}
+	html.f #helpbox a {
+		color: var(--a);
+	}
+
+
+}
+@media screen and (min-width: 66em) {
+	html.f #toc {
+		background: var(--bg-u1);
+		border: none;
+		border-right: 1px solid var(--line);
+		box-shadow: none;
+	}
+	html.f #toc::-webkit-scrollbar-track,
+	html.f #toc::-webkit-scrollbar {
+		background: var(--bg-u1);
+	}
+	html.f #toc::-webkit-scrollbar-thumb {
+		background: var(--bg-u6);
+	}
+}
+/* theme f end */

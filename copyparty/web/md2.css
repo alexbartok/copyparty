@@ -117,3 +117,66 @@ html.z #helpbox {
 	border: 1px solid #079;
 	border-width: 1px 0;
 }
+
+
+
+/* theme f begin */
+/* theme f, "plain": markdown editor (colors are in ui.css) */
+html.f #mtw {
+	overflow: hidden;
+}
+html.f #mt,
+html.f #mtr {
+	color: var(--fg);
+	background: var(--bg-u1);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	box-sizing: border-box;
+	padding: .5rem .6rem;
+	line-height: 1.45;
+	scrollbar-color: var(--bg-u6) var(--bg-u1);
+}
+html.f #mt:focus {
+	border-color: var(--a);
+}
+html.f #mh #save {
+	color: var(--on-a);
+	background: var(--a);
+	border-color: transparent;
+}
+html.f #mh #save:hover {
+	background: var(--a-b);
+}
+html.f #mh #save.force-save {
+	color: #fff;
+	background: var(--err);
+	border-color: transparent;
+	border-radius: var(--rad);
+}
+html.f #mh #save.disabled {
+	color: var(--fg-weak);
+	background: var(--bg-u3);
+	border-color: var(--line);
+	opacity: .6;
+}
+html.f #helpbox {
+	color: var(--fg);
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: calc(var(--rad) * 2);
+	box-shadow: 0 1rem 3rem rgba(0,0,0,0.4);
+	padding: 1.25rem 1.5rem;
+}
+html.f #helpbox #helpclose {
+	display: inline-block;
+	color: var(--fg);
+	background: var(--bg-u4);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	padding: .3rem .8rem;
+	font-size: .9rem;
+}
+html.f #helpbox #helpclose:hover {
+	background: var(--bg-u5);
+}
+/* theme f end */

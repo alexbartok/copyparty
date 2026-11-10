@@ -645,3 +645,380 @@ hr {
 		transition: none;
 	}
 }
+
+
+
+/* theme f begin */
+/* theme f, "plain" (fz = dark, fy = light): colors and the parts shared by all pages
+ * neutral surfaces, one accent color, no text shadows
+ */
+html.f {
+	--font-main: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	--font-mono: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas;
+
+	--rad: .4rem;
+	--line: rgba(128,128,128,0.22);
+	--ok: #3fa55b;
+	--warn: #c98a1b;
+	--err: #d2504b;
+}
+html.f.fz {
+	--fg: #dcdde0;
+	--fg-max: #fff;
+	--fg2-max: #fff;
+	--fg-weak: #9a9da4;
+
+	--bg-u6: #4a4d55;
+	--bg-u5: #3a3d44;
+	--bg-u4: #303238;
+	--bg-u3: #292b30;
+	--bg-u2: #222428;
+	--bg-u1: #1d1e22;
+	--bg: #18191c;
+	--bg-d1: #141518;
+	--bg-d2: #111214;
+	--bg-d3: #0c0d0e;
+	--bg-max: #000;
+
+	--a: #8ab4ff;
+	--a-b: #a8c7ff;
+	--a-gray: #6b6e75;
+	--on-a: #0b1a33;
+	--sel: #25334d;
+
+	--sel-fg: #fff;
+	--sel-bg: #33507f;
+}
+html.f.fy {
+	--fg: #26282c;
+	--fg-max: #000;
+	--fg2-max: #000;
+	--fg-weak: #666a72;
+
+	--bg-max: #fff;
+	--bg-u6: #c9ccd1;
+	--bg-u5: #d9dbdf;
+	--bg-u4: #e3e5e8;
+	--bg-u3: #ebecef;
+	--bg-u2: #f3f4f6;
+	--bg-u1: #f7f8f9;
+	--bg: #fff;
+	--bg-d1: #f3f4f6;
+	--bg-d2: #e3e5e8;
+	--bg-d3: #c9ccd1;
+
+	--a: #2257c9;
+	--a-b: #17449f;
+	--a-gray: #9a9da4;
+	--on-a: #fff;
+	--sel: #e3ecfd;
+
+	--sel-fg: #000;
+	--sel-bg: #bcd2fb;
+	--line: rgba(0,0,0,0.12);
+}
+html.f *:focus,
+html.f *:focus+label,
+html.f #pctl *:focus,
+html.f .btn:focus {
+	box-shadow: none;
+	outline: none;
+}
+html.f *:focus-visible,
+html.f *:focus-visible+label,
+html.f #pctl *:focus-visible,
+html.f .btn:focus-visible {
+	box-shadow: none;
+	outline: 2px solid var(--a);
+	outline-offset: 1px;
+}
+html.f input[type="text"]:focus,
+html.f input:not([type]):focus,
+html.f textarea:focus {
+	border-color: var(--a);
+	box-shadow: 0 0 0 2px var(--sel);
+	outline: none;
+}
+html.f #tt,
+html.f #toast {
+	color: var(--fg);
+	background: var(--bg-u4);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	box-shadow: 0 .25rem 1rem rgba(0,0,0,0.3);
+	text-shadow: none;
+}
+html.f #tt {
+	border-width: 0;
+	font-size: .85rem;
+	line-height: 1.45;
+}
+html.f #tt.show,
+html.f #tt.show.b {
+	border-width: 1px;
+	padding: .6rem .8rem;
+}
+html.f #tth {
+	color: var(--on-a);
+	background: var(--a);
+}
+html.f #tt em {
+	color: var(--a);
+}
+html.f #tt code,
+html.f #toast code,
+html.f #modalc code {
+	color: var(--fg-max);
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: .25rem;
+	box-shadow: none;
+}
+html.f #toast {
+	border-width: 1px 1px 1px .25rem;
+	border-left-color: var(--a);
+}
+html.f #toast.ok {
+	border-left-color: var(--ok);
+}
+html.f #toast.warn {
+	border-left-color: var(--warn);
+}
+html.f #toast.err {
+	border-left-color: var(--err);
+}
+html.f #toast #toastc {
+	color: var(--fg);
+	background: var(--bg-u5);
+	border-radius: var(--rad) 0 0 var(--rad);
+	box-shadow: none;
+	text-shadow: none;
+}
+html.f #toast #toastt {
+	color: var(--fg-weak);
+	background: none;
+	text-shadow: none;
+}
+html.f #modal {
+	background: rgba(0,0,0,0.5);
+}
+html.f #modalc {
+	color: var(--fg);
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: calc(var(--rad) * 2);
+	box-shadow: 0 1rem 3rem rgba(0,0,0,0.4);
+	padding: 1.25rem;
+}
+html.f #modalc h6 {
+	font-size: 1.05rem;
+	font-weight: 500;
+	text-align: left;
+	border: none;
+	padding: 0 0 .75rem 0;
+}
+html.f #modalc a {
+	color: var(--a);
+}
+html.f #modalc input[type="text"],
+html.f #modalc input[type="password"],
+html.f #modalc textarea,
+html.f #modalc select {
+	font-family: inherit;
+	font-size: 1rem;
+	color: var(--fg);
+	background: var(--bg);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	padding: .4rem .6rem;
+	box-shadow: none;
+}
+html.f #modalc textarea {
+	font-family: var(--font-mono), monospace;
+	font-size: .9rem;
+}
+html.f #modalb a {
+	color: var(--fg);
+	background: var(--bg-u4);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	padding: .4rem .9rem;
+	margin-left: .5rem;
+}
+html.f #modalb a:hover {
+	background: var(--bg-u5);
+}
+html.f #modalb a#modal-ok {
+	color: var(--on-a);
+	background: var(--a);
+	border-color: transparent;
+}
+html.f #modalb a:focus {
+	outline: 2px solid var(--a);
+	outline-offset: 1px;
+	box-shadow: none;
+}
+
+/* rendered markdown */
+@media screen {
+	/* rendered markdown */
+	html.f .mdo {
+		line-height: 1.6;
+	}
+	html.f .mdo a,
+	html.fy .mdo a {
+		color: var(--a);
+		background: none;
+		border: none;
+		padding: 0;
+		margin: 0;
+		text-decoration: underline;
+		text-underline-offset: .15em;
+	}
+	html.f .mdo a:hover {
+		color: var(--a-b);
+	}
+	html.f .mdo h1 a, html.f .mdo h4 a,
+	html.f .mdo h2 a, html.f .mdo h5 a,
+	html.f .mdo h3 a, html.f .mdo h6 a {
+		color: inherit;
+		background: none;
+		text-decoration: none;
+	}
+	html.f .mdo h1,
+	html.f .mdo h2,
+	html.f .mdo h3 {
+		color: var(--fg-max);
+		background: none;
+		font-weight: 600;
+		text-align: left;
+		line-height: 1.3;
+		border: none;
+		border-radius: 0;
+	}
+	html.f .mdo h1 {
+		font-size: 1.75em;
+		border-bottom: 1px solid var(--line);
+		margin: 1.5em 0 .75em 0;
+		padding: 0 0 .3em 0;
+	}
+	html.f .mdo h2 {
+		font-size: 1.35em;
+		border-bottom: 1px solid var(--line);
+		margin: 2em 0 .75em 0;
+		padding: 0 0 .25em 0;
+	}
+	html.f .mdo h3 {
+		font-size: 1.1em;
+		margin: 1.75em 0 .5em 0;
+	}
+	html.f .mdo pre,
+	html.f .mdo code {
+		color: var(--fg-max);
+		background: var(--bg-u2);
+		border: 1px solid var(--line);
+		border-radius: .25rem;
+	}
+	html.f .mdo code {
+		font-size: .9em;
+		padding: .1em .35em;
+	}
+	html.f .mdo a>code {
+		color: inherit;
+		background: var(--bg-u2);
+		border: 1px solid var(--line);
+		padding: .1em .35em;
+	}
+	html.f .mdo pre {
+		padding: .5em .3em;
+		margin: 1em 0;
+		overflow-x: auto;
+	}
+	html.f .mdo pre code {
+		color: inherit;
+		background: none;
+		border: none;
+		border-radius: 0;
+		line-height: 1.5;
+		padding: 0 .5em;
+	}
+	html.f .mdo pre code:hover {
+		color: var(--fg-max);
+		background: var(--bg-u4);
+	}
+	html.f .mdo pre code::before {
+		color: var(--fg-weak);
+	}
+	html.f .mdo strong {
+		color: var(--fg-max);
+	}
+	html.f .mdo p>em,
+	html.f .mdo li>em,
+	html.f .mdo td>em {
+		color: inherit;
+		border: none;
+		padding: 0;
+	}
+	html.f .mdo blockquote {
+		font-family: inherit;
+		color: var(--fg-weak);
+		background: none;
+		border: none;
+		border-left: 3px solid var(--bg-u6);
+		padding: 0 0 0 1em;
+		margin: 1em 0;
+	}
+	html.f .mdo ul,
+	html.f .mdo ol {
+		border-color: var(--line);
+	}
+	html.f .mdo ul ul,
+	html.f .mdo ul ol,
+	html.f .mdo ol ul,
+	html.f .mdo ol ol {
+		border-left: 1px solid var(--line);
+	}
+	html.f .mdo ul>li,
+	html.f .mdo ol>li {
+		margin-top: .35em;
+		margin-bottom: .35em;
+	}
+	html.f .mdo th,
+	html.f .mdo td {
+		border: 1px solid var(--line);
+		padding: .35em .7em;
+	}
+	html.f .mdo th {
+		color: var(--fg-max);
+		background: var(--bg-u2);
+		font-weight: 600;
+		text-align: left;
+	}
+	html.f .mdo hr {
+		border: none;
+		border-top: 1px solid var(--line);
+		margin: 2em 0;
+	}
+	html.f .mdo img {
+		border-radius: var(--rad);
+	}
+	html.f .mdo pre,
+	html.f .mdo pre[class*="language-"] {
+		background: var(--bg-u2);
+		border: 1px solid var(--line);
+		border-radius: var(--rad);
+		box-shadow: none;
+		padding: .6rem .75rem;
+	}
+	html.f .mdo pre code,
+	html.f .mdo pre code[class*="language-"] {
+		display: block;
+		background: none;
+		border: none;
+		border-radius: 0;
+		box-shadow: none;
+		padding: 0;
+		margin: 0;
+	}
+}
+/* theme f end */

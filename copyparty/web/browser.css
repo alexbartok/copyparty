@@ -4192,3 +4192,1916 @@ html.e #detree {
     pointer-events: none;
 	z-index: 99;
 }
+
+
+
+.optabs {
+	display: none;
+}
+
+
+
+/* theme f begin */
+/* theme f, "plain": filebrowser (colors and shared parts are in ui.css)
+ * icons: Lucide v1.71.0, ISC license, https://lucide.dev
+ */
+html.f {
+	--ic: 1.25rem;
+
+	--i-arrow-down-0-1: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m3 16 4 4 4-4%22/%3E%3Cpath d=%22M7 20V4%22/%3E%3Crect x=%2215%22 y=%224%22 width=%224%22 height=%226%22 ry=%222%22/%3E%3Cpath d=%22M17 20v-6h-2%22/%3E%3Cpath d=%22M15 20h4%22/%3E%3C/svg%3E");
+	--i-arrow-left-right: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 3 4 7l4 4%22/%3E%3Cpath d=%22M4 7h16%22/%3E%3Cpath d=%22m16 21 4-4-4-4%22/%3E%3Cpath d=%22M20 17H4%22/%3E%3C/svg%3E");
+	--i-arrow-left-to-line: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 19V5%22/%3E%3Cpath d=%22m13 6-6 6 6 6%22/%3E%3Cpath d=%22M7 12h14%22/%3E%3C/svg%3E");
+	--i-arrow-right-from-line: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 5v14%22/%3E%3Cpath d=%22M21 12H7%22/%3E%3Cpath d=%22m15 18 6-6-6-6%22/%3E%3C/svg%3E");
+	--i-audio-waveform: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2 13a2 2 0 0 0 2-2V7a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0V4a2 2 0 0 1 4 0v13a2 2 0 0 0 4 0v-4a2 2 0 0 1 2-2%22/%3E%3C/svg%3E");
+	--i-check-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M18 6 7 17l-5-5%22/%3E%3Cpath d=%22m22 10-7.5 7.5L13 16%22/%3E%3C/svg%3E");
+	--i-chevron-down: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E");
+	--i-chevron-left: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m15 18-6-6 6-6%22/%3E%3C/svg%3E");
+	--i-chevron-right: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 18 6-6-6-6%22/%3E%3C/svg%3E");
+	--i-chevron-up: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m18 15-6-6-6 6%22/%3E%3C/svg%3E");
+	--i-circle-help: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22/%3E%3Cpath d=%22M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3%22/%3E%3Cpath d=%22M12 17h.01%22/%3E%3C/svg%3E");
+	--i-clipboard: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%228%22 height=%224%22 x=%228%22 y=%222%22 rx=%221%22 ry=%221%22/%3E%3Cpath d=%22M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2%22/%3E%3C/svg%3E");
+	--i-clipboard-paste: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M11 14h10%22/%3E%3Cpath d=%22M16 4h2a2 2 0 0 1 2 2v1.344%22/%3E%3Cpath d=%22m17 18 4-4-4-4%22/%3E%3Cpath d=%22M8 4H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 1.793-1.113%22/%3E%3Crect x=%228%22 y=%222%22 width=%228%22 height=%224%22 rx=%221%22/%3E%3C/svg%3E");
+	--i-clock: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22/%3E%3Cpath d=%22M12 6v6l4 2%22/%3E%3C/svg%3E");
+	--i-copy: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2214%22 height=%2214%22 x=%228%22 y=%228%22 rx=%222%22 ry=%222%22/%3E%3Cpath d=%22M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2%22/%3E%3C/svg%3E");
+	--i-crop: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 2v14a2 2 0 0 0 2 2h14%22/%3E%3Cpath d=%22M18 22V8a2 2 0 0 0-2-2H2%22/%3E%3C/svg%3E");
+	--i-dices: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2212%22 height=%2212%22 x=%222%22 y=%2210%22 rx=%222%22 ry=%222%22/%3E%3Cpath d=%22m17.92 14 3.5-3.5a2.24 2.24 0 0 0 0-3l-5-4.92a2.24 2.24 0 0 0-3 0L10 6%22/%3E%3Cpath d=%22M6 18h.01%22/%3E%3Cpath d=%22M10 14h.01%22/%3E%3Cpath d=%22M15 6h.01%22/%3E%3Cpath d=%22M18 9h.01%22/%3E%3C/svg%3E");
+	--i-download: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 15V3%22/%3E%3Cpath d=%22M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4%22/%3E%3Cpath d=%22m7 10 5 5 5-5%22/%3E%3C/svg%3E");
+	--i-eye: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+	--i-eye-off: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49%22/%3E%3Cpath d=%22M14.084 14.158a3 3 0 0 1-4.242-4.242%22/%3E%3Cpath d=%22M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143%22/%3E%3Cpath d=%22m2 2 20 20%22/%3E%3C/svg%3E");
+	--i-file-plus: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z%22/%3E%3Cpath d=%22M14 2v5a1 1 0 0 0 1 1h5%22/%3E%3Cpath d=%22M9 15h6%22/%3E%3Cpath d=%22M12 18v-6%22/%3E%3C/svg%3E");
+	--i-file-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z%22/%3E%3Cpath d=%22M14 2v5a1 1 0 0 0 1 1h5%22/%3E%3Ccircle cx=%2211.5%22 cy=%2214.5%22 r=%222.5%22/%3E%3Cpath d=%22M13.3 16.3 15 18%22/%3E%3C/svg%3E");
+	--i-file-text: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z%22/%3E%3Cpath d=%22M14 2v5a1 1 0 0 0 1 1h5%22/%3E%3Cpath d=%22M10 9H8%22/%3E%3Cpath d=%22M16 13H8%22/%3E%3Cpath d=%22M16 17H8%22/%3E%3C/svg%3E");
+	--i-file-up: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z%22/%3E%3Cpath d=%22M14 2v5a1 1 0 0 0 1 1h5%22/%3E%3Cpath d=%22M12 12v6%22/%3E%3Cpath d=%22m15 15-3-3-3 3%22/%3E%3C/svg%3E");
+	--i-folder-plus: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 10v6%22/%3E%3Cpath d=%22M9 13h6%22/%3E%3Cpath d=%22M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z%22/%3E%3C/svg%3E");
+	--i-folders: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M20 5a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H9a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h2.5a1.5 1.5 0 0 1 1.2.6l.6.8a1.5 1.5 0 0 0 1.2.6z%22/%3E%3Cpath d=%22M3 8.268a2 2 0 0 0-1 1.738V19a2 2 0 0 0 2 2h11a2 2 0 0 0 1.732-1%22/%3E%3C/svg%3E");
+	--i-headphones: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3%22/%3E%3C/svg%3E");
+	--i-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2218%22 height=%2218%22 x=%223%22 y=%223%22 rx=%222%22 ry=%222%22/%3E%3Ccircle cx=%229%22 cy=%229%22 r=%222%22/%3E%3Cpath d=%22m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21%22/%3E%3C/svg%3E");
+	--i-image-off: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cline x1=%222%22 x2=%2222%22 y1=%222%22 y2=%2222%22/%3E%3Cpath d=%22M10.41 10.41a2 2 0 1 1-2.83-2.83%22/%3E%3Cline x1=%2213.5%22 x2=%226%22 y1=%2213.5%22 y2=%2221%22/%3E%3Cline x1=%2218%22 x2=%2221%22 y1=%2212%22 y2=%2215%22/%3E%3Cpath d=%22M3.59 3.59A1.99 1.99 0 0 0 3 5v14a2 2 0 0 0 2 2h14c.55 0 1.052-.22 1.41-.59%22/%3E%3Cpath d=%22M21 15V5a2 2 0 0 0-2-2H9%22/%3E%3C/svg%3E");
+	--i-image-upscale: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M16 3h5v5%22/%3E%3Cpath d=%22M17 21h2a2 2 0 0 0 2-2%22/%3E%3Cpath d=%22M21 12v3%22/%3E%3Cpath d=%22m21 3-5 5%22/%3E%3Cpath d=%22M3 7V5a2 2 0 0 1 2-2%22/%3E%3Cpath d=%22m5 21 4.144-4.144a1.21 1.21 0 0 1 1.712 0L13 19%22/%3E%3Cpath d=%22M9 3h3%22/%3E%3Crect x=%223%22 y=%2211%22 width=%2210%22 height=%2210%22 rx=%221%22/%3E%3C/svg%3E");
+	--i-info: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22/%3E%3Cpath d=%22M12 16v-4%22/%3E%3Cpath d=%22M12 8h.01%22/%3E%3C/svg%3E");
+	--i-layout-grid: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%227%22 height=%227%22 x=%223%22 y=%223%22 rx=%221%22/%3E%3Crect width=%227%22 height=%227%22 x=%2214%22 y=%223%22 rx=%221%22/%3E%3Crect width=%227%22 height=%227%22 x=%2214%22 y=%2214%22 rx=%221%22/%3E%3Crect width=%227%22 height=%227%22 x=%223%22 y=%2214%22 rx=%221%22/%3E%3C/svg%3E");
+	--i-leaf: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M11 20a10 10 0 0010-10 25.9 25.9 0 00-1.04-7.281 1 1 0 00-1.755-.325C15.833 5.5 13 5.5 9.8 6.1A7 7 0 0011 20%22/%3E%3Cpath d=%22M2 21a5 5 0 012.911-4.544C7.613 15.212 8.351 15.24 11 13%22/%3E%3C/svg%3E");
+	--i-list-music: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M16 5H3%22/%3E%3Cpath d=%22M11 12H3%22/%3E%3Cpath d=%22M11 19H3%22/%3E%3Cpath d=%22M21 16V5%22/%3E%3Ccircle cx=%2218%22 cy=%2216%22 r=%223%22/%3E%3C/svg%3E");
+	--i-list-plus: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M16 5H3%22/%3E%3Cpath d=%22M11 12H3%22/%3E%3Cpath d=%22M16 19H3%22/%3E%3Cpath d=%22M18 9v6%22/%3E%3Cpath d=%22M21 12h-6%22/%3E%3C/svg%3E");
+	--i-locate-fixed: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cline x1=%222%22 x2=%225%22 y1=%2212%22 y2=%2212%22/%3E%3Cline x1=%2219%22 x2=%2222%22 y1=%2212%22 y2=%2212%22/%3E%3Cline x1=%2212%22 x2=%2212%22 y1=%222%22 y2=%225%22/%3E%3Cline x1=%2212%22 x2=%2212%22 y1=%2219%22 y2=%2222%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%227%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+	--i-maximize: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M8 3H5a2 2 0 0 0-2 2v3%22/%3E%3Cpath d=%22M21 8V5a2 2 0 0 0-2-2h-3%22/%3E%3Cpath d=%22M3 16v3a2 2 0 0 0 2 2h3%22/%3E%3Cpath d=%22M16 21h3a2 2 0 0 0 2-2v-3%22/%3E%3C/svg%3E");
+	--i-message-square: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M22 17a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 21.286V5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2z%22/%3E%3C/svg%3E");
+	--i-move-horizontal: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m18 8 4 4-4 4%22/%3E%3Cpath d=%22M2 12h20%22/%3E%3Cpath d=%22m6 8-4 4 4 4%22/%3E%3C/svg%3E");
+	--i-music: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M21 16V3a1 1 0 0 0-1.28-.96l-10 2.917a1 1 0 0 0-.72.96V19%22/%3E%3Ccircle cx=%2218%22 cy=%2216%22 r=%223%22/%3E%3Ccircle cx=%226%22 cy=%2219%22 r=%223%22/%3E%3C/svg%3E");
+	--i-package: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M11 21.73a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73z%22/%3E%3Cpath d=%22M12 22V12%22/%3E%3Cpolyline points=%223.29 7 12 12 20.71 7%22/%3E%3Cpath d=%22m7.5 4.27 9 5.15%22/%3E%3C/svg%3E");
+	--i-panel-left: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2218%22 height=%2218%22 x=%223%22 y=%223%22 rx=%222%22/%3E%3Cpath d=%22M9 3v18%22/%3E%3C/svg%3E");
+	--i-panel-left-close: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2218%22 height=%2218%22 x=%223%22 y=%223%22 rx=%222%22/%3E%3Cpath d=%22M9 3v18%22/%3E%3Cpath d=%22m16 15-3-3 3-3%22/%3E%3C/svg%3E");
+	--i-pause: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%2214%22 y=%223%22 width=%225%22 height=%2218%22 rx=%221%22/%3E%3Crect x=%225%22 y=%223%22 width=%225%22 height=%2218%22 rx=%221%22/%3E%3C/svg%3E");
+	--i-pencil: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z%22/%3E%3Cpath d=%22m15 5 4 4%22/%3E%3C/svg%3E");
+	--i-pin: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 17v5%22/%3E%3Cpath d=%22M9 10.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-.76a2 2 0 0 0-1.11-1.79l-1.78-.9A2 2 0 0 1 15 10.76V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H8a2 2 0 0 0 0 4 1 1 0 0 1 1 1z%22/%3E%3C/svg%3E");
+	--i-pin-off: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 17v5%22/%3E%3Cpath d=%22M15 9.34V7a1 1 0 0 1 1-1 2 2 0 0 0 0-4H7.89%22/%3E%3Cpath d=%22m2 2 20 20%22/%3E%3Cpath d=%22M9 9v1.76a2 2 0 0 1-1.11 1.79l-1.78.9A2 2 0 0 0 5 15.24V16a1 1 0 0 0 1 1h11%22/%3E%3C/svg%3E");
+	--i-play: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z%22/%3E%3C/svg%3E");
+	--i-refresh-cw: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8%22/%3E%3Cpath d=%22M21 3v5h-5%22/%3E%3Cpath d=%22M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16%22/%3E%3Cpath d=%22M8 16H3v5%22/%3E%3C/svg%3E");
+	--i-repeat-1: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m17 2 4 4-4 4%22/%3E%3Cpath d=%22M3 11v-1a4 4 0 0 1 4-4h14%22/%3E%3Cpath d=%22m7 22-4-4 4-4%22/%3E%3Cpath d=%22M21 13v1a4 4 0 0 1-4 4H3%22/%3E%3Cpath d=%22M11 10h1v4%22/%3E%3C/svg%3E");
+	--i-rotate-ccw: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8%22/%3E%3Cpath d=%22M3 3v5h5%22/%3E%3C/svg%3E");
+	--i-rotate-cw: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M21 12a9 9 0 1 1-9-9c2.52 0 4.93 1 6.74 2.74L21 8%22/%3E%3Cpath d=%22M21 3v5h-5%22/%3E%3C/svg%3E");
+	--i-rows-2: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2218%22 height=%2218%22 x=%223%22 y=%223%22 rx=%222%22/%3E%3Cpath d=%22M3 12h18%22/%3E%3C/svg%3E");
+	--i-rows-4: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2218%22 height=%2218%22 x=%223%22 y=%223%22 rx=%222%22/%3E%3Cpath d=%22M21 7.5H3%22/%3E%3Cpath d=%22M21 12H3%22/%3E%3Cpath d=%22M21 16.5H3%22/%3E%3C/svg%3E");
+	--i-scissors: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%226%22 cy=%226%22 r=%223%22/%3E%3Cpath d=%22M8.12 8.12 12 12%22/%3E%3Cpath d=%22M20 4 8.12 15.88%22/%3E%3Ccircle cx=%226%22 cy=%2218%22 r=%223%22/%3E%3Cpath d=%22M14.8 14.8 20 20%22/%3E%3C/svg%3E");
+	--i-search: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m21 21-4.34-4.34%22/%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%228%22/%3E%3C/svg%3E");
+	--i-settings: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M9.671 4.136a2.34 2.34 0 0 1 4.659 0 2.34 2.34 0 0 0 3.319 1.915 2.34 2.34 0 0 1 2.33 4.033 2.34 2.34 0 0 0 0 3.831 2.34 2.34 0 0 1-2.33 4.033 2.34 2.34 0 0 0-3.319 1.915 2.34 2.34 0 0 1-4.659 0 2.34 2.34 0 0 0-3.32-1.915 2.34 2.34 0 0 1-2.33-4.033 2.34 2.34 0 0 0 0-3.831A2.34 2.34 0 0 1 6.35 6.051a2.34 2.34 0 0 0 3.319-1.915%22/%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22/%3E%3C/svg%3E");
+	--i-share-2: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2218%22 cy=%225%22 r=%223%22/%3E%3Ccircle cx=%226%22 cy=%2212%22 r=%223%22/%3E%3Ccircle cx=%2218%22 cy=%2219%22 r=%223%22/%3E%3Cline x1=%228.59%22 x2=%2215.42%22 y1=%2213.51%22 y2=%2217.49%22/%3E%3Cline x1=%2215.41%22 x2=%228.59%22 y1=%226.51%22 y2=%2210.49%22/%3E%3C/svg%3E");
+	--i-shield: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z%22/%3E%3C/svg%3E");
+	--i-shuffle: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m18 14 4 4-4 4%22/%3E%3Cpath d=%22m18 2 4 4-4 4%22/%3E%3Cpath d=%22M2 18h1.973a4 4 0 0 0 3.3-1.7l5.454-8.6a4 4 0 0 1 3.3-1.7H22%22/%3E%3Cpath d=%22M2 6h1.972a4 4 0 0 1 3.6 2.2%22/%3E%3Cpath d=%22M22 18h-6.041a4 4 0 0 1-3.3-1.8l-.359-.45%22/%3E%3C/svg%3E");
+	--i-skip-back: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M17.971 4.285A2 2 0 0 1 21 6v12a2 2 0 0 1-3.029 1.715l-9.997-5.998a2 2 0 0 1-.003-3.432z%22/%3E%3Cpath d=%22M3 20V4%22/%3E%3C/svg%3E");
+	--i-skip-forward: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M21 4v16%22/%3E%3Cpath d=%22M6.029 4.285A2 2 0 0 0 3 6v12a2 2 0 0 0 3.029 1.715l9.997-5.998a2 2 0 0 0 .003-3.432z%22/%3E%3C/svg%3E");
+	--i-sliders-horizontal: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M10 5H3%22/%3E%3Cpath d=%22M12 19H3%22/%3E%3Cpath d=%22M14 3v4%22/%3E%3Cpath d=%22M16 17v4%22/%3E%3Cpath d=%22M21 12h-9%22/%3E%3Cpath d=%22M21 19h-5%22/%3E%3Cpath d=%22M21 5h-7%22/%3E%3Cpath d=%22M8 10v4%22/%3E%3Cpath d=%22M8 12H3%22/%3E%3C/svg%3E");
+	--i-square-check: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect width=%2218%22 height=%2218%22 x=%223%22 y=%223%22 rx=%222%22/%3E%3Cpath d=%22m16 9-5.5 5.5L8 12%22/%3E%3C/svg%3E");
+	--i-square-mouse-pointer: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12.034 12.681a.498.498 0 0 1 .647-.647l9 3.5a.5.5 0 0 1-.033.943l-3.444 1.068a1 1 0 0 0-.66.66l-1.067 3.443a.5.5 0 0 1-.943.033z%22/%3E%3Cpath d=%22M21 11V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h6%22/%3E%3C/svg%3E");
+	--i-trash-2: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M10 11v6%22/%3E%3Cpath d=%22M14 11v6%22/%3E%3Cpath d=%22M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6%22/%3E%3Cpath d=%22M3 6h18%22/%3E%3Cpath d=%22M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2%22/%3E%3C/svg%3E");
+	--i-undo-2: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M9 14 4 9l5-5%22/%3E%3Cpath d=%22M4 9h10.5a5.5 5.5 0 0 1 5.5 5.5a5.5 5.5 0 0 1-5.5 5.5H11%22/%3E%3C/svg%3E");
+	--i-unfold-horizontal: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M16 12h6%22/%3E%3Cpath d=%22M8 12H2%22/%3E%3Cpath d=%22M12 2v2%22/%3E%3Cpath d=%22M12 8v2%22/%3E%3Cpath d=%22M12 14v2%22/%3E%3Cpath d=%22M12 20v2%22/%3E%3Cpath d=%22m19 15 3-3-3-3%22/%3E%3Cpath d=%22m5 9-3 3 3 3%22/%3E%3C/svg%3E");
+	--i-upload: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3v12%22/%3E%3Cpath d=%22m17 8-5-5-5 5%22/%3E%3Cpath d=%22M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4%22/%3E%3C/svg%3E");
+	--i-wrap-text: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m16 16-3 3 3 3%22/%3E%3Cpath d=%22M3 12h14.5a1 1 0 0 1 0 7H13%22/%3E%3Cpath d=%22M3 19h6%22/%3E%3Cpath d=%22M3 5h18%22/%3E%3C/svg%3E");
+	--i-x: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M18 6 6 18%22/%3E%3Cpath d=%22m6 6 12 12%22/%3E%3C/svg%3E");
+	--i-zap: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M15.914 4a1.5 1.5 0 00-2.474-1.561l-9 9A1.5 1.5 0 005.5 14h4.002a.5.5 0 01.471.666L8.086 20a1.5 1.5 0 002.475 1.56l9-9A1.5 1.5 0 0018.5 10h-3.997a.5.5 0 01-.472-.667z%22/%3E%3C/svg%3E");
+	--i-zoom-in: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%228%22/%3E%3Cline x1=%2221%22 x2=%2216.65%22 y1=%2221%22 y2=%2216.65%22/%3E%3Cline x1=%2211%22 x2=%2211%22 y1=%228%22 y2=%2214%22/%3E%3Cline x1=%228%22 x2=%2214%22 y1=%2211%22 y2=%2211%22/%3E%3C/svg%3E");
+	--i-zoom-out: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22%23000%22 stroke-width=%221.75%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%228%22/%3E%3Cline x1=%2221%22 x2=%2216.65%22 y1=%2221%22 y2=%2216.65%22/%3E%3Cline x1=%228%22 x2=%2214%22 y1=%2211%22 y2=%2211%22/%3E%3C/svg%3E");
+
+	--bgg: var(--bg);
+	--tree-bg: var(--bg-u1);
+	--row-alt: var(--bg);
+	--txt-sh: a;
+	--op-a-sh: transparent;
+	--op-aa-sh: none;
+	--op-aa-fg: var(--fg-max);
+	--op-aa-bg: var(--bg-u3);
+
+	--a-hil: var(--a);
+	--a-dark: var(--a);
+	--scroll: var(--bg-u6);
+
+	--btn-fg: var(--fg);
+	--btn-bg: var(--bg-u3);
+	--btn-bs: none;
+	--btn-bb: none;
+	--btn-h-fg: var(--fg-max);
+	--btn-h-bg: var(--bg-u5);
+	--btn-1-fg: var(--on-a);
+	--btn-1-bg: var(--a);
+	--btn-1h-fg: var(--on-a);
+	--btn-1h-bg: var(--a-b);
+	--chk-fg: var(--a);
+	--txt-bg: var(--bg-u2);
+
+	--tab-alt: var(--fg-weak);
+	--sort-1: var(--a);
+	--sort-2: var(--fg-weak);
+
+	--sz-b: var(--fg-weak);
+	--sz-k: var(--fg-weak);
+	--sz-m: var(--fg);
+	--sz-g: var(--a);
+	--sz-t: var(--warn);
+	--srv-1: var(--fg-weak);
+	--srv-2: var(--fg-weak);
+	--srv-3: var(--fg);
+	--srv-3b: var(--line);
+
+	--g-play-bg: var(--a);
+	--g-play-b1: var(--a);
+	--g-play-b2: var(--a);
+	--g-play-sh: transparent;
+	--g-sel-fg: var(--fg-max);
+	--g-sel-bg: var(--sel);
+	--g-sel-b1: var(--a);
+	--g-sel-sh: transparent;
+	--g-fsel-bg: var(--a);
+	--g-fsel-b1: var(--a);
+	--g-fsel-ts: transparent;
+	--g-dfg: var(--fg);
+	--g-fg: var(--fg);
+	--g-bg: var(--bg-u1);
+	--g-b1: var(--line);
+	--g-b2: var(--line);
+	--g-g1: var(--bg-u1);
+	--g-g2: var(--bg-u1);
+	--g-f-bg: var(--bg-u3);
+	--g-f-b1: var(--line);
+	--g-f-fg: var(--fg-max);
+	--g-sh: transparent;
+
+	--f-sh1: 0;
+	--f-sh2: 0;
+	--f-sh3: 0;
+	--f-h-b1: var(--line);
+	--f-play-bg: var(--sel);
+	--f-play-fg: var(--fg-max);
+	--f-sel-sh: transparent;
+	--f-gray: var(--fg-weak);
+	--fm-off: var(--fg-weak);
+	--mp-sh: transparent;
+	--mp-b-bg: transparent;
+
+	--u2-btn-b1: var(--line);
+	--u2-sbtn-b1: var(--line);
+	--u2-txt-bg: var(--bg-u2);
+	--u2-tab-bg: transparent;
+	--u2-tab-b1: var(--line);
+	--u2-tab-1-fg: var(--fg-max);
+	--u2-tab-1-bg: var(--bg-u3);
+	--u2-tab-1-b1: var(--a);
+	--u2-tab-1-b2: var(--a);
+	--u2-tab-1-sh: transparent;
+	--u2-b-fg: var(--fg);
+	--u2-b1-bg: var(--bg-u3);
+	--u2-b2-bg: var(--bg-u3);
+	--ud-b1: var(--line);
+
+	text-shadow: none;
+}
+html.f body {
+	-webkit-font-smoothing: antialiased;
+	background: var(--bg);
+}
+html.f #wrap,
+html.f #files,
+html.f #bdoc {
+	background: var(--bg);
+}
+html.f a:hover,
+html.f #files a:hover {
+	color: var(--a);
+	background: none;
+	text-decoration: none;
+}
+html.f :focus-visible {
+	outline: 2px solid var(--a);
+	outline-offset: 1px;
+	box-shadow: none;
+}
+
+
+
+/* icons: hide the emoji, draw a mask in the text color */
+html.f #ops a,
+html.f #entree,
+html.f #wtgrid,
+html.f #wtico,
+html.f #wfm a,
+html.f #zip1,
+html.f #wnp a,
+html.f #wm3u a,
+html.f #wzip a,
+html.f #pctl a,
+html.f #treeh a {
+	font-size: 0;
+	text-shadow: none;
+}
+html.f #ops a:before,
+html.f #entree:before,
+html.f #wtgrid:before,
+html.f #wtico:before,
+html.f #wfm a:before,
+html.f #zip1:before,
+html.f #wnp a:before,
+html.f #wm3u a:before,
+html.f #wzip a:before,
+html.f #pctl a:before,
+html.f #treeh a:before {
+	content: '';
+	display: inline-block;
+	flex: none;
+	width: var(--ic);
+	height: var(--ic);
+	background: currentColor;
+	-webkit-mask: var(--i) center / contain no-repeat;
+	mask: var(--i) center / contain no-repeat;
+}
+html.f #opa_x { --i: var(--i-x) }
+html.f #opa_srch { --i: var(--i-search) }
+html.f #opa_del { --i: var(--i-undo-2) }
+html.f #opa_up { --i: var(--i-upload) }
+html.f #opa_bup { --i: var(--i-file-up) }
+html.f #opa_mkd { --i: var(--i-folder-plus) }
+html.f #opa_md { --i: var(--i-file-plus) }
+html.f #opa_msg { --i: var(--i-message-square) }
+html.f #opa_auc { --i: var(--i-sliders-horizontal) }
+html.f #opa_cfg { --i: var(--i-settings) }
+html.f #entree { --i: var(--i-panel-left) }
+html.f #wtgrid { --i: var(--i-layout-grid) }
+html.f #wtico { --i: var(--i-music) }
+html.f #fshr { --i: var(--i-share-2) }
+html.f #fren { --i: var(--i-pencil) }
+html.f #fdel { --i: var(--i-trash-2) }
+html.f #fcut { --i: var(--i-scissors) }
+html.f #fcpy { --i: var(--i-copy) }
+html.f #fpst { --i: var(--i-clipboard-paste) }
+html.f #zip1,
+html.f #selzip { --i: var(--i-package) }
+html.f #selall { --i: var(--i-check-check) }
+html.f #selinv { --i: var(--i-arrow-left-right) }
+html.f #seldl { --i: var(--i-download) }
+html.f #npirc,
+html.f #nptxt { --i: var(--i-clipboard) }
+html.f #m3ua { --i: var(--i-list-plus) }
+html.f #m3uc { --i: var(--i-list-music) }
+html.f #bprev { --i: var(--i-skip-back) }
+html.f #bplay { --i: var(--i-play) }
+html.f #bplay.on { --i: var(--i-pause) }
+html.f #bnext { --i: var(--i-skip-forward) }
+html.f #detree { --i: var(--i-panel-left-close) }
+html.f #twobytwo { --i: var(--i-arrow-right-from-line) }
+html.f #twig { --i: var(--i-arrow-left-to-line) }
+html.f #visdir { --i: var(--i-locate-fixed) }
+html.f #filetree { --i: var(--i-file-text) }
+html.f #parpane { --i: var(--i-pin-off) }
+html.f #parpane.on { --i: var(--i-pin) }
+html.f #dyntree { --i: var(--i-unfold-horizontal) }
+html.f #wraptree { --i: var(--i-wrap-text) }
+html.f #hovertree { --i: var(--i-eye-off) }
+html.f #hovertree.on { --i: var(--i-eye) }
+
+
+
+/* top bar */
+html.f #ops {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .125rem;
+	padding: .5rem .75rem;
+	margin: 1.75rem 0 0 0;
+	background: var(--bg);
+	border-bottom: 1px solid var(--line);
+	box-shadow: none;
+	border-radius: 0;
+}
+html.f #ops a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	padding: 0;
+	color: var(--fg-weak);
+	border-radius: var(--rad);
+	border: none;
+}
+html.f #ops a:hover {
+	color: var(--fg-max);
+	background: var(--bg-u3);
+}
+html.f #ops a.act {
+	color: var(--fg-max);
+	background: var(--bg-u4);
+	border: none;
+	box-shadow: none;
+	border-radius: var(--rad);
+}
+html.f #ops #opa_x {
+	display: none;
+}
+html.f.op_open #ops #opa_x {
+	display: inline-flex;
+	order: 99;
+	margin-left: auto;
+}
+html.f #srv_info,
+html.f #acc_info {
+	font-size: .8rem;
+	color: var(--fg-weak);
+	background: none;
+	top: .5rem;
+}
+html.f #srv_info {
+	left: .9rem;
+}
+html.f #acc_info {
+	right: .9rem;
+}
+html.f #srv_info span,
+html.f #acc_info span,
+html.f #acc_info a {
+	color: var(--fg-weak);
+}
+html.f #acc_info a {
+	color: var(--a);
+	margin-left: .5rem;
+}
+html.f .opview {
+	margin: 0;
+}
+html.f .opbox,
+html.f #srch_form {
+	background: var(--bg-u1);
+	border: none;
+	border-bottom: 1px solid var(--line);
+	border-radius: 0;
+	box-shadow: none;
+	padding: 1rem;
+	max-width: none;
+}
+html.f .opwide>div {
+	border-left: none;
+	border-color: var(--line);
+}
+html.f #op_cfg h3,
+html.f #op_player h3,
+html.f .opwide h3 {
+	font-size: .8rem;
+	font-weight: 500;
+	color: var(--fg-weak);
+	border: none;
+	margin: 0 0 .25rem .2rem;
+	padding: 0;
+}
+
+
+
+/* buttons and inputs */
+html.f .btn,
+html.f input[type="submit"],
+html.f #u2conf a.b {
+	font-size: .95rem;
+	border-radius: var(--rad);
+	border: 1px solid var(--line);
+	padding: .3rem .6rem;
+	top: 0;
+	text-shadow: none;
+}
+html.f .btn:hover {
+	background: var(--bg-u5);
+	color: var(--fg-max);
+}
+html.f .tgl.btn.on,
+html.f .btn.on {
+	background: var(--a);
+	color: var(--on-a);
+	border-color: transparent;
+}
+html.f input[type="text"],
+html.f input[type="password"],
+html.f input.txtbox,
+html.f select,
+html.f textarea {
+	font-family: inherit;
+	color: var(--fg);
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	box-shadow: none;
+	padding: .3rem .5rem;
+}
+html.f input[type="text"]:focus,
+html.f input[type="password"]:focus,
+html.f select:focus {
+	border-color: var(--a);
+	outline: none;
+	box-shadow: 0 0 0 2px var(--sel);
+}
+
+html.f input[type="submit"] {
+	font-family: inherit;
+	color: var(--on-a);
+	background: var(--a);
+	border-color: transparent;
+	cursor: pointer;
+	margin: 0;
+}
+html.f input[type="submit"]:hover {
+	background: var(--a-b);
+}
+html.f input[type="file"] {
+	font-family: inherit;
+	font-size: .95rem;
+	color: var(--fg-weak);
+}
+html.f input[type="file"]::file-selector-button {
+	font-family: inherit;
+	font-size: .95rem;
+	color: var(--fg);
+	background: var(--bg-u3);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	padding: .3rem .6rem;
+	margin-right: .6rem;
+	cursor: pointer;
+}
+html.f .opbox label,
+html.f #srch_form label,
+html.f #op_search td {
+	color: var(--fg);
+}
+html.f #srch_form td:first-child {
+	color: var(--fg-weak);
+	font-size: .85rem;
+}
+html.f input[type="checkbox"],
+html.f input[type="radio"] {
+	accent-color: var(--a);
+}
+
+/* panels with one text field: new folder, new file, message */
+html.f #op_mkdir form,
+html.f #op_new_md form,
+html.f #op_msg form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .5rem;
+	max-width: 40rem;
+	font-size: 0;
+}
+html.f #op_mkdir form input.i,
+html.f #op_new_md form input.i,
+html.f #op_msg form input.i {
+	flex: 1 1 12rem;
+	width: auto;
+	font-size: 1rem;
+	margin: 0;
+}
+html.f #op_mkdir form input[type="submit"],
+html.f #op_new_md form input[type="submit"],
+html.f #op_msg form input[type="submit"] {
+	font-size: .95rem;
+}
+html.f #new_mdi {
+	display: block;
+	margin-top: .5rem;
+	font-size: .85rem;
+	color: var(--fg-weak);
+}
+html.f #op_bup form {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .5rem;
+}
+html.f #op_bup form br {
+	display: none;
+}
+html.f #op_bup,
+html.f #op_unpost {
+	line-height: 1.6;
+}
+
+/* switches that are clear as an icon; the tooltip carries the words */
+html.f .opwide.act {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1.25rem 2rem;
+	align-items: flex-start;
+	padding: 1.25rem;
+}
+html.f .opwide>.optabs {
+	display: flex;
+	flex: 0 0 100%;
+	gap: .25rem;
+	margin: -.5rem 0 0 0;
+	border-bottom: 1px solid var(--line);
+}
+html.f .optabs a {
+	color: var(--fg-weak);
+	font-size: .9rem;
+	padding: .45rem .8rem;
+	margin-bottom: -1px;
+	border-bottom: 2px solid transparent;
+}
+html.f .optabs a:hover {
+	color: var(--fg-max);
+}
+html.f .optabs a.act {
+	color: var(--fg-max);
+	border-bottom-color: var(--a);
+}
+html.f.nwrite #op_cfg .optabs a[n="3"] {
+	display: none;
+}
+html.f .opwide[otab="0"]>div[otab]:not([otab="0"]),
+html.f .opwide[otab="1"]>div[otab]:not([otab="1"]),
+html.f .opwide[otab="2"]>div[otab]:not([otab="2"]),
+html.f .opwide[otab="3"]>div[otab]:not([otab="3"]) {
+	display: none;
+}
+html.f .opwide>div {
+	display: block;
+	float: none;
+	margin: 0;
+	padding: 0;
+	border: none;
+	min-width: 0;
+}
+html.f .opwide>div:has(>div>.btn:nth-of-type(4)),
+html.f .opwide>div:has(>div>input[type="radio"]),
+html.f .opwide>div:has(table),
+html.f .opwide>div:has(.eq_step) {
+	flex: 0 0 100%;
+}
+html.f.nwrite #op_cfg>div:has(#u2ts) {
+	display: none;
+}
+html.f .opwide h3 {
+	margin: 0 0 .5rem 0;
+}
+html.f .opwide>div>div {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .375rem;
+	margin: 0;
+	padding: 0;
+}
+html.f .opwide>div>div>.btn,
+html.f .opwide>div>div>input[type="text"],
+html.f .opwide>div>div>select {
+	position: static;
+	top: 0;
+	vertical-align: middle;
+	box-sizing: border-box;
+	height: 2.25rem;
+	line-height: 1.25rem;
+	margin: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+	font-size: .9rem;
+}
+html.f .opwide>div>div>.btn {
+	display: inline-flex;
+	align-items: center;
+	padding-left: .7rem;
+	padding-right: .7rem;
+}
+html.f .opwide>div>div>input[type="text"] {
+	min-width: 3.5rem;
+	padding-left: .5rem;
+	padding-right: .5rem;
+	text-align: left;
+}
+html.f .opwide table {
+	border-collapse: separate;
+	border-spacing: .25rem 0;
+	margin-left: -.25rem;
+}
+html.f .opwide td {
+	font-size: .8rem;
+	color: var(--fg-weak);
+	text-align: center;
+	padding: 0;
+}
+html.f .opwide td {
+	vertical-align: middle;
+}
+html.f .opwide td .btn,
+html.f .opwide td input[type="text"] {
+	position: static;
+	top: 0;
+}
+html.f .opwide td:first-child {
+	padding-right: .25rem;
+}
+html.f #au_eq {
+	position: relative;
+	top: .55rem;
+}
+html.f .opwide td input[type="text"] {
+	box-sizing: border-box;
+	width: 3.5rem;
+	height: 2rem;
+	margin: .15rem 0;
+	padding: 0 .3rem;
+	font-size: .9rem;
+	text-align: center;
+}
+html.f .opwide td .btn {
+	height: 2rem;
+	line-height: 1;
+	padding: 0 .7rem;
+	font-size: .9rem;
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	margin: 0;
+}
+html.f .opwide .eq_step {
+	color: var(--fg-weak);
+	background: none;
+	border: none;
+	box-shadow: none;
+	text-shadow: none;
+}
+html.f .opwide .eq_step:hover {
+	color: var(--a);
+}
+html.f .opwide select {
+	max-width: 100%;
+	padding-left: .5rem;
+}
+html.f .opwide label {
+	margin-right: .75rem;
+	font-size: .9rem;
+}
+html.f #tooltips,
+html.f #griden,
+html.f #thumbs,
+html.f #dotfiles,
+html.f #dir1st,
+html.f #nsort,
+html.f #au_loop,
+html.f #au_shuf,
+html.f #au_waves,
+html.f #au_follow {
+	display: inline-flex;
+	order: -1;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	padding: 0;
+	font-size: 0;
+	vertical-align: middle;
+}
+html.f #tooltips:before,
+html.f #griden:before,
+html.f #thumbs:before,
+html.f #dotfiles:before,
+html.f #dir1st:before,
+html.f #nsort:before,
+html.f #au_loop:before,
+html.f #au_shuf:before,
+html.f #au_waves:before,
+html.f #au_follow:before {
+	content: '';
+	width: 1.15rem;
+	height: 1.15rem;
+	background: currentColor;
+	-webkit-mask: var(--i) center / contain no-repeat;
+	mask: var(--i) center / contain no-repeat;
+}
+html.f #tooltips { --i: var(--i-info) }
+html.f #griden { --i: var(--i-layout-grid) }
+html.f #thumbs { --i: var(--i-image-off) }
+html.f #thumbs.on { --i: var(--i-image) }
+html.f #dotfiles { --i: var(--i-eye-off) }
+html.f #dotfiles.on { --i: var(--i-eye) }
+html.f #dir1st { --i: var(--i-folders) }
+html.f #nsort { --i: var(--i-arrow-down-0-1) }
+html.f #au_loop { --i: var(--i-repeat-1) }
+html.f #au_shuf { --i: var(--i-shuffle) }
+html.f #au_waves { --i: var(--i-audio-waveform) }
+html.f #au_follow { --i: var(--i-locate-fixed) }
+
+
+/* breadcrumbs */
+html.f #path {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .125rem;
+	font-size: 1rem;
+	margin: 0;
+	padding: .5rem .75rem;
+	background: none;
+	border: none;
+	box-shadow: none;
+}
+html.f #path a {
+	color: var(--fg-weak);
+	padding: .2rem .4rem;
+	border-radius: var(--rad);
+	margin: 0;
+}
+html.f #path a:hover {
+	color: var(--fg-max);
+	background: var(--bg-u3);
+}
+html.f #path a:last-child {
+	color: var(--fg-max);
+	font-weight: 500;
+}
+html.f #path i {
+	width: .9rem;
+	height: .9rem;
+	margin: 0;
+	border: none;
+	transform: none;
+	background: var(--fg-weak);
+	opacity: .6;
+	-webkit-mask: var(--i-chevron-right) center / contain no-repeat;
+	mask: var(--i-chevron-right) center / contain no-repeat;
+}
+html.f #entree {
+	display: inline-flex;
+	align-items: center;
+}
+html.f #path #entree+i {
+	display: none;
+}
+
+
+
+/* file list */
+html.f #wrap {
+	margin-top: 0;
+	padding: 0 .75rem;
+}
+html.f #files {
+	top: 0;
+	border-collapse: collapse;
+}
+html.f #files td:nth-child(2) {
+	min-width: 16rem;
+}
+html.f #files thead th {
+	font-size: .8rem;
+	font-weight: 500;
+	color: var(--fg-weak);
+	background: var(--bg);
+	border: none;
+	border-bottom: 1px solid var(--line);
+	border-radius: 0;
+	padding: .5rem .75rem;
+	text-align: left;
+	box-shadow: none;
+}
+html.f .s0:after,
+html.f .s1:after,
+html.f .s0r:after,
+html.f .s1r:after {
+	content: '';
+	display: inline-block;
+	width: .9rem;
+	height: .9rem;
+	margin: 0 0 -.15rem .25rem;
+	background: currentColor;
+	-webkit-mask: var(--i-chevron-down) center / contain no-repeat;
+	mask: var(--i-chevron-down) center / contain no-repeat;
+}
+html.f .s0r:after,
+html.f .s1r:after {
+	-webkit-mask-image: var(--i-chevron-up);
+	mask-image: var(--i-chevron-up);
+}
+html.f #files thead th:after {
+	margin-right: 0;
+}
+html.f #files thead th:hover {
+	color: var(--fg-max);
+}
+html.f #files td {
+	background: none;
+	border: none;
+	border-bottom: 1px solid var(--line);
+	border-radius: 0;
+	padding: .15rem .75rem;
+	box-shadow: none;
+}
+html.f #files tbody tr:hover td {
+	background: var(--bg-u1);
+}
+html.f #files tbody a {
+	color: var(--fg);
+	padding: .45rem 0;
+	margin: 0;
+}
+html.f #files tbody a.dir,
+html.f #files tbody a[href$="/"] {
+	font-weight: 500;
+}
+html.f #files tbody td:first-child,
+html.f #files tbody td:first-child a,
+html.f #files tbody td:nth-child(3),
+html.f #files tbody td:nth-last-child(1),
+html.f #files tbody td:nth-last-child(2) {
+	font-family: inherit;
+	font-size: .85rem;
+	color: var(--fg-weak);
+	font-variant-numeric: tabular-nums;
+	white-space: nowrap;
+}
+html.f #files tbody td:first-child a:hover {
+	color: var(--a);
+}
+html.f #files tbody tr.play td,
+html.f #files tbody tr.play td a,
+html.f #files tbody tr.sel td,
+html.f #files tbody tr.sel td a {
+	background: var(--sel);
+	color: var(--fg-max);
+	text-shadow: none;
+	box-shadow: none;
+	border-color: var(--line);
+}
+html.f #files tbody tr.play td:nth-child(2) a {
+	color: var(--a);
+	font-weight: 500;
+}
+
+
+
+/* folder tree */
+html.f #tree {
+	background: var(--bg-u1);
+	border-right: 1px solid var(--line);
+	box-shadow: none;
+}
+html.f #treeh {
+	display: flex;
+	align-items: center;
+	gap: .125rem;
+	height: auto;
+	line-height: 1;
+	background: var(--bg-u1);
+	border: none;
+	border-bottom: 1px solid var(--line);
+	padding: .35rem .5rem;
+}
+html.f #treeh a,
+html.f #treeh a.btn {
+	display: inline-flex;
+	flex: none;
+	align-items: center;
+	justify-content: center;
+	width: 1.9rem;
+	height: 1.9rem;
+	padding: 0;
+	margin: 0;
+	color: var(--fg-weak);
+	background: none;
+	border: none;
+	border-radius: var(--rad);
+	--ic: 1.05rem;
+}
+html.f #treeh a:hover {
+	color: var(--fg-max);
+	background: var(--bg-u3);
+}
+html.f #treeh a.tgl.on {
+	color: var(--a);
+	background: none;
+}
+html.f #treeul {
+	left: -1.5rem;
+	width: calc(100% + 1.25rem);
+}
+html.f #tree ul {
+	border-left: 1px solid var(--line);
+	margin-left: .6rem;
+}
+html.f #tree li {
+	border: none;
+	margin-left: .75rem;
+}
+html.f #docul a,
+html.f .ntree a {
+	color: var(--fg);
+	border-radius: var(--rad);
+	padding: .3rem .4rem;
+	box-sizing: border-box;
+	font-size: .92rem;
+}
+html.f .ntree a+a {
+	line-height: 1.2;
+}
+html.f .ntree a:first-child {
+	color: var(--fg-weak);
+}
+html.f .ntree a:hover {
+	background: var(--bg-u3);
+	color: var(--fg-max);
+}
+html.f #tree li,
+html.f #tree.nowrap li {
+	min-height: 1.75rem;
+}
+html.f #tree li>a:first-child {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	width: 1.5rem;
+	height: 1.75rem;
+	padding: 0;
+	text-align: center;
+	font-family: inherit;
+	font-size: .92rem;
+	line-height: 1.75rem;
+}
+html.f #tree li>a+a {
+	display: inline-block;
+	box-sizing: border-box;
+	vertical-align: top;
+	width: calc(100% - 1.5rem);
+	min-height: 1.75rem;
+	padding: .325rem .4rem;
+	line-height: 1.1rem;
+}
+html.f #tree.nowrap li>a+a {
+	width: auto;
+	max-width: none;
+}
+html.f #tree.nowrap .ntree a+a:hover {
+	width: auto;
+	min-width: 0;
+	color: var(--fg-max);
+	background: var(--bg-u3);
+}
+html.f #wraptree.on+#hovertree {
+	display: none;
+}
+html.f #docul {
+	list-style: none;
+	margin: 0;
+	padding: .25rem .5rem;
+}
+html.f #docul li {
+	margin: 0;
+	border: none;
+}
+html.f #docul li.bn {
+	font-size: .8rem;
+	color: var(--fg-weak);
+	text-align: left;
+	line-height: 1.5;
+	padding: .35rem .4rem .5rem .4rem;
+}
+html.f #docul li.bn a,
+html.f #docul li.bn span {
+	display: inline;
+	padding: 0;
+	margin: 0 .15rem;
+	font-size: inherit;
+	font-weight: normal;
+	color: var(--fg-weak);
+}
+html.f #docul li.bn a:last-child {
+	color: var(--fg);
+}
+html.f #tree #docul li+li a {
+	display: block;
+	width: auto;
+	text-align: left;
+	padding: .3rem .5rem;
+	line-height: 1.3;
+	height: auto;
+	min-height: 0;
+	overflow-wrap: anywhere;
+}
+html.f #docul a.hl {
+	background: var(--sel);
+	color: var(--fg-max);
+	box-shadow: none;
+}
+html.f #tree ul a.hl {
+	background: var(--sel);
+	color: var(--fg-max);
+	box-shadow: none;
+}
+html.f #tree ul a.sel {
+	background: var(--bg-u3);
+	box-shadow: none;
+}
+html.f #treepar {
+	border-bottom: 1px solid var(--line);
+}
+
+
+
+/* bottom bar and player */
+html.f #wtoggle {
+	display: flex;
+	align-items: center;
+	gap: .125rem;
+	top: -2.75rem;
+	right: .75rem;
+	height: 2.25rem;
+	padding: .125rem;
+	font-size: 1rem;
+	line-height: 1;
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: calc(var(--rad) + .125rem);
+	box-shadow: 0 .25rem 1rem rgba(0,0,0,0.25);
+}
+html.f #wtoggle>a,
+html.f #wtoggle>span>a {
+	display: inline-flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: .35rem;
+	min-width: 2.25rem;
+	height: 2.25rem;
+	padding: 0 .5rem;
+	margin: 0;
+	box-sizing: border-box;
+	color: var(--fg);
+	background: none;
+	border: none;
+	border-radius: var(--rad);
+	position: static;
+	line-height: 1;
+}
+html.f #wtoggle>a:hover,
+html.f #wtoggle>span>a:hover {
+	background: var(--bg-u4);
+	color: var(--fg-max);
+}
+html.f #wtoggle span>a>span,
+html.f #wzip a br {
+	display: none;
+}
+html.f #wtoggle>span {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+html.f #wfs.act,
+html.f #wfm.act,
+html.f #wzip1,
+html.f #wtoggle.sel #wzip,
+html.f #wtoggle.m3u #wm3u,
+html.f #wtoggle.np #wnp {
+	display: inline-flex;
+	align-items: center;
+	gap: .125rem;
+}
+html.f #wtoggle.sel #wzip1,
+html.f #wtoggle.sel.np #wnp {
+	display: none;
+}
+html.f #wfm.act,
+html.f #wtoggle.sel #wzip,
+html.f #wtoggle.m3u #wm3u,
+html.f #wtoggle.np #wnp,
+html.f #wzip1 {
+	padding-right: .25rem;
+	margin-right: .125rem;
+	border-right: 1px solid var(--line);
+}
+html.f #wfs.act {
+	display: block;
+	font-size: .75rem;
+	line-height: 1.25;
+	text-align: right;
+	color: var(--fg);
+	padding: 0 .6rem 0 .5rem;
+	white-space: nowrap;
+	font-variant-numeric: tabular-nums;
+}
+html.f #wfm a:not(.en) {
+	opacity: .35;
+	color: var(--fg-weak);
+}
+html.f #wtoggle a.hide {
+	display: none;
+}
+html.f #wtgrid.on,
+html.f #wtico.on,
+html.f #widget.open #wtico {
+	color: var(--a);
+}
+html.f #widgeti {
+	background: var(--bg-u2);
+	border-top: 1px solid var(--line);
+	box-shadow: none;
+}
+html.f #pctl a {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0;
+	margin: 0;
+	border-radius: var(--rad);
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background: none;
+	border: none;
+	color: var(--fg);
+	box-shadow: none;
+}
+html.f #pctl a:hover {
+	background: var(--bg-u4);
+}
+html.f #barpos,
+html.f #barbuf,
+html.f #pvol {
+	border-radius: var(--rad);
+	box-shadow: none;
+}
+
+
+
+/* footer links */
+html.f #wfp {
+	font-size: .9rem;
+	font-weight: normal;
+	margin: 1.5rem 0 5rem 0;
+	padding: 0;
+}
+html.f #wfp a {
+	color: var(--fg-weak);
+	margin: 0 .25rem;
+	padding: .2rem .4rem;
+	border-radius: var(--rad);
+	text-shadow: none;
+}
+html.f #wfp a:hover {
+	color: var(--fg-max);
+	background: var(--bg-u3);
+}
+html.f #wfp span,
+html.f #wfp {
+	color: var(--line);
+}
+html.f #repl {
+	color: var(--fg-weak);
+	opacity: .5;
+	font-size: .9rem;
+	text-shadow: none;
+}
+
+
+
+/* upload panel */
+html.f #u2conf .c,
+html.f #u2conf .c * {
+	color: var(--fg-weak);
+	text-shadow: none;
+}
+html.f #u2conf input[type="checkbox"]+label,
+html.f #u2conf input[type="checkbox"]:checked+label {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	width: 2.75rem;
+	height: 2.75rem;
+	padding: 0;
+	font-size: 1rem;
+	color: var(--fg-weak);
+	background: var(--bg-u3);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	text-shadow: none;
+}
+html.f #u2conf input[type="checkbox"]:checked+label {
+	color: var(--on-a);
+	background: var(--a);
+	border-color: transparent;
+}
+html.f #u2conf input[type="checkbox"]+label:hover {
+	color: var(--fg-max);
+	background: var(--bg-u5);
+}
+html.f #u2conf input[type="checkbox"]:checked+label:hover {
+	color: var(--on-a);
+	background: var(--a-b);
+}
+html.f #u2conf input[type="checkbox"]+label[for="multitask"],
+html.f #u2conf input[type="checkbox"]+label[for="potato"],
+html.f #u2conf input[type="checkbox"]+label[for="u2rand"],
+html.f #u2conf input[type="checkbox"]+label[for="fsearch"],
+html.f #u2conf input[type="checkbox"]+label[for="u2ow"][ow] {
+	font-size: 0;
+}
+html.f #u2conf label[for="multitask"]:before,
+html.f #u2conf label[for="potato"]:before,
+html.f #u2conf label[for="u2rand"]:before,
+html.f #u2conf label[for="fsearch"]:before,
+html.f #u2conf label[for="u2ow"][ow]:before {
+	content: '';
+	width: var(--ic);
+	height: var(--ic);
+	background: currentColor;
+	-webkit-mask: var(--i) center / contain no-repeat;
+	mask: var(--i) center / contain no-repeat;
+}
+html.f #u2conf label[for="multitask"] { --i: var(--i-zap) }
+html.f #u2conf label[for="potato"] { --i: var(--i-leaf) }
+html.f #u2conf label[for="u2rand"] { --i: var(--i-dices) }
+html.f #u2conf label[for="fsearch"] { --i: var(--i-file-search) }
+html.f #u2conf label[for="u2ow"][ow="0"] { --i: var(--i-shield) }
+html.f #u2conf label[for="u2ow"][ow="1"] { --i: var(--i-clock) }
+html.f #u2conf label[for="u2ow"][ow="2"] { --i: var(--i-refresh-cw) }
+html.f #u2conf label[for="u2ow"][ow="3"] { --i: var(--i-skip-forward) }
+html.f #u2conf .txtbox {
+	color: var(--fg);
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: 0;
+	box-shadow: none;
+}
+html.f #u2conf a.b {
+	color: var(--fg);
+	background: var(--bg-u3);
+	border: 1px solid var(--line);
+	box-shadow: none;
+	text-shadow: none;
+}
+html.f #u2conf a.b:hover {
+	background: var(--bg-u5);
+}
+html.f #u2btn {
+	color: var(--fg);
+	background: var(--bg-u1);
+	border: 1px dashed var(--bg-u6);
+	border-radius: calc(var(--rad) * 2);
+	box-shadow: none;
+	text-shadow: none;
+	font-size: 1rem;
+	line-height: 1.5;
+	padding: 1rem;
+}
+html.f #u2btn:hover,
+html.f #u2btn.hover {
+	color: var(--fg-max);
+	border-color: var(--a);
+	background: var(--sel);
+}
+html.f #u2cards a {
+	color: var(--fg-weak);
+	background: none;
+	border: none;
+	border-bottom: 2px solid transparent;
+	border-radius: 0;
+	box-shadow: none;
+	margin: 0;
+	padding: .4rem .9rem;
+}
+html.f #u2cards a.act {
+	color: var(--fg-max);
+	border: none;
+	border-bottom: 2px solid var(--a);
+	border-radius: 0;
+	box-shadow: none;
+	background: none;
+	padding: .4rem .9rem;
+}
+html.f #u2cards span {
+	color: inherit;
+	font-family: inherit;
+	font-variant-numeric: tabular-nums;
+}
+html.f #u2tab td {
+	border: none;
+	border-bottom: 1px solid var(--line);
+	background: none;
+}
+html.f #u2foot,
+html.f #u2etas {
+	font-family: inherit;
+	color: var(--fg-weak);
+}
+html.f #op_up2k {
+	padding: 1rem;
+	margin: 0;
+	background: var(--bg-u1);
+	border-bottom: 1px solid var(--line);
+}
+html.f #u2conf,
+html.f #u2conf.w,
+html.f #u2conf.ww {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .5rem;
+	width: auto;
+	max-width: 60rem;
+	margin: 0;
+}
+html.f #u2conf tbody,
+html.f #u2conf tr {
+	display: contents;
+}
+html.f #u2conf td {
+	display: block;
+	padding: 0;
+	order: 3;
+}
+html.f #u2conf br {
+	display: none;
+}
+html.f #u2conf #u2btn br {
+	display: inline;
+}
+html.f #u2conf tr:first-child td:first-child {
+	order: 1;
+	font-size: .9rem;
+}
+html.f #u2conf tr+tr td {
+	order: 2;
+	margin-right: .75rem;
+	white-space: nowrap;
+	font-size: 0;
+}
+html.f #u2conf tr+tr td * {
+	font-size: 1rem;
+}
+html.f #u2conf input[type="checkbox"] {
+	position: absolute;
+	top: auto;
+}
+html.f #u2conf #u2btn_cw {
+	order: 9;
+	flex: 0 0 100%;
+	text-align: left;
+}
+html.f #u2conf #u2btn,
+html.f #u2conf.ww #u2btn,
+html.f #u2btn {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: none;
+	margin: .5rem 0 0 0;
+	padding: 1.25rem 1rem;
+}
+html.f #u2bm {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: .5rem;
+	font-size: 0;
+	color: var(--fg-max);
+}
+html.f #u2bm:before {
+	content: '';
+	width: var(--ic);
+	height: var(--ic);
+	background: currentColor;
+	-webkit-mask: var(--i-upload) center / contain no-repeat;
+	mask: var(--i-upload) center / contain no-repeat;
+}
+html.f #op_up2k.srch #u2bm:before {
+	-webkit-mask-image: var(--i-file-search);
+	mask-image: var(--i-file-search);
+}
+html.f #u2bm sup {
+	font-size: 1rem;
+	font-weight: 500;
+	color: inherit;
+	vertical-align: baseline;
+}
+html.f #u2conf #u2c3w,
+html.f #u2conf.ww #u2c3w {
+	order: 10;
+	flex: 0 0 100%;
+	width: auto;
+}
+html.f #u2c3t {
+	max-width: 60rem;
+}
+html.f #u2cards,
+html.f #u2cards.w,
+html.f #u2cards.ww {
+	display: block;
+	width: auto;
+	min-width: 0;
+	margin: .5rem 0 0 0;
+	padding: 0;
+	text-align: left;
+	border-bottom: 1px solid var(--line);
+}
+html.f #u2etaw,
+html.f #u2etaw.w,
+html.f #u2etaw.ww {
+	width: auto;
+	margin: .75rem 0 0 0;
+	text-align: left;
+}
+html.f #u2etas {
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	font-size: .9rem;
+}
+html.f #u2tabw {
+	margin: 1rem 0 0 0;
+}
+html.f #u2tab {
+	width: 100%;
+	max-width: 60rem;
+	margin: 0;
+}
+html.f #u2tab thead td,
+html.f #u2tab th {
+	font-size: .8rem;
+	font-weight: 500;
+	color: var(--fg-weak);
+}
+html.f #u2tab td {
+	padding: .45rem .5rem;
+	font-family: inherit;
+	font-size: .9rem;
+	font-variant-numeric: tabular-nums;
+}
+html.f #u2tab td:nth-child(2) {
+	color: var(--fg);
+	background: none;
+	border-radius: 0;
+	box-shadow: none;
+	text-shadow: none;
+}
+html.f #u2tab.up.ok td:nth-child(3),
+html.f #u2tab.up.bz td:nth-child(3),
+html.f #u2tab.up.q td:nth-child(3) {
+	background: none;
+	box-shadow: none;
+}
+html.f #u2tab tbody tr:hover td {
+	background: var(--bg-u2);
+}
+
+
+
+/* drag and drop targets */
+html.f #drops {
+	background: rgba(0,0,0,0.45);
+}
+html.f .dropdesc,
+html.f .dropdesc.hl.ok,
+html.f .dropdesc.hl.err {
+	left: 10%;
+	width: 80%;
+	height: 26%;
+	margin: 0;
+	box-sizing: border-box;
+	font-size: 1.5rem;
+	font-weight: 500;
+	color: var(--fg);
+	background: var(--bg-u2);
+	border: 2px dashed var(--bg-u6);
+	border-radius: calc(var(--rad) * 3);
+	box-shadow: 0 1rem 3rem rgba(0,0,0,0.35);
+	text-shadow: none;
+}
+html.f .dropdesc.hl.ok {
+	color: var(--fg-max);
+	background: var(--sel);
+	border-color: var(--a);
+}
+html.f .dropdesc.hl.err {
+	border-color: var(--err);
+}
+html.f .dropdesc b,
+html.f .dropdesc.hl.ok b {
+	font-size: 1.5rem;
+	font-weight: 500;
+	margin: 0 .5rem;
+	border: none;
+}
+html.f .dropdesc>div>div {
+	display: none;
+}
+html.f .dropdesc span,
+html.f .dropdesc.err span {
+	display: inline-block;
+	margin-top: .5rem;
+	font-size: .9rem;
+	font-weight: normal;
+	color: var(--fg);
+	background: var(--bg-u4);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	padding: .3rem .7rem;
+	text-shadow: none;
+}
+
+
+/* loading indicator */
+html.f .dumb_loader_thing {
+	font-size: 0;
+	width: 1.75rem;
+	height: 1.75rem;
+	min-width: 0;
+	min-height: 0;
+	margin: 1rem;
+	padding: 0;
+	box-sizing: border-box;
+	border: .2rem solid var(--line);
+	border-top-color: var(--a);
+	border-radius: 50%;
+	filter: none;
+}
+
+
+
+/* narrow screens */
+@media (max-width: 40em) {
+	html.f #files {
+		width: 100%;
+	}
+	html.f #files td:nth-child(2) {
+		min-width: 0;
+		width: 100%;
+	}
+	html.f #files thead th:first-child span {
+		font-size: 0;
+	}
+	html.f #files th:nth-child(n+4),
+	html.f #files td:nth-child(n+4) {
+		display: none;
+	}
+	html.f .opwide.act {
+		padding: 1rem .75rem;
+		gap: 1rem 1.25rem;
+	}
+	html.f .opwide>.optabs {
+		overflow-x: auto;
+	}
+	html.f #ggrid {
+		grid-template-columns: repeat(auto-fill, minmax(min(var(--grid-sz), 45%), 1fr));
+	}
+	html.f #files td,
+	html.f #files thead th {
+		padding-left: .4rem;
+		padding-right: .4rem;
+	}
+	html.f #files tbody a {
+		padding: .65rem 0;
+	}
+	html.f #wrap {
+		padding: 0 .5rem;
+	}
+	html.f #ops a,
+	html.f #wtoggle>a,
+	html.f #wtoggle>span>a {
+		min-width: 2.75rem;
+		height: 2.75rem;
+	}
+	html.f #ops a {
+		width: 2.75rem;
+	}
+	html.f #wtoggle {
+		height: 2.75rem;
+		top: -3.25rem;
+	}
+}
+
+
+
+/* right-click menu */
+html.f #rcm {
+	min-width: 11rem;
+	padding: .25rem;
+	font-size: .9rem;
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: calc(var(--rad) + .125rem);
+	box-shadow: 0 .5rem 1.5rem rgba(0,0,0,0.35);
+}
+html.f #rcm > a {
+	color: var(--fg);
+	padding: .35rem .6rem;
+	border-radius: calc(var(--rad) - .1rem);
+	line-height: 1.3;
+}
+html.f #rcm > a:hover {
+	color: var(--fg-max);
+	background: var(--bg-u4);
+}
+html.f #rcm > .sep {
+	margin: .25rem .35rem;
+	border-bottom: 1px solid var(--line);
+}
+
+
+
+/* grid view */
+html.f #ggrid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(var(--grid-sz), 1fr));
+	gap: .75rem;
+	margin: 0 0 1rem 0;
+}
+html.f #ggrid>a,
+html.f #ggrid>a[tt] {
+	width: auto;
+	margin: 0;
+}
+html.f #ggrid>a img {
+	max-width: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+html.f #ggrid.nocrop>a img {
+	object-fit: contain;
+}
+html.f #ggrid>a,
+html.f #ggrid>a[tt] {
+	color: var(--fg);
+	background: var(--bg-u1);
+	border: 1px solid var(--line);
+	border-radius: calc(var(--rad) + .125rem);
+	box-shadow: none;
+	padding: .375rem;
+	font-size: .85rem;
+	line-height: 1.3;
+	transition: none;
+}
+html.f #ggrid>a:hover,
+html.f #ggrid>a:focus,
+html.f #ggrid>a[tt]:hover,
+html.f #ggrid>a[tt]:focus {
+	color: var(--fg-max);
+	background: var(--bg-u3);
+	border-color: var(--bg-u6);
+}
+html.f #ggrid>a img {
+	border-radius: calc(var(--rad) - .1rem);
+}
+html.f #ggrid>a>span,
+html.f #ggrid>a.dir>span {
+	color: inherit;
+	padding-top: .4rem;
+	text-align: center;
+}
+html.f #ggrid>a.dir>span {
+	font-weight: 500;
+}
+html.f #ggrid>a.dir:before {
+	content: none;
+}
+html.f #ggrid>a:before {
+	background: none;
+	text-shadow: none;
+	font-size: 1.25rem;
+	margin: .25rem;
+	padding: 0;
+	transition: none;
+}
+html.f #ggrid>a:hover:before,
+html.f #ggrid>a:focus:before {
+	font-size: 1.25rem;
+	margin: .25rem;
+}
+html.f #ggrid>a.play,
+html.f #ggrid>a[tt].play,
+html.f #ggrid>a.sel,
+html.f #ggrid>a[tt].sel {
+	color: var(--fg-max);
+	background: var(--sel);
+	border-color: var(--a);
+	box-shadow: none;
+	transition: none;
+}
+html.f #ggrid>a.sel>span {
+	color: inherit;
+}
+html.f .ghead,
+html.f #ghead {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: .375rem;
+	background: var(--bg);
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: .5rem 0;
+	margin: 0;
+	font-size: .9rem;
+	color: var(--fg-weak);
+}
+html.f .ghead .btn,
+html.f #ghead .btn {
+	box-sizing: border-box;
+	display: inline-flex;
+	align-items: center;
+	height: 2rem;
+	margin: 0;
+	padding: 0 .6rem;
+	font-size: .85rem;
+}
+html.f #ghead>span {
+	display: inline-flex;
+	align-items: center;
+	gap: .25rem;
+}
+html.f #ghead>span:nth-of-type(1),
+html.f #ghead>span:nth-of-type(2) {
+	font-size: 0;
+	padding-left: .5rem;
+	margin-left: .125rem;
+	border-left: 1px solid var(--line);
+}
+html.f #ghead>span:nth-of-type(3) {
+	gap: .125rem;
+	padding-left: .6rem;
+	margin-left: .125rem;
+	border-left: 1px solid var(--line);
+}
+html.f #ghead>span:nth-of-type(3) a {
+	color: var(--fg-weak);
+	padding: .3rem .5rem;
+	border-radius: var(--rad);
+}
+html.f #ghead>span:nth-of-type(3) a:hover {
+	color: var(--fg-max);
+	background: var(--bg-u3);
+}
+html.f #ghead>span:nth-of-type(3) a[class*="s0"],
+html.f #ghead>span:nth-of-type(3) a[class*="s1"] {
+	color: var(--fg-max);
+}
+html.f #ghead #gridvau,
+html.f #ghead #gridsel,
+html.f #ghead #gridcrop,
+html.f #ghead #grid3x,
+html.f #ghead a.btn[z],
+html.f #ghead a.btn[l] {
+	justify-content: center;
+	width: 2rem;
+	padding: 0;
+	font-size: 0;
+}
+html.f #ghead #gridvau:before,
+html.f #ghead #gridsel:before,
+html.f #ghead #gridcrop:before,
+html.f #ghead #grid3x:before,
+html.f #ghead a.btn[z]:before,
+html.f #ghead a.btn[l]:before {
+	content: '';
+	width: 1.1rem;
+	height: 1.1rem;
+	background: currentColor;
+	-webkit-mask: var(--i) center / contain no-repeat;
+	mask: var(--i) center / contain no-repeat;
+}
+html.f #gridvau { --i: var(--i-headphones) }
+html.f #gridsel { --i: var(--i-square-mouse-pointer) }
+html.f #gridcrop { --i: var(--i-crop) }
+html.f #grid3x { --i: var(--i-image-upscale) }
+html.f #ghead a.btn[z^="-"] { --i: var(--i-zoom-out) }
+html.f #ghead a.btn[z="1.1"] { --i: var(--i-zoom-in) }
+html.f #ghead a.btn[l="-1"] { --i: var(--i-rows-2) }
+html.f #ghead a.btn[l="1"] { --i: var(--i-rows-4) }
+
+
+
+/* image viewer */
+html.f #bbox-overlay button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	min-width: 2.5rem;
+	height: 2.5rem;
+	padding: 0 .6rem;
+	margin: 0 .125rem;
+	font-family: inherit;
+	font-size: .85rem;
+	font-weight: 500;
+	text-transform: none;
+	color: #e3e4e6;
+	background: rgba(24,25,28,0.72);
+	border: 1px solid rgba(255,255,255,0.14);
+	border-radius: var(--rad);
+	box-shadow: none;
+	text-shadow: none;
+}
+html.f #bbox-overlay button:hover,
+html.f #bbox-overlay button:focus {
+	color: #fff;
+	background: rgba(48,50,56,0.9);
+}
+html.f #bbox-overlay button.on,
+html.f #bbox-overlay button.sel {
+	color: var(--on-a);
+	background: var(--a);
+	border-color: transparent;
+}
+html.f #bbox-overlay #bbox-help,
+html.f #bbox-overlay #bbox-anim,
+html.f #bbox-overlay #bbox-rotl,
+html.f #bbox-overlay #bbox-rotr,
+html.f #bbox-overlay #bbox-tsel,
+html.f #bbox-overlay #bbox-full,
+html.f #bbox-overlay #bbzoom,
+html.f #bbox-overlay #bbox-close,
+html.f #bbox-overlay #bbox-prev,
+html.f #bbox-overlay #bbox-next {
+	font-size: 0;
+	padding: 0;
+}
+html.f #bbox-overlay #bbox-help:before,
+html.f #bbox-overlay #bbox-anim:before,
+html.f #bbox-overlay #bbox-rotl:before,
+html.f #bbox-overlay #bbox-rotr:before,
+html.f #bbox-overlay #bbox-tsel:before,
+html.f #bbox-overlay #bbox-full:before,
+html.f #bbox-overlay #bbzoom:before,
+html.f #bbox-overlay #bbox-close:before,
+html.f #bbox-overlay #bbox-prev:before,
+html.f #bbox-overlay #bbox-next:before {
+	content: '';
+	width: 1.2rem;
+	height: 1.2rem;
+	background: currentColor;
+	-webkit-mask: var(--i) center / contain no-repeat;
+	mask: var(--i) center / contain no-repeat;
+}
+html.f #bbox-overlay #bbox-help { --i: var(--i-circle-help) }
+html.f #bbox-overlay #bbox-anim { --i: var(--i-move-horizontal) }
+html.f #bbox-overlay #bbox-rotl { --i: var(--i-rotate-ccw) }
+html.f #bbox-overlay #bbox-rotr { --i: var(--i-rotate-cw) }
+html.f #bbox-overlay #bbox-tsel { --i: var(--i-square-check) }
+html.f #bbox-overlay #bbox-full { --i: var(--i-maximize) }
+html.f #bbox-overlay #bbzoom { --i: var(--i-zoom-in) }
+html.f #bbox-overlay #bbox-close { --i: var(--i-x) }
+html.f #bbox-overlay #bbox-prev { --i: var(--i-chevron-left) }
+html.f #bbox-overlay #bbox-next { --i: var(--i-chevron-right) }
+html.f #bbox-overlay #bbox-prev,
+html.f #bbox-overlay #bbox-next {
+	width: 2.75rem;
+	height: 3.5rem;
+}
+html.f #bbox-overlay figcaption a {
+	color: #e3e4e6;
+	background: rgba(24,25,28,0.72);
+	border-radius: var(--rad);
+	padding: .3rem .7rem;
+	font-size: .85rem;
+	text-shadow: none;
+}
+
+
+
+/* text and markdown viewer inside the file browser */
+html.f #bdoc .mdo pre,
+html.f #bdoc pre[class*="language-"],
+html.f #doc.mdo pre {
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	box-shadow: none;
+	padding: .6rem .75rem;
+}
+html.f #bdoc .mdo pre code,
+html.f #bdoc .mdo pre code[class*="language-"],
+html.f #doc.mdo pre code,
+html.f #doc.mdo pre code[class*="language-"] {
+	display: block;
+	background: none;
+	border: none;
+	border-radius: 0;
+	box-shadow: none;
+	padding: 0;
+	margin: 0;
+}
+/* theme f end */

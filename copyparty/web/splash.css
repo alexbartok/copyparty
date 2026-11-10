@@ -257,3 +257,253 @@ html.bz {
 html.bz .vols img {
 	filter: sepia(0.8) hue-rotate(180deg);
 }
+
+
+
+/* theme f begin */
+/* theme f, "plain": start page and control panel (colors are in ui.css) */
+html.f {
+	color: var(--fg);
+	background: var(--bg);
+	-webkit-font-smoothing: antialiased;
+}
+html.f #wrap {
+	max-width: 44rem;
+	line-height: 1.5;
+}
+html.f h1 {
+	font-size: 1.05rem;
+	font-weight: 500;
+	color: var(--fg-max);
+	border: none;
+	margin: 2.5rem 0 .75rem 0;
+	line-height: 1.3;
+}
+html.f #wrap>p {
+	color: var(--fg-weak);
+	margin: 0;
+	line-height: 2.25rem;
+}
+html.f #wrap>p strong {
+	color: var(--fg-max);
+	font-weight: 500;
+}
+html.f ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: .375rem;
+}
+html.f ul a {
+	margin: 0;
+}
+html.f li {
+	margin: 0;
+}
+html.f a,
+html.f #lo,
+html.f #x,
+html.f input[type="submit"] {
+	display: inline-block;
+	font-family: inherit;
+	font-size: .95rem;
+	line-height: 1.25rem;
+	color: var(--fg);
+	background: var(--bg-u3);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	box-shadow: none;
+	padding: .4rem .8rem;
+	margin: 0 .5rem 0 0;
+	cursor: pointer;
+}
+html.f a:hover,
+html.f #lo:hover,
+html.f #x:hover,
+html.f input[type="submit"]:hover {
+	color: var(--fg-max);
+	background: var(--bg-u5);
+}
+html.f input[type="submit"]#ls,
+html.f a.g {
+	color: var(--on-a);
+	background: var(--a);
+	border-color: transparent;
+	box-shadow: none;
+}
+html.f a.r,
+html.f #lo,
+html.f .logout {
+	color: var(--err);
+	background: none;
+	border-color: var(--line);
+}
+html.f #w,
+html.f #wb {
+	color: var(--warn);
+	background: none;
+	border-color: var(--line);
+}
+html.f .af,
+html.f .logout {
+	margin: 0 0 0 .5rem;
+}
+html.f td a {
+	margin: 0;
+}
+html.f #repl,
+html.f #pb a {
+	color: inherit;
+	background: none;
+	border: none;
+	padding: 0;
+}
+html.f #repl,
+html.f #pb {
+	font-size: .8rem;
+	color: var(--fg-weak);
+	opacity: .6;
+}
+html.f form {
+	line-height: 3rem;
+}
+html.f input[type="text"],
+html.f input[type="password"] {
+	font-family: inherit;
+	font-size: 1rem;
+	line-height: 1.25rem;
+	color: var(--fg);
+	background: var(--bg-u1);
+	border: 1px solid var(--line);
+	border-radius: var(--rad);
+	padding: .4rem .7rem;
+	margin: 0 .5rem 0 0;
+}
+html.f input[type="text"]:focus,
+html.f input[type="password"]:focus {
+	border-color: var(--a);
+	outline: none;
+	box-shadow: 0 0 0 2px var(--sel);
+}
+html.f input::placeholder {
+	font-size: 1em;
+	font-style: normal;
+	letter-spacing: 0;
+	color: var(--fg-weak);
+	opacity: 1;
+}
+html.f .agr a,
+html.f .agr form,
+html.f #lo {
+	line-height: 1.25rem;
+	margin: 0 .5rem .5rem 0;
+}
+html.f .vols td,
+html.f .vols th {
+	padding: .4rem .75rem;
+	border-bottom: 1px solid var(--line);
+}
+html.f .vols th {
+	font-size: .8rem;
+	font-weight: 500;
+	color: var(--fg-weak);
+}
+html.f .num {
+	border-color: var(--line);
+	color: var(--fg-weak);
+}
+html.f blockquote {
+	color: var(--fg-weak);
+	border-left: 2px solid var(--line);
+	border-radius: 0;
+	margin: .5rem 0 1rem 0;
+	padding: 0 0 0 1rem;
+}
+html.f pre,
+html.f code {
+	color: var(--fg-max);
+	background: var(--bg-u2);
+	border: 1px solid var(--line);
+	border-radius: .25rem;
+}
+html.f pre b,
+html.f code b {
+	color: var(--a);
+	text-shadow: none;
+	border: none;
+}
+html.f #msg h1 + p {
+	text-align: left;
+}
+
+/* connect page (svcs.html) */
+html.f #wrap.w {
+	max-width: 56rem;
+}
+html.f #wrap.w .cn p {
+	margin: .75rem 0;
+}
+html.f #wrap.w .btns a,
+html.f #wrap.w .ossel a {
+	margin: 0 .25rem;
+}
+html.f #wrap.w .sph {
+	margin-top: 2rem;
+	color: var(--fg-weak);
+	line-height: 1.6;
+}
+html.f #wrap.w h1 {
+	margin: 2.5rem 0 .5rem 0;
+	padding-bottom: .4rem;
+	border-bottom: 1px solid var(--line);
+}
+html.f #wrap.w ul {
+	display: block;
+	list-style: disc;
+	padding-left: 1.3rem;
+	margin: .5rem 0;
+}
+html.f #wrap.w li {
+	margin: .4rem 0;
+}
+html.f #wrap.w p:not(.btns):not(.sph) a,
+html.f #wrap.w li a {
+	display: inline;
+	font-size: inherit;
+	line-height: inherit;
+	color: var(--a);
+	background: none;
+	border: none;
+	border-radius: 0;
+	padding: 0;
+	margin: 0;
+	text-decoration: underline;
+	text-underline-offset: .15em;
+}
+html.f #wrap.w p:not(.btns):not(.sph) a:hover,
+html.f #wrap.w li a:hover {
+	color: var(--a-b);
+	background: none;
+}
+html.f #wrap.w pre {
+	padding: .6rem .8rem;
+	margin: .5rem 0 1rem 0;
+	line-height: 1.5;
+	font-size: .9rem;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+html.f #wrap.w code {
+	font-size: .9em;
+	padding: .1em .35em;
+}
+html.f #wrap.w a.txa {
+	font-size: .8rem;
+	padding: .2rem .6rem;
+	margin: .4rem .4rem 0 1rem;
+}
+/* theme f end */
