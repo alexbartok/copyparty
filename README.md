@@ -33,7 +33,7 @@ A source checkout has no `copyparty/web/deps` (markdown editors, fonts). Build i
 
 ## Upstream
 
-Based on copyparty v1.20.26. I merge upstream by hand, so this fork can be behind. The upstream documentation is in [README-upstream.md](README-upstream.md).
+Based on copyparty v1.20.26. I merge upstream by hand, so this fork can be behind. The upstream documentation is in [README-upstream.md](README-upstream.md). How to update the fork: [docs/boring/MAINTAINING.md](docs/boring/MAINTAINING.md).
 
 ## Credit
 
