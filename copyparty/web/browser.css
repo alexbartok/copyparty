@@ -4195,6 +4195,9 @@ html.e #detree {
 
 
 
+.dropdesc i {
+	font-style: normal;
+}
 .optabs {
 	display: none;
 }
@@ -5707,6 +5710,26 @@ html.f .dropdesc.hl.ok b {
 }
 html.f .dropdesc>div>div {
 	display: none;
+}
+html.f .dropdesc i {
+	display: inline-block;
+	width: 1.5rem;
+	height: 1.5rem;
+	margin-right: .5rem;
+	vertical-align: middle;
+	position: relative;
+	top: -.1rem;
+	font-size: 0;
+	background: currentColor;
+	-webkit-mask: var(--i-upload) center / contain no-repeat;
+	mask: var(--i-upload) center / contain no-repeat;
+}
+html.f .dropdesc span:empty {
+	display: none;
+}
+html.f #srch_zd i {
+	-webkit-mask-image: var(--i-file-search);
+	mask-image: var(--i-file-search);
 }
 html.f .dropdesc span,
 html.f .dropdesc.err span {

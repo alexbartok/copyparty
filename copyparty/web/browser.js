@@ -164,7 +164,7 @@ if (1)
 		"ul_par": "parallel uploads:",
 		"ut_rand": "Give the uploaded files random names",
 		"ut_u2ts": "Copy the last-modified timestamp$Nfrom your filesystem to the server\">Keep timestamps",
-		"ut_ow": "Overwrite existing files on the server?$N🛡️: never (will generate a new filename instead)$N🕒: overwrite if server-file is older than yours$N♻️: always overwrite if the files are different$N⏭️: unconditionally skip all existing files",
+		"ut_ow": "Overwrite existing files on the server?$NClick to switch between four modes:$NShield: never (makes a new filename instead)$NClock: overwrite if the file on the server is older than yours$NArrows: always overwrite if the files are different$NSkip: skip all files that exist on the server",
 		"ut_mt": "Continue hashing other files while uploading$N$NConsider disabling this if your CPU or disk is a bottleneck",
 		"ut_ask": 'Ask for confirmation before an upload starts">Ask before upload',
 		"ut_pot": "Use a simpler UI, which improves$Nthe upload speed on slow devices",
@@ -651,7 +651,7 @@ if (1)
 		"u_emtleak2": ' <a href="{0}">switch to https (recommended)</a> or ',
 		"u_emtleak3": ' ',
 		"u_emtleakc": 'try the following:\n<ul><li>hit <code>F5</code> to refresh the page</li><li>then disable &nbsp;<code>Multithreaded hashing</code>&nbsp; in the settings</li><li>and try that upload again</li></ul>Uploads will be a bit slower.\n\nNote: chrome v107 <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1354816" target="_blank">has a bugfix</a> for this',
-		"u_emtleakf": 'try the following:\n<ul><li>hit <code>F5</code> to refresh the page</li><li>then enable <code>🥔</code> (simple UI) in the upload panel<li>and try that upload again</li></ul>\nNote: firefox has an <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1790500" target="_blank">open bug report</a> for this',
+		"u_emtleakf": 'try the following:\n<ul><li>hit <code>F5</code> to refresh the page</li><li>then enable the simple UI (the leaf button) in the upload panel<li>and try that upload again</li></ul>\nNote: firefox has an <a href="https://bugzilla.mozilla.org/show_bug.cgi?id=1790500" target="_blank">open bug report</a> for this',
 		"u_s404": "not found on server",
 		"u_expl": "explain",
 		"u_maxconn": "most browsers limit this to 6, but firefox lets you raise it with <code>connections-per-server</code> in <code>about:config</code>",
@@ -667,7 +667,7 @@ if (1)
 		"ue_ro": 'your access to this folder is Read-Only\n\n',
 		"ue_nl": 'you are currently not logged in',
 		"ue_la": 'you are currently logged in as "{0}"',
-		"ue_sr": 'you are currently in file-search mode\n\nswitch to upload-mode by clicking the magnifying glass 🔎 (next to the large Search button), and try uploading again',
+		"ue_sr": 'you are currently in file-search mode\n\nswitch to upload-mode by clicking the search-mode button (next to the large Search button), and try uploading again',
 		"ue_ta": 'try uploading again, it should work now',
 		"ue_ab": "this file is already being uploaded into another folder, and that upload must be completed before the file can be uploaded elsewhere.\n\nYou can abort and forget the initial upload with the recent-uploads button (unpost) in the top menu",
 		"ur_1uo": "OK: File uploaded successfully",
@@ -982,8 +982,8 @@ x.parentNode.insertBefore(mknod('div', null,
 	var o = mknod('div');
 	o.innerHTML = (
 		'<div id="drops">\n' +
-		'	<div class="dropdesc" id="up_zd"><div>🚀 ' + L.udt_up + '<br /><span></span><div>🚀<b>' + L.udt_up + '</b></div><div><b>' + L.udt_up + '</b>🚀</div></div></div>\n' +
-		'	<div class="dropdesc" id="srch_zd"><div>🔎 ' + L.udt_srch + '<br /><span></span><div>🔎<b>' + L.udt_srch + '</b></div><div><b>' + L.udt_srch + '</b>🔎</div></div></div>\n' +
+		'	<div class="dropdesc" id="up_zd"><div><i>🚀</i> ' + L.udt_up + '<br /><span></span><div><i>🚀</i><b>' + L.udt_up + '</b></div><div><b>' + L.udt_up + '</b><i>🚀</i></div></div></div>\n' +
+		'	<div class="dropdesc" id="srch_zd"><div><i>🔎</i> ' + L.udt_srch + '<br /><span></span><div><i>🔎</i><b>' + L.udt_srch + '</b></div><div><b>' + L.udt_srch + '</b><i>🔎</i></div></div></div>\n' +
 		'	<div class="dropzone" id="up_dz" v="up_zd"></div>\n' +
 		'	<div class="dropzone" id="srch_dz" v="srch_zd"></div>\n' +
 		'</div>'
@@ -4361,8 +4361,8 @@ var fileman = (function () {
 			'<code>n.d=</code><input type="text" id="rn_n_d" placeholder="1" ' + NOAC + ' /> &nbsp;',
 			'<code>n.s=</code><input type="text" id="rn_n_s" placeholder="1" ' + NOAC + ' />',
 			'</td></tr>',
-			'<button id="rn_pdel">❌ ' + L.fr_pdel + '</button>',
-			'<button id="rn_pnew">💾 ' + L.fr_pnew + '</button>',
+			'<button id="rn_pdel">' + L.fr_pdel + '</button>',
+			'<button id="rn_pnew">' + L.fr_pnew + '</button>',
 			'</td></tr>',
 			'</table></div>'
 		]);
@@ -4880,8 +4880,8 @@ var fileman = (function () {
 		var html = [
 				'<div>',
 				'<button id="rn_cancel" tt="' + L.frt_abrt + '</button>',
-				'<button id="rn_skip">⏭ ' + L.fp_skip + '</button>',
-				'<button id="rn_apply">✅ ' + L.fp_apply + '</button>',
+				'<button id="rn_skip">' + L.fp_skip + '</button>',
+				'<button id="rn_apply">' + L.fp_apply + '</button>',
 				' &nbsp; src: ' + esc(r.clip[0].replace(/[^/]+$/, '')),
 				'</div>',
 				'<p id="cnmt"></p>',
@@ -6806,7 +6806,7 @@ var search_ui = (function () {
 
 		var html = mk_files_header(tagord), seen = {};
 		html.push('<tbody>');
-		html.push('<tr class="srch_hdr"><td>-</td><td><a href="#" id="unsearch"><big style="font-weight:bold">[❌] ' + L.sl_close + '</big></a> -- ' + L.sl_hits.format(res.hits.length) + (res.trunc ? ' -- <a href="#" id="moar">' + L.sl_moar + '</a>' : '') + '</td></tr>');
+		html.push('<tr class="srch_hdr"><td>-</td><td><a href="#" id="unsearch"><big style="font-weight:bold">' + L.sl_close + '</big></a> -- ' + L.sl_hits.format(res.hits.length) + (res.trunc ? ' -- <a href="#" id="moar">' + L.sl_moar + '</a>' : '') + '</td></tr>');
 
 		for (var a = 0; a < res.hits.length; a++) {
 			var r = res.hits[a],
@@ -9627,7 +9627,7 @@ var unpost = (function () {
 				) {
 					up2k.st.todo.handshake.push(f);
 					up2k.ui.seth(f.n, 2, L.u_hashdone);
-					up2k.ui.seth(f.n, 1, '📦 wait');
+					up2k.ui.seth(f.n, 1, 'wait');
 					up2k.ui.move(f.n, 'bz');
 				}
 			}

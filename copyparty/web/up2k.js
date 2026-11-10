@@ -1573,7 +1573,7 @@ function up2k_init(subtle) {
             pvis.addfile([
                 uc.fsearch ? esc(entry.name) : linksplit(
                     entry.purl + uricom_enc(entry.name), window.up_site).join(' / '),
-                '📐 ' + L.u_hashing,
+                L.u_hashing,
                 ''
             ], entry.size, draw_each);
 
@@ -2297,7 +2297,7 @@ function up2k_init(subtle) {
                 t.t_hashed = Date.now();
 
                 pvis.seth(t.n, 2, L.u_hashdone);
-                pvis.seth(t.n, 1, '📦 wait');
+                pvis.seth(t.n, 1, 'wait');
                 apop(st.busy.hash, t);
                 st.todo.handshake.push(t);
                 tasker();
@@ -2474,7 +2474,7 @@ function up2k_init(subtle) {
                 t.t_hashed = Date.now();
 
                 pvis.seth(t.n, 2, L.u_hashdone);
-                pvis.seth(t.n, 1, '📦 wait');
+                pvis.seth(t.n, 1, 'wait');
                 apop(st.busy.hash, t);
                 st.todo.handshake.push(t);
                 tasker();
@@ -2933,7 +2933,7 @@ function up2k_init(subtle) {
         if (!t.t_uploading)
             t.t_uploading = Date.now();
 
-        pvis.seth(t.n, 1, "🚀 " + L.ul_send);
+        pvis.seth(t.n, 1, L.ul_send);
 
         var chunksize = get_chunksize(t.size),
             car = pcar * chunksize,

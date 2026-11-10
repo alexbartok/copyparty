@@ -2159,8 +2159,8 @@ function repl(e) {
     var html = [
         '<p>js repl (prefix with <code>,</code> to allow raise)</p>',
         '<p><select id="repl_pre"></select>',
-        ' &nbsp; <button id="repl_pdel">❌ del</button>',
-        ' &nbsp; <button id="repl_pnew">💾 SAVE</button></p>'
+        ' &nbsp; <button id="repl_pdel">Delete</button>',
+        ' &nbsp; <button id="repl_pnew">Save</button></p>'
     ];
 
     modal.prompt(html.join(''), '', function (cmd) {
