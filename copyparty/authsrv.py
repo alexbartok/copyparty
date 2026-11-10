@@ -790,7 +790,7 @@ class VFS(object):
     def _ls_nope(
         self, *a, **ka
     ) -> tuple[str, list[tuple[str, os.stat_result]], dict[str, "VFS"]]:
-        raise Pebkac(500, "nope.avi")
+        raise Pebkac(500, "folder listing is not available here")
 
     def _ls_shr(
         self,
@@ -3707,7 +3707,7 @@ class AuthSrv(object):
         hpw = self.ah.hash(pw) if self.ah.on else pw
 
         if hpw == self.acct[uname]:
-            return False, "that's already your password my dude"
+            return False, "that is already your password"
 
         if hpw in self.iacct or hpw in self.sesa:
             return False, "password is taken"

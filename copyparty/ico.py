@@ -15,11 +15,15 @@ class Ico(object):
     def __init__(self, args: argparse.Namespace) -> None:
         self.args = args
 
-    def get(self, ext: str, as_thumb: bool, chrome: bool) -> tuple[str, bytes]:
+    def get(
+        self, ext: str, as_thumb: bool, chrome: bool, style: str = ""
+    ) -> tuple[str, bytes]:
         """placeholder to make thumbnails not break"""
 
         bext = ext.encode("ascii", "replace")
         ext = bext.decode("utf-8")
+        if style in ("y", "z"):
+            return self._plain(ext, as_thumb, chrome, style == "y")
         zb = hashlib.sha1(bext).digest()[2:4]
         if PY2:
             zb = [ord(x) for x in zb]  # type: ignore
@@ -111,4 +115,72 @@ class Ico(object):
 
         svg = svg.format(h, c[:6], y, c[6:], txt)
 
+        return "image/svg+xml", svg.encode("utf-8")
+
+    def _plain(
+        self, ext: str, as_thumb: bool, chrome: bool, light: bool
+    ) -> tuple[str, bytes]:
+        """neutral placeholder for the "plain" themes; a folder shape or the file extension"""
+
+        bg, fg = ("f3f4f6", "666a72") if light else ("222428", "9a9da4")
+        w = 100
+        h = 30
+        if as_thumb:
+            sw, sh = self.args.th_size.split("x")
+            h = int(100.0 / (float(sw) / float(sh)))
+
+        isdir = ext == "folder"
+        if ext == "unk":
+            ext = "file"
+        if chrome and HAVE_PILF:
+            try:
+                from PIL import Image, ImageDraw
+
+                h = int(256.0 * h / w)
+                w = 256
+                img = Image.new("RGB", (w, h), "#" + bg)
+                pb = ImageDraw.Draw(img)
+                if isdir:
+                    u = min(w, h) / 10.0
+                    x, y = w / 2.0, h / 2.0
+                    c = "#" + fg
+                    pb.rounded_rectangle(
+                        (x - 2.4 * u, y - 1.9 * u, x - 0.2 * u, y - 0.6 * u), u / 3, c
+                    )
+                    pb.rounded_rectangle(
+                        (x - 2.4 * u, y - 1.3 * u, x + 2.4 * u, y + 1.9 * u), u / 3, c
+                    )
+                else:
+                    _, _, tw, th = pb.textbbox((0, 0), ext, font_size=30)
+                    xy = (int((w - tw) / 2), int((h - th) / 2) - 4)
+                    pb.text(xy, ext, fill="#" + fg, font_size=30)
+
+                buf = BytesIO()
+                img.save(buf, format="PNG", compress_level=1)
+                return "image/png", buf.getvalue()
+            except:
+                pass
+
+        if isdir:
+            body = (
+                '<rect x="38" y="{0}" width="11" height="6" rx="1.5" fill="#{2}" />'
+                '<rect x="38" y="{1}" width="24" height="16" rx="1.5" fill="#{2}" />'
+            ).format(h / 2.0 - 9.5, h / 2.0 - 6.5, fg)
+        else:
+            lines = html_escape(ext, True).split("\n")
+            y = 50 - 10 * (len(lines) - 1)
+            zs = '<tspan x="50%%" dy="%s">%s</tspan>'
+            txt = "".join(
+                [zs % ("0" if not n else "1.2em", x) for n, x in enumerate(lines)]
+            )
+            body = (
+                '<text x="50%" y="{}%" dominant-baseline="middle" text-anchor="middle"'
+                ' fill="#{}" font-family="system-ui, sans-serif" font-size="12px">{}</text>'
+            ).format(y, fg, txt)
+
+        svg = (
+            '<?xml version="1.0" encoding="UTF-8"?>\n'
+            '<svg version="1.1" viewBox="0 0 100 {}" xmlns="http://www.w3.org/2000/svg">'
+            '<rect width="100%" height="100%" fill="#{}" />{}</svg>\n'
+        ).format(h, bg, body)
         return "image/svg+xml", svg.encode("utf-8")

@@ -347,6 +347,8 @@ class HttpCli(object):
         ka["s_doctitle"] = self.args.doctitle
         ka["tcolor"] = self.vn.flags["tcolor"]
         ka["js_nonce"] = self.js_nonce
+        if "dtheme" not in ka:
+            ka["dtheme"] = self.args.theme
 
         if self.args.js_other and "js" not in ka:
             zs = self.args.js_other
@@ -701,7 +703,7 @@ class HttpCli(object):
         if len(uparam) > 12:
             t = "http-request rejected; num.params: %d %r"
             self.log(t % (len(uparam), self.req), 3)
-            self.loud_reply("u wot m8", status=400)
+            self.loud_reply("bad request: too many URL parameters", status=400)
             return False
 
         if VPTL_OS:
@@ -792,7 +794,7 @@ class HttpCli(object):
 
                 if trusted_key and trusted_xff:
                     if idp_usr.lower() == LEELOO_DALLAS:
-                        self.loud_reply("send her back", status=403)
+                        self.loud_reply("reserved username", status=403)
                         return False
                     self.asrv.idp_checkin(self.conn.hsrv.broker, idp_usr, idp_grp)
                 else:
@@ -3265,7 +3267,7 @@ class HttpCli(object):
                         raise Pebkac(500, "the server OS denied write-access")
 
                     if ex.errno == errno.EEXIST:
-                        raise Pebkac(400, "some file got your folder name")
+                        raise Pebkac(400, "a file with that name already exists")
 
                     raise Pebkac(500, min_ex())
             except Pebkac:
@@ -3697,7 +3699,7 @@ class HttpCli(object):
 
         dst = self.args.idp_logout or (self.args.SRS + "?h")
         h2 = '<a href="' + dst + '">continue</a>'
-        html = self.j2s("msg", h1="ok bye", h2=h2, redir=dst)
+        html = self.j2s("msg", h1="logged out", h2=h2, redir=dst)
         self.reply(html.encode("utf-8"))
         return True
 
@@ -3714,7 +3716,7 @@ class HttpCli(object):
                 self.log("username [%s] rejected by --ipr" % (self.uname,), 3)
                 uname = ""
         if uname:
-            msg = "hi " + uname
+            msg = "logged in as " + uname
             dur = int(60 * 60 * self.args.logout)
         else:
             logpwd = pwd
@@ -3728,7 +3730,7 @@ class HttpCli(object):
                 self.log("invalid password: %r" % (logpwd,), 3)
                 self.cbonk(self.conn.hsrv.gpwd, pwd, "pw", "invalid passwords")
 
-            msg = "naw dude"
+            msg = "wrong username or password" if self.args.usernames else "wrong password"
             pwd = "x"  # nosec
             dur = 0
 
@@ -5596,7 +5598,9 @@ class HttpCli(object):
         # chrome cannot handle more than ~2000 unique SVGs
         # so url-param "raster" returns a png/webp instead
         # (useragent-sniffing kinshi due to caching proxies)
-        mime, ico = self.conn.hsrv.ico.get(txt, not small, "raster" in self.uparam)
+        mime, ico = self.conn.hsrv.ico.get(
+            txt, not small, "raster" in self.uparam, self.uparam.get("ico") or ""
+        )
 
         lm = formatdate(self.E.t0)
         self.reply(ico, mime=mime, headers={"Last-Modified": lm})
@@ -5688,6 +5692,7 @@ class HttpCli(object):
         boundary = "\roll\tide"
         targs = {
             "r": self.args.SR if self.is_vproxied else "",
+            "dtheme": self.args.theme,
             "js_nonce": self.js_nonce,
             "ts": self.conn.hsrv.cachebuster(),
             "edit": "edit" in self.uparam,
@@ -5883,9 +5888,9 @@ class HttpCli(object):
 
         if fmt in ["v", "t", "txt"]:
             if self.uname == "*":
-                txt = "howdy stranger (you're not logged in)"
+                txt = "you are not logged in"
             else:
-                txt = "welcome back {}".format(self.uname)
+                txt = "logged in as {}".format(self.uname)
 
             if vstate:
                 txt += "\nstatus:"
@@ -5993,15 +5998,15 @@ class HttpCli(object):
     def tx_404(self, is_403: bool = False) -> bool:
         rc = 404
         if self.args.vague_403:
-            t = '<h1 id="n">404 not found &nbsp;┐( ´ -`)┌</h1><p id="o">or maybe you don\'t have access -- try a password or <a href="{}/?h">go home</a></p>'
-            pt = "404 not found  ┐( ´ -`)┌   (or maybe you don't have access -- try a password)"
+            t = '<h1 id="n">404 not found</h1><p id="o">or you do not have access; try logging in, or <a href="{}/?h">go to the start page</a></p>'
+            pt = "404 not found   (or you do not have access; try logging in)"
         elif is_403:
-            t = '<h1 id="p">403 forbiddena &nbsp;~┻━┻</h1><p id="q">use a password or <a href="{}/?h">go home</a></p>'
-            pt = "403 forbiddena ~┻━┻   (you'll have to log in)"
+            t = '<h1 id="p">403 forbidden</h1><p id="q">log in, or <a href="{}/?h">go to the start page</a></p>'
+            pt = "403 forbidden   (you need to log in)"
             rc = 403
         else:
-            t = '<h1 id="n">404 not found &nbsp;┐( ´ -`)┌</h1><p><a id="r" href="{}/?h">go home</a></p>'
-            pt = "404 not found  ┐( ´ -`)┌"
+            t = '<h1 id="n">404 not found</h1><p><a id="r" href="{}/?h">go to the start page</a></p>'
+            pt = "404 not found"
 
         if self.ua.startswith(("curl/", "fetch")):
             pt = "# acct: %s\n%s\n" % (self.uname, pt)
@@ -6086,7 +6091,7 @@ class HttpCli(object):
     def handle_reload(self) -> bool:
         act = self.uparam.get("reload")
         if act != "cfg":
-            raise Pebkac(400, "only config files ('cfg') can be reloaded rn")
+            raise Pebkac(400, "only config files ('cfg') can be reloaded")
 
         if not self.avol:
             raise Pebkac(403, "'reload' not allowed for user " + self.uname)
@@ -6125,7 +6130,7 @@ class HttpCli(object):
             dst = ""
         elif top:
             if not dst.startswith(top + "/"):
-                raise Pebkac(422, "arg funk")
+                raise Pebkac(422, "invalid path argument")
 
             dst = dst[len(top) + 1 :]
 
@@ -6605,7 +6610,7 @@ class HttpCli(object):
 
     def tx_shares(self) -> bool:
         if self.uname == "*":
-            self.loud_reply("you're not logged in")
+            self.loud_reply("you are not logged in")
             return True
 
         idx = self.conn.get_u2idx()
@@ -6616,7 +6621,7 @@ class HttpCli(object):
 
         cur = idx.get_shr()
         if not cur:
-            raise Pebkac(400, "huh, sharing must be disabled in the server config...")
+            raise Pebkac(400, "sharing appears to be disabled in the server config")
 
         rows = cur.execute("select * from sh").fetchall()
         rows = [list(x) for x in rows]
@@ -6665,13 +6670,13 @@ class HttpCli(object):
 
         cur = idx.get_shr()
         if not cur:
-            raise Pebkac(400, "huh, sharing must be disabled in the server config...")
+            raise Pebkac(400, "sharing appears to be disabled in the server config")
 
         rows = cur.execute("select un, t1 from sh where k = ?", (skey,)).fetchall()
         un = rows[0][0] if rows and rows[0] else ""
 
         if not un:
-            raise Pebkac(400, "that sharekey didn't match anything")
+            raise Pebkac(400, "no share was found with that sharekey")
 
         expiry = rows[0][1]
 
@@ -6742,11 +6747,11 @@ class HttpCli(object):
             raise Pebkac(400, "sharekey has illegal character %r" % (m[1],))
 
         if vp.startswith(self.args.shr1):
-            raise Pebkac(400, "yo dawg...")
+            raise Pebkac(400, "cannot create a share of a share")
 
         cur = idx.get_shr()
         if not cur:
-            raise Pebkac(400, "huh, sharing must be disabled in the server config...")
+            raise Pebkac(400, "sharing appears to be disabled in the server config")
 
         q = "select * from sh where k = ?"
         qr = cur.execute(q, (skey,)).fetchall()
@@ -6772,7 +6777,7 @@ class HttpCli(object):
             if s_dot and not can_dot:
                 raise Exception()
         except:
-            raise Pebkac(400, "you dont have all the perms you tried to grant")
+            raise Pebkac(400, "you do not have all of the permissions you tried to grant")
 
         zs = vfs.flags["shr_who"]
         if zs == "auth" and self.uname != "*":
@@ -6780,7 +6785,7 @@ class HttpCli(object):
         elif zs == "a" and self.uname in vfs.axs.uadmin:
             pass
         else:
-            raise Pebkac(400, "you dont have perms to create shares from this volume")
+            raise Pebkac(400, "you do not have permission to create shares from this volume")
 
         ap, reals, _ = vfs.ls(rem, self.uname, not self.args.no_scandir, [s_axs])
         zsl = [x[0] for x in reals]
@@ -7143,6 +7148,7 @@ class HttpCli(object):
         ):
             if th_fmt is not None:
                 nothumb = "dthumb" in vn.flags
+                was_dir = is_dir
                 if is_dir:
                     vrem = vrem.rstrip("/")
                     cvs = vn.flags["th_coversl"]
@@ -7193,6 +7199,10 @@ class HttpCli(object):
                     raise Pebkac(404)
                 elif th_fmt in ACODE2_FMT:
                     raise Pebkac(415)
+
+                if was_dir:
+                    # the cover exists but its thumbnail is not ready
+                    return self.tx_svg("folder")
 
                 return self.tx_ico(rem)
 
